@@ -1,0 +1,46 @@
+# Production backend image: locked deps, non-root user, datasets mounted at /data
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS builder
+ENV UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy \
+    UV_PYTHON_DOWNLOADS=never
+WORKDIR /app
+
+COPY pyproject.toml uv.lock ./
+COPY DataGenerator/pyproject.toml DataGenerator/
+COPY Inference/pyproject.toml Inference/
+COPY Application/pyproject.toml Application/
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --frozen --no-dev --no-install-workspace
+
+COPY Infra Infra
+COPY DataGenerator/src DataGenerator/src
+COPY DataGenerator/config DataGenerator/config
+COPY Inference/src Inference/src
+COPY Application/src Application/src
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --frozen --no-dev --no-editable
+
+FROM python:3.12-slim-bookworm AS runtime
+RUN groupadd --system --gid 10001 app \
+ && useradd --system --uid 10001 --gid app --home-dir /home/app --create-home app \
+ && mkdir -p /data/datasets /data/artifacts \
+ && chown -R app:app /data
+WORKDIR /app
+COPY --from=builder --chown=app:app /app/.venv /app/.venv
+COPY --from=builder --chown=app:app /app/DataGenerator/config /app/config
+
+ENV PATH="/app/.venv/bin:${PATH}" \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    FIRMABLE_ENV=production \
+    FIRMABLE_DATASETS_DIR=/data/datasets \
+    FIRMABLE_ARTIFACTS_DIR=/data/artifacts \
+    FIRMABLE_GENERATOR_CONFIG_DIR=/app/config \
+    ORGGRAPH_CONFIG_DIR=/app/config
+
+USER app
+EXPOSE 8000
+VOLUME ["/data"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health')"
+CMD ["uvicorn", "firmable.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]

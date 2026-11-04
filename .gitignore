@@ -1,0 +1,8 @@
+# Shared ignore rules; each project adds its own
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+.idea/
+.vscode/

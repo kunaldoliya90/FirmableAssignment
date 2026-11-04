@@ -1,0 +1,31 @@
+# Company size segments, the default mix and the in-segment size skew
+segments:
+  small:
+    label: Small
+    min: 100
+    max: 249
+    default_count: 180
+  mid_small:
+    label: Mid-small
+    min: 250
+    max: 499
+    default_count: 140
+  mid_market:
+    label: Mid-market
+    min: 500
+    max: 999
+    default_count: 100
+  large:
+    label: Large
+    min: 1000
+    max: 4999
+    default_count: 60
+  enterprise:
+    label: Enterprise
+    min: 5000
+    max: 20000
+    default_count: 20
+
+keep_min_per_segment: 5
+
+within_segment_skew: 2.0

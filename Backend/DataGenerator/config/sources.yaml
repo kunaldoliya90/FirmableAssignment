@@ -1,0 +1,105 @@
+# Observation sources: coverage, freshness and noise multipliers
+sources:
+  hr_export:
+    label: HR export
+    coverage: 0.85
+    coverage_by_employment_type: {contractor: 0.25, part_time: 0.8, intern: 0.7}
+    title_noise_multiplier: 0.35
+    missing_department_multiplier: 0.2
+    missing_location_multiplier: 0.3
+    missing_job_family_multiplier: 0.3
+    missing_title_multiplier: 0.3
+    stale_multiplier: 0.2
+    conflict_multiplier: 0.4
+    department_noise_multiplier: 0.4
+    location_noise_multiplier: 0.5
+    includes_job_family: true
+    reports_employment_status: true
+    always_historical: false
+    provides_historical_manager: false
+    status_unknown_probability: 0.0
+    age_days: [0, 30]
+
+  company_directory:
+    label: Company directory
+    coverage: 0.70
+    title_noise_multiplier: 0.8
+    missing_department_multiplier: 0.8
+    missing_location_multiplier: 0.8
+    missing_job_family_multiplier: 1.0
+    missing_title_multiplier: 0.8
+    stale_multiplier: 0.8
+    conflict_multiplier: 1.0
+    department_noise_multiplier: 1.0
+    location_noise_multiplier: 1.0
+    includes_job_family: false
+    reports_employment_status: false
+    always_historical: false
+    provides_historical_manager: false
+    status_unknown_probability: 0.3
+    age_days: [0, 120]
+
+  internal_directory:
+    label: Internal directory
+    coverage: 0.50
+    title_noise_multiplier: 0.6
+    missing_department_multiplier: 0.6
+    missing_location_multiplier: 0.6
+    missing_job_family_multiplier: 0.8
+    missing_title_multiplier: 0.6
+    stale_multiplier: 0.6
+    conflict_multiplier: 0.8
+    department_noise_multiplier: 0.8
+    location_noise_multiplier: 0.8
+    includes_job_family: true
+    reports_employment_status: true
+    always_historical: false
+    provides_historical_manager: false
+    status_unknown_probability: 0.05
+    age_days: [0, 60]
+
+  public_profile:
+    label: Public profile
+    coverage: 0.55
+    coverage_by_employment_type: {contractor: 0.7, intern: 0.6}
+    title_noise_multiplier: 2.0
+    missing_department_multiplier: 3.0
+    missing_location_multiplier: 1.5
+    missing_job_family_multiplier: 1.0
+    missing_title_multiplier: 1.5
+    stale_multiplier: 2.5
+    conflict_multiplier: 1.8
+    department_noise_multiplier: 1.6
+    location_noise_multiplier: 1.8
+    includes_job_family: false
+    reports_employment_status: false
+    always_historical: false
+    provides_historical_manager: false
+    status_unknown_probability: 0.6
+    age_days: [0, 720]
+
+  historical_snapshot:
+    label: Historical snapshot
+    coverage: 0.30
+    title_noise_multiplier: 0.7
+    missing_department_multiplier: 0.8
+    missing_location_multiplier: 1.0
+    missing_job_family_multiplier: 1.0
+    missing_title_multiplier: 0.8
+    stale_multiplier: 1.0
+    conflict_multiplier: 1.0
+    department_noise_multiplier: 1.0
+    location_noise_multiplier: 1.0
+    includes_job_family: true
+    reports_employment_status: true
+    always_historical: true
+    provides_historical_manager: true
+    status_unknown_probability: 0.0
+    age_days: [365, 1095]
+
+fallback_source: company_directory
+
+departed_source_coverage:
+  historical_snapshot: 1.0
+  public_profile: 0.6
+  company_directory: 0.3

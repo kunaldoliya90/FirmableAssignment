@@ -1,0 +1,457 @@
+# Industry templates: weights, sizes, archetypes, regions and departments
+naming:
+  first_parts: [Aster, Bluefin, Cobalt, Driftwood, Ember, Fernhill, Granite, Harbor, Ironleaf, Juniper,
+                Keystone, Larkspur, Meridian, Northwind, Oakridge, Pinecrest, Quarry, Redwing, Silverline,
+                Tidewater, Umber, Vantage, Willowmere, Xylo, Yellowtail, Zephyr, Amberly, Brightwater,
+                Cedarbrook, Duskfall, Evergale, Foxglove, Glimmer, Highmoor, Inkwell, Jadeport, Kestrel,
+                Lumen, Mistral, Novaline]
+  second_parts: [Ridge, Forge, Point, Field, Stone, Gate, Works, Crest, Bay, Peak, Haven, Brook, Vale,
+                 Line, Path, Spire, Bridge, Harbor, Glen, Mark, Shore, Vista, Wharf, Grove]
+
+industries:
+  technology:
+    name: Technology
+    weight: 1.6
+    name_suffixes: [Technologies, Labs, Systems, Software, Digital]
+    size_weights: {small: 1.3, mid_small: 1.2, mid_market: 1.0, large: 0.9, enterprise: 0.8}
+    archetype_weights: {functional: 3, product_based: 4, flat_startup: 3, matrix: 2, business_unit: 1, regional: 1, enterprise: 1.5}
+    region_weights: {north_america: 5, emea: 3, apac: 2, latam: 0.5}
+    business_units: [Cloud, Consumer, Enterprise, Payments, Developer Platform]
+    product_lines: [Core Platform, Mobile Apps, Analytics Suite, Marketplace, Integrations, Identity]
+    departments:
+      engineering: [1.0, 32]
+      data_analytics: [0.85, 7]
+      product: [1.0, 6]
+      design: [0.9, 3]
+      security: [0.8, 3]
+      infrastructure: [0.8, 5]
+      it: [0.8, 2]
+      sales: [1.0, 12]
+      marketing: [1.0, 6]
+      finance: [1.0, 3]
+      hr: [1.0, 3]
+      operations: [0.6, 3]
+      legal: [0.8, 1.5]
+      customer_success: [0.95, 8]
+
+  financial_services:
+    name: Financial Services
+    weight: 1.2
+    name_suffixes: [Capital, Financial, Partners, Investments, Wealth]
+    size_weights: {small: 0.9, mid_small: 1.0, mid_market: 1.1, large: 1.3, enterprise: 1.4}
+    archetype_weights: {functional: 3, business_unit: 3, matrix: 2, enterprise: 2.5, regional: 1.5, product_based: 1, flat_startup: 0.5}
+    region_weights: {north_america: 4, emea: 4, apac: 2, latam: 0.5}
+    business_units: [Wealth Management, Asset Management, Capital Markets, Retail Finance]
+    product_lines: [Lending, Payments, Investments, Advisory]
+    executive_overrides: {data_analytics: cdo}
+    departments:
+      technology: [1.0, 18]
+      data_analytics: [0.85, 6]
+      risk: [1.0, 9]
+      compliance: [1.0, 6]
+      finance: [1.0, 7]
+      operations: [1.0, 12]
+      product: [0.7, 4]
+      sales: [1.0, 12]
+      marketing: [0.9, 4]
+      security: [0.9, 3]
+      internal_audit: [0.9, 2]
+      hr: [1.0, 3]
+      legal: [1.0, 3]
+      customer_success: [0.6, 5]
+
+  banking:
+    name: Banking
+    weight: 1.0
+    name_suffixes: [Bank, Bancorp, Savings Bank, Trust]
+    size_weights: {small: 0.7, mid_small: 0.9, mid_market: 1.1, large: 1.4, enterprise: 1.6}
+    archetype_weights: {functional: 2, business_unit: 3, regional: 3, enterprise: 3, matrix: 1.5, product_based: 0.5, flat_startup: 0.2}
+    region_weights: {north_america: 4, emea: 4, apac: 3, latam: 1}
+    business_units: [Retail Banking, Commercial Banking, Private Banking, Corporate Banking]
+    product_lines: [Mortgages, Cards, Deposits, Business Lending]
+    executive_overrides: {data_analytics: cdo}
+    departments:
+      commercial_banking: [1.0, 16]
+      operations: [1.0, 14]
+      technology: [1.0, 12]
+      risk: [1.0, 9]
+      compliance: [1.0, 7]
+      finance: [1.0, 6]
+      data_analytics: [0.7, 4]
+      customer_success: [0.9, 8]
+      marketing: [0.8, 3]
+      security: [0.9, 3]
+      internal_audit: [1.0, 2]
+      hr: [1.0, 3]
+      legal: [1.0, 2]
+
+  insurance:
+    name: Insurance
+    weight: 0.9
+    name_suffixes: [Insurance, Assurance, Mutual, Insurance Group]
+    size_weights: {small: 0.8, mid_small: 1.0, mid_market: 1.1, large: 1.3, enterprise: 1.2}
+    archetype_weights: {functional: 3, business_unit: 2.5, regional: 2, enterprise: 2, matrix: 1.5, product_based: 1, flat_startup: 0.3}
+    region_weights: {north_america: 4, emea: 3, apac: 2, latam: 1}
+    business_units: [Personal Lines, Commercial Lines, Life & Annuities, Specialty]
+    product_lines: [Auto, Home, Life, Health, Specialty]
+    departments:
+      underwriting: [1.0, 12]
+      claims: [1.0, 16]
+      actuarial: [1.0, 5]
+      technology: [1.0, 10]
+      data_analytics: [0.8, 4]
+      sales: [1.0, 10]
+      customer_success: [0.9, 8]
+      risk: [1.0, 4]
+      compliance: [1.0, 4]
+      finance: [1.0, 5]
+      marketing: [0.8, 3]
+      hr: [1.0, 3]
+      legal: [1.0, 2]
+      internal_audit: [0.8, 1.5]
+
+  healthcare:
+    name: Healthcare
+    weight: 1.1
+    name_suffixes: [Health, Healthcare, Medical Group, Care Partners]
+    size_weights: {small: 1.0, mid_small: 1.0, mid_market: 1.1, large: 1.2, enterprise: 1.0}
+    archetype_weights: {functional: 3, regional: 3, business_unit: 1.5, enterprise: 1.5, matrix: 1.5, product_based: 0.5, flat_startup: 0.5}
+    region_weights: {north_america: 5, emea: 3, apac: 2, latam: 1}
+    business_units: [Hospital Services, Outpatient Care, Home Health, Diagnostics]
+    product_lines: [Primary Care, Specialty Care, Diagnostics, Telehealth]
+    departments:
+      clinical_operations: [1.0, 40]
+      operations: [1.0, 10]
+      it: [1.0, 5]
+      data_analytics: [0.6, 3]
+      compliance: [1.0, 4]
+      finance: [1.0, 6]
+      hr: [1.0, 5]
+      legal: [0.9, 2]
+      marketing: [0.7, 2]
+      customer_success: [0.7, 6]
+      quality: [0.8, 3]
+      security: [0.6, 2]
+      procurement: [0.6, 2]
+
+  pharmaceuticals:
+    name: Pharmaceuticals
+    weight: 0.8
+    name_suffixes: [Pharma, Therapeutics, Biosciences, Pharmaceuticals]
+    size_weights: {small: 0.9, mid_small: 1.0, mid_market: 1.1, large: 1.3, enterprise: 1.3}
+    archetype_weights: {functional: 3, business_unit: 2.5, matrix: 3, enterprise: 2, regional: 1.5, product_based: 1, flat_startup: 0.5}
+    region_weights: {north_america: 4, emea: 4, apac: 2, latam: 0.5}
+    business_units: [Oncology, Immunology, Neuroscience, Vaccines, Rare Diseases]
+    product_lines: [Oncology, Cardiometabolic, Immunology, Specialty]
+    departments:
+      research_development: [1.0, 28]
+      manufacturing_operations: [0.9, 14]
+      quality: [1.0, 6]
+      regulatory_affairs: [1.0, 5]
+      clinical_operations: [0.7, 8]
+      sales: [1.0, 12]
+      marketing: [1.0, 5]
+      supply_chain: [0.8, 4]
+      finance: [1.0, 4]
+      it: [1.0, 3]
+      hr: [1.0, 3]
+      legal: [1.0, 2]
+      compliance: [1.0, 3]
+      data_analytics: [0.6, 3]
+
+  retail:
+    name: Retail
+    weight: 1.0
+    name_suffixes: [Stores, Retail, Outfitters, Market, Trading Co.]
+    size_weights: {small: 0.9, mid_small: 1.0, mid_market: 1.1, large: 1.3, enterprise: 1.4}
+    archetype_weights: {functional: 3, regional: 3.5, business_unit: 2, enterprise: 2, matrix: 1, product_based: 1, flat_startup: 0.5}
+    region_weights: {north_america: 4, emea: 3, apac: 2, latam: 1.5}
+    business_units: [Apparel, Home, Grocery, Electronics, Beauty]
+    product_lines: [Private Label, Online Store, Loyalty]
+    departments:
+      store_operations: [1.0, 45]
+      merchandising: [1.0, 7]
+      supply_chain: [1.0, 9]
+      marketing: [1.0, 5]
+      engineering: [0.6, 5]
+      it: [1.0, 3]
+      finance: [1.0, 4]
+      hr: [1.0, 4]
+      legal: [0.8, 1.5]
+      customer_success: [0.8, 4]
+      procurement: [0.7, 2]
+      data_analytics: [0.6, 2]
+
+  ecommerce:
+    name: E-commerce
+    weight: 1.0
+    name_suffixes: [Commerce, Marketplace, Online, Direct, Shop]
+    size_weights: {small: 1.3, mid_small: 1.2, mid_market: 1.0, large: 0.9, enterprise: 0.7}
+    archetype_weights: {functional: 3, product_based: 3.5, flat_startup: 2.5, matrix: 2, business_unit: 1.5, regional: 1.5, enterprise: 1}
+    region_weights: {north_america: 4, emea: 3, apac: 3, latam: 1}
+    business_units: [Marketplace, Retail, Logistics Services, Advertising]
+    product_lines: [Checkout, Search & Discovery, Seller Tools, Fulfillment, Ads]
+    departments:
+      engineering: [1.0, 24]
+      data_analytics: [0.9, 6]
+      product: [1.0, 6]
+      design: [0.9, 3]
+      supply_chain: [0.9, 10]
+      operations: [1.0, 8]
+      marketing: [1.0, 8]
+      customer_success: [1.0, 10]
+      merchandising: [0.7, 4]
+      finance: [1.0, 3]
+      hr: [1.0, 3]
+      legal: [0.7, 1.5]
+      security: [0.6, 2]
+      it: [0.7, 2]
+
+  manufacturing:
+    name: Manufacturing
+    weight: 1.1
+    name_suffixes: [Manufacturing, Industries, Works, Fabrication, Industrial]
+    size_weights: {small: 0.9, mid_small: 1.0, mid_market: 1.2, large: 1.3, enterprise: 1.2}
+    archetype_weights: {functional: 4, business_unit: 2.5, regional: 2, enterprise: 2, matrix: 1.5, product_based: 1, flat_startup: 0.3}
+    region_weights: {north_america: 4, emea: 4, apac: 3, latam: 1}
+    business_units: [Industrial Products, Components, Aftermarket, Specialty Materials]
+    product_lines: [Precision Parts, Assemblies, Controls, Packaging]
+    departments:
+      manufacturing_operations: [1.0, 40]
+      industrial_engineering: [1.0, 9]
+      supply_chain: [1.0, 8]
+      quality: [1.0, 6]
+      procurement: [1.0, 4]
+      product_development: [0.8, 5]
+      sales: [1.0, 7]
+      finance: [1.0, 4]
+      hr: [1.0, 3]
+      it: [1.0, 3]
+      operations: [0.5, 3]
+      legal: [0.6, 1]
+      marketing: [0.6, 2]
+
+  telecommunications:
+    name: Telecommunications
+    weight: 0.8
+    name_suffixes: [Telecom, Communications, Networks, Mobile, Connect]
+    size_weights: {small: 0.7, mid_small: 0.9, mid_market: 1.1, large: 1.4, enterprise: 1.6}
+    archetype_weights: {functional: 3, regional: 3, business_unit: 2, enterprise: 2.5, matrix: 2, product_based: 1, flat_startup: 0.3}
+    region_weights: {north_america: 3, emea: 4, apac: 3, latam: 2}
+    business_units: [Consumer Mobile, Enterprise Solutions, Broadband, Wholesale]
+    product_lines: [5G, Fiber, IoT, Unified Communications]
+    departments:
+      network_operations: [1.0, 24]
+      engineering: [0.9, 10]
+      field_operations: [0.9, 12]
+      sales: [1.0, 10]
+      customer_success: [1.0, 12]
+      marketing: [1.0, 4]
+      product: [0.8, 3]
+      it: [1.0, 4]
+      finance: [1.0, 4]
+      hr: [1.0, 3]
+      legal: [1.0, 2]
+      security: [0.9, 2]
+      compliance: [0.7, 2]
+
+  consulting:
+    name: Consulting
+    weight: 0.9
+    name_suffixes: [Consulting, Advisory, Associates, Group]
+    size_weights: {small: 1.1, mid_small: 1.1, mid_market: 1.0, large: 1.0, enterprise: 1.0}
+    archetype_weights: {functional: 2, regional: 3, business_unit: 2.5, matrix: 3, enterprise: 1.5, product_based: 0.5, flat_startup: 1.5}
+    region_weights: {north_america: 4, emea: 4, apac: 2, latam: 1}
+    business_units: [Strategy & Transformation, Technology Advisory, Operations Advisory, Risk Advisory]
+    product_lines: [Digital, Strategy, Operations]
+    departments:
+      consulting_delivery: [1.0, 60]
+      sales: [0.9, 5]
+      marketing: [0.9, 3]
+      finance: [1.0, 3]
+      hr: [1.0, 4]
+      it: [1.0, 2]
+      legal: [0.8, 1]
+      operations: [0.7, 3]
+      data_analytics: [0.5, 3]
+
+  professional_services:
+    name: Professional Services
+    weight: 0.8
+    name_suffixes: [Services, Solutions, Partners, Professional Group]
+    size_weights: {small: 1.2, mid_small: 1.1, mid_market: 1.0, large: 0.9, enterprise: 0.8}
+    archetype_weights: {functional: 3, regional: 2.5, business_unit: 2, matrix: 2, flat_startup: 1.5, enterprise: 1, product_based: 0.5}
+    region_weights: {north_america: 4, emea: 3, apac: 2, latam: 1}
+    business_units: [Tax, Audit & Assurance, Legal Services, Staffing]
+    product_lines: [Managed Services, Outsourcing, Advisory]
+    departments:
+      consulting_delivery: [1.0, 40]
+      operations: [1.0, 10]
+      sales: [1.0, 6]
+      customer_success: [0.8, 6]
+      finance: [1.0, 4]
+      hr: [1.0, 4]
+      it: [1.0, 3]
+      legal: [0.9, 3]
+      marketing: [0.8, 2]
+      compliance: [0.5, 2]
+
+  media:
+    name: Media
+    weight: 0.7
+    name_suffixes: [Media, Studios, Publishing, Broadcasting, Entertainment]
+    size_weights: {small: 1.2, mid_small: 1.1, mid_market: 1.0, large: 0.9, enterprise: 0.7}
+    archetype_weights: {functional: 3, business_unit: 2.5, product_based: 2, flat_startup: 2, matrix: 1.5, regional: 1, enterprise: 1}
+    region_weights: {north_america: 4, emea: 3, apac: 2, latam: 1}
+    business_units: [News, Entertainment, Sports, Digital Media]
+    product_lines: [Streaming, Podcasts, Print, Events]
+    departments:
+      editorial: [1.0, 30]
+      engineering: [0.8, 10]
+      product: [0.7, 3]
+      design: [0.8, 4]
+      sales: [1.0, 10]
+      marketing: [1.0, 7]
+      data_analytics: [0.6, 3]
+      finance: [1.0, 3]
+      hr: [1.0, 3]
+      legal: [1.0, 3]
+      operations: [0.8, 4]
+      it: [0.8, 2]
+
+  logistics:
+    name: Logistics
+    weight: 0.8
+    name_suffixes: [Logistics, Freight, Express, Transport, Shipping]
+    size_weights: {small: 0.9, mid_small: 1.0, mid_market: 1.1, large: 1.2, enterprise: 1.2}
+    archetype_weights: {functional: 3, regional: 4, business_unit: 2, enterprise: 2, matrix: 1, product_based: 0.5, flat_startup: 0.5}
+    region_weights: {north_america: 4, emea: 3, apac: 3, latam: 1.5}
+    business_units: [Freight Forwarding, Contract Logistics, Parcel, Ocean & Air]
+    product_lines: [Last Mile, Warehousing, Cross-Border]
+    departments:
+      transportation: [1.0, 30]
+      operations: [1.0, 16]
+      supply_chain: [1.0, 10]
+      sales: [1.0, 6]
+      customer_success: [1.0, 7]
+      engineering: [0.5, 5]
+      it: [1.0, 3]
+      finance: [1.0, 4]
+      hr: [1.0, 3]
+      legal: [0.7, 1]
+      procurement: [0.7, 2]
+      quality: [0.5, 2]
+
+  energy:
+    name: Energy
+    weight: 0.7
+    name_suffixes: [Energy, Power, Utilities, Resources, Renewables]
+    size_weights: {small: 0.7, mid_small: 0.9, mid_market: 1.1, large: 1.4, enterprise: 1.5}
+    archetype_weights: {functional: 3, business_unit: 3, regional: 2.5, enterprise: 2.5, matrix: 1.5, product_based: 0.5, flat_startup: 0.3}
+    region_weights: {north_america: 4, emea: 3, apac: 2, latam: 2}
+    business_units: [Upstream, Midstream, Renewables, Power Generation, Retail Energy]
+    product_lines: [Solar, Wind, Grid Services, Storage]
+    departments:
+      field_operations: [1.0, 30]
+      industrial_engineering: [1.0, 12]
+      operations: [1.0, 10]
+      supply_chain: [0.8, 5]
+      quality: [0.6, 3]
+      sales: [0.8, 5]
+      finance: [1.0, 5]
+      hr: [1.0, 3]
+      it: [1.0, 3]
+      legal: [1.0, 2]
+      compliance: [1.0, 3]
+      security: [0.6, 2]
+      procurement: [0.8, 2]
+
+  automotive:
+    name: Automotive
+    weight: 0.7
+    name_suffixes: [Motors, Automotive, Mobility, Auto Systems]
+    size_weights: {small: 0.7, mid_small: 0.9, mid_market: 1.1, large: 1.4, enterprise: 1.6}
+    archetype_weights: {functional: 3, business_unit: 3, enterprise: 2.5, matrix: 2.5, regional: 2, product_based: 1, flat_startup: 0.3}
+    region_weights: {north_america: 3, emea: 4, apac: 3, latam: 1}
+    business_units: [Passenger Vehicles, Commercial Vehicles, Powertrain, Aftersales]
+    product_lines: [Electric Vehicles, Infotainment, Driver Assistance, Chassis]
+    departments:
+      manufacturing_operations: [1.0, 32]
+      industrial_engineering: [1.0, 14]
+      engineering: [0.7, 8]
+      product_development: [1.0, 7]
+      supply_chain: [1.0, 8]
+      quality: [1.0, 6]
+      procurement: [1.0, 4]
+      sales: [1.0, 7]
+      marketing: [0.9, 3]
+      finance: [1.0, 4]
+      hr: [1.0, 3]
+      it: [1.0, 3]
+      legal: [0.8, 1.5]
+
+  education:
+    name: Education
+    weight: 0.7
+    name_suffixes: [Academy, Learning, Education, Institute, University]
+    size_weights: {small: 1.1, mid_small: 1.1, mid_market: 1.0, large: 1.0, enterprise: 0.7}
+    archetype_weights: {functional: 3, regional: 2, business_unit: 2, matrix: 1.5, flat_startup: 1.5, product_based: 1, enterprise: 1}
+    region_weights: {north_america: 4, emea: 3, apac: 3, latam: 1}
+    business_units: [Undergraduate, Graduate Programs, Online Learning, Continuing Education]
+    product_lines: [K-12, Higher Education, Professional Certificates]
+    departments:
+      academic_affairs: [1.0, 40]
+      student_services: [1.0, 12]
+      operations: [1.0, 8]
+      it: [1.0, 5]
+      engineering: [0.4, 6]
+      marketing: [0.9, 4]
+      finance: [1.0, 5]
+      hr: [1.0, 4]
+      legal: [0.6, 1]
+      data_analytics: [0.5, 2]
+
+  real_estate:
+    name: Real Estate
+    weight: 0.6
+    name_suffixes: [Realty, Properties, Real Estate, Land Holdings, Estates]
+    size_weights: {small: 1.3, mid_small: 1.2, mid_market: 1.0, large: 0.8, enterprise: 0.6}
+    archetype_weights: {functional: 3, regional: 3.5, business_unit: 2, flat_startup: 1.5, matrix: 1, enterprise: 1, product_based: 0.5}
+    region_weights: {north_america: 4, emea: 3, apac: 2, latam: 1}
+    business_units: [Residential, Commercial, Industrial, Hospitality]
+    product_lines: [Leasing, Development, Facilities Services]
+    departments:
+      property_management: [1.0, 35]
+      sales: [1.0, 14]
+      operations: [1.0, 10]
+      finance: [1.0, 7]
+      marketing: [1.0, 5]
+      legal: [1.0, 3]
+      hr: [1.0, 3]
+      it: [0.8, 2]
+      customer_success: [0.6, 4]
+      procurement: [0.4, 2]
+
+  consumer_goods:
+    name: Consumer Goods
+    weight: 0.8
+    name_suffixes: [Brands, Consumer Products, Goods Co., Home & Living]
+    size_weights: {small: 0.9, mid_small: 1.0, mid_market: 1.1, large: 1.2, enterprise: 1.3}
+    archetype_weights: {functional: 3, business_unit: 3, regional: 2.5, enterprise: 2, matrix: 2, product_based: 1.5, flat_startup: 0.5}
+    region_weights: {north_america: 4, emea: 3, apac: 3, latam: 1.5}
+    business_units: [Personal Care, Household, Food & Beverage, Pet Care]
+    product_lines: [Snacks, Skincare, Cleaning, Beverages]
+    departments:
+      manufacturing_operations: [1.0, 22]
+      supply_chain: [1.0, 10]
+      sales: [1.0, 12]
+      marketing: [1.0, 10]
+      product_development: [1.0, 6]
+      quality: [1.0, 4]
+      procurement: [1.0, 3]
+      finance: [1.0, 4]
+      hr: [1.0, 3]
+      it: [1.0, 3]
+      legal: [0.8, 1.5]
+      data_analytics: [0.6, 2]
+      merchandising: [0.5, 3]

@@ -1,0 +1,55 @@
+# Local stack: FastAPI backend and Next.js dev server, run from Backend/
+name: firmable
+
+services:
+  backend:
+    image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+    working_dir: /app
+    command: >
+      sh -c "uv sync --frozen &&
+             uv run uvicorn firmable.main:app --host 0.0.0.0 --port 8000
+             --reload --reload-dir Application/src --reload-dir Inference/src --reload-dir Infra"
+    environment:
+      FIRMABLE_ENV: local
+      FIRMABLE_CORS_ORIGINS: '["http://localhost:3000","http://127.0.0.1:3000"]'
+      FIRMABLE_LOG_LEVEL: INFO
+      UV_PROJECT_ENVIRONMENT: /opt/venv
+      UV_LINK_MODE: copy
+      UV_CACHE_DIR: /opt/uv-cache
+      WATCHFILES_FORCE_POLLING: "true"
+    volumes:
+      - ../..:/app
+      - backend-venv:/opt/venv
+      - uv-cache:/opt/uv-cache
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+  frontend:
+    image: node:22-bookworm-slim
+    working_dir: /app
+    command: sh -c "npm ci --no-audit --no-fund && npm run dev -- --hostname 0.0.0.0"
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000/api/v1
+      WATCHPACK_POLLING: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      - ../../../Frontend:/app
+      - frontend-node-modules:/app/node_modules
+      - frontend-next:/app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  backend-venv:
+  uv-cache:
+  frontend-node-modules:
+  frontend-next:

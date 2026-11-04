@@ -1,0 +1,518 @@
+# Job families: title tokens, ladders, aliases and legacy titles
+families:
+  executive_support:
+    name: Executive Support
+    aliases: [Administration, Executive Administration]
+    ic_role: Executive Assistant
+    ic_abbrev: EA
+    function: Executive Support
+    function_abbrev: Exec Support
+    ic_levels: [ic, senior_ic, staff]
+    management: false
+
+  software_engineering:
+    name: Software Engineering
+    aliases: [Engineering, Software Development, SWE]
+    ic_role: Software Engineer
+    ic_abbrev: SWE
+    function: Engineering
+    function_abbrev: Engg
+    legacy_titles:
+      junior: [Programmer, Junior Developer]
+      ic: [Software Developer, Programmer Analyst, Developer]
+      senior_ic: [Senior Developer, Senior Programmer Analyst]
+      manager: [Development Manager, Software Development Manager]
+
+  qa_engineering:
+    name: Quality Engineering
+    aliases: [QA, Testing, Quality Assurance Engineering]
+    ic_role: QA Engineer
+    ic_abbrev: QAE
+    function: QA
+    function_abbrev: QA
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Software Tester, Test Engineer]
+      senior_ic: [Senior Test Engineer]
+
+  data_engineering:
+    name: Data Engineering
+    aliases: [Data, Data Platform, Data Eng]
+    ic_role: Data Engineer
+    ic_abbrev: DE
+    function: Data Engineering
+    function_abbrev: Data Eng
+    legacy_titles:
+      ic: [ETL Developer, BI Developer]
+      senior_ic: [Senior ETL Developer]
+
+  data_science:
+    name: Data Science
+    aliases: [Data, Data Science & Analytics, Science]
+    ic_role: Data Scientist
+    ic_abbrev: DS
+    function: Data Science
+    function_abbrev: DS
+    legacy_titles:
+      ic: [Statistician, Quantitative Analyst]
+
+  machine_learning:
+    name: Machine Learning
+    aliases: [ML, AI, AI/ML]
+    ic_role: Machine Learning Engineer
+    ic_abbrev: MLE
+    function: Machine Learning
+    function_abbrev: ML
+
+  analytics:
+    name: Analytics
+    aliases: [Business Intelligence, BI, Insights]
+    ic_role: Data Analyst
+    ic_abbrev: DA
+    function: Analytics
+    function_abbrev: Analytics
+    ic_levels: [intern, junior, ic, senior_ic, staff, principal]
+    legacy_titles:
+      ic: [Reporting Analyst, BI Analyst]
+      senior_ic: [Senior Reporting Analyst]
+
+  product_management:
+    name: Product Management
+    aliases: [Product, PM]
+    ic_role: Product Manager
+    ic_abbrev: PM
+    function: Product Management
+    function_abbrev: Product
+    legacy_titles:
+      ic: [Product Owner, Business Analyst]
+      senior_ic: [Senior Product Owner]
+
+  design:
+    name: Design
+    aliases: [UX, User Experience, Product Design]
+    ic_role: Product Designer
+    ic_abbrev: Designer
+    function: Design
+    function_abbrev: Design
+    legacy_titles:
+      ic: [UI Designer, Web Designer, Visual Designer]
+      senior_ic: [Senior UI Designer]
+
+  security:
+    name: Security
+    aliases: [Information Security, InfoSec, Cybersecurity]
+    ic_role: Security Engineer
+    ic_abbrev: SecEng
+    function: Security
+    function_abbrev: Sec
+    legacy_titles:
+      ic: [Information Security Analyst, IT Security Specialist]
+
+  infrastructure:
+    name: Infrastructure
+    aliases: [SRE, DevOps, Site Reliability]
+    ic_role: Site Reliability Engineer
+    ic_abbrev: SRE
+    function: Infrastructure
+    function_abbrev: Infra
+    legacy_titles:
+      ic: [Systems Administrator, DevOps Engineer]
+      senior_ic: [Senior Systems Administrator]
+
+  it:
+    name: Information Technology
+    aliases: [IT, IT Support, Tech Support]
+    ic_role: IT Specialist
+    ic_abbrev: IT Spec
+    function: IT
+    function_abbrev: IT
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Help Desk Technician, Desktop Support Technician]
+
+  sales:
+    name: Sales
+    aliases: [Business Development, Commercial, Revenue]
+    ic_role: Account Executive
+    ic_abbrev: AE
+    function: Sales
+    function_abbrev: Sls
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Sales Representative, Salesperson]
+      senior_ic: [Senior Sales Representative]
+
+  marketing:
+    name: Marketing
+    aliases: [Growth, Brand, Communications]
+    ic_role: Marketing Specialist
+    ic_abbrev: Mktg Spec
+    function: Marketing
+    function_abbrev: Mktg
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Marketing Coordinator, Marketing Executive]
+
+  finance:
+    name: Finance
+    aliases: [FP&A, Financial Planning]
+    ic_role: Financial Analyst
+    ic_abbrev: FA
+    function: Finance
+    function_abbrev: Fin
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Finance Executive, Budget Analyst]
+
+  accounting:
+    name: Accounting
+    aliases: [Finance, Controllership]
+    ic_role: Accountant
+    ic_abbrev: Acct
+    function: Accounting
+    function_abbrev: Acctg
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Bookkeeper, Accounts Clerk]
+
+  hr:
+    name: Human Resources
+    aliases: [HR, People, People Operations]
+    ic_role: HR Specialist
+    ic_abbrev: HR Spec
+    function: Human Resources
+    function_abbrev: HR
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Personnel Officer, HR Officer]
+      manager: [Personnel Manager]
+
+  recruiting:
+    name: Talent Acquisition
+    aliases: [Recruiting, Recruitment, TA]
+    ic_role: Recruiter
+    ic_abbrev: Recruiter
+    function: Talent Acquisition
+    function_abbrev: TA
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Recruitment Consultant, Staffing Specialist]
+
+  operations:
+    name: Operations
+    aliases: [Business Operations, Ops]
+    ic_role: Operations Analyst
+    ic_abbrev: Ops Analyst
+    function: Operations
+    function_abbrev: Ops
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Operations Coordinator, Operations Executive]
+
+  legal:
+    name: Legal
+    aliases: [Legal Affairs, Counsel]
+    ic_role: Legal Counsel
+    ic_abbrev: Counsel
+    function: Legal
+    function_abbrev: Legal
+    ic_levels: [junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Corporate Lawyer, Attorney]
+
+  customer_success:
+    name: Customer Success
+    aliases: [Account Management, Client Services, CS]
+    ic_role: Customer Success Manager
+    ic_abbrev: CSM
+    function: Customer Success
+    function_abbrev: CS
+    ic_levels: [junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Account Manager, Client Relationship Manager]
+
+  customer_support:
+    name: Customer Support
+    aliases: [Support, Customer Care, Help Desk]
+    ic_role: Support Specialist
+    ic_abbrev: Support Spec
+    function: Customer Support
+    function_abbrev: Support
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Customer Service Representative, Call Center Agent]
+
+  risk:
+    name: Risk
+    aliases: [Risk Management, Enterprise Risk]
+    ic_role: Risk Analyst
+    ic_abbrev: Risk Analyst
+    function: Risk
+    function_abbrev: Risk
+    ic_levels: [intern, junior, ic, senior_ic, staff, principal]
+    industries: [financial_services, banking, insurance, energy]
+
+  compliance:
+    name: Compliance
+    aliases: [Regulatory Compliance, Compliance & Ethics]
+    ic_role: Compliance Analyst
+    ic_abbrev: Compliance Analyst
+    function: Compliance
+    function_abbrev: Compl
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Compliance Officer]
+
+  internal_audit:
+    name: Internal Audit
+    aliases: [Audit, Assurance]
+    ic_role: Internal Auditor
+    ic_abbrev: Auditor
+    function: Internal Audit
+    function_abbrev: IA
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+
+  manufacturing:
+    name: Manufacturing
+    aliases: [Production, Plant Operations]
+    ic_role: Production Technician
+    ic_abbrev: Prod Tech
+    function: Manufacturing
+    function_abbrev: Mfg
+    ic_levels: [junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Machine Operator, Assembler]
+      senior_ic: [Senior Machine Operator]
+      manager: [Plant Supervisor, Shift Supervisor]
+
+  hardware_engineering:
+    name: Hardware Engineering
+    aliases: [Mechanical Engineering, Engineering, Product Engineering]
+    ic_role: Mechanical Engineer
+    ic_abbrev: ME
+    function: Mechanical Engineering
+    function_abbrev: Mech Eng
+    legacy_titles:
+      ic: [Design Engineer, Draftsman]
+
+  supply_chain:
+    name: Supply Chain
+    aliases: [SCM, Planning, Supply Planning]
+    ic_role: Supply Chain Analyst
+    ic_abbrev: SC Analyst
+    function: Supply Chain
+    function_abbrev: SCM
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Materials Planner, Inventory Analyst]
+
+  logistics:
+    name: Logistics
+    aliases: [Transportation, Distribution, Freight]
+    ic_role: Logistics Coordinator
+    ic_abbrev: Logistics Coord
+    function: Logistics
+    function_abbrev: Log
+    ic_levels: [junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Dispatcher, Shipping Clerk]
+
+  quality:
+    name: Quality
+    aliases: [Quality Assurance, QA/QC, Quality Control]
+    ic_role: Quality Engineer
+    ic_abbrev: QE
+    function: Quality
+    function_abbrev: QC
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Quality Inspector, QC Technician]
+
+  procurement:
+    name: Procurement
+    aliases: [Purchasing, Sourcing]
+    ic_role: Procurement Specialist
+    ic_abbrev: Buyer
+    function: Procurement
+    function_abbrev: Proc
+    ic_levels: [junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Buyer, Purchasing Agent]
+
+  clinical:
+    name: Clinical Operations
+    aliases: [Clinical, Patient Care, Nursing]
+    ic_role: Clinical Coordinator
+    ic_abbrev: Clin Coord
+    function: Clinical Operations
+    function_abbrev: Clin Ops
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [healthcare, pharmaceuticals]
+    legacy_titles:
+      ic: [Staff Nurse, Clinical Associate]
+
+  research:
+    name: Research
+    aliases: [R&D, Research & Development, Science]
+    ic_role: Scientist
+    ic_abbrev: Sci
+    function: Research
+    function_abbrev: R&D
+    industries: [pharmaceuticals, healthcare, energy, manufacturing, consumer_goods]
+    legacy_titles:
+      ic: [Research Chemist, Lab Scientist]
+
+  regulatory_affairs:
+    name: Regulatory Affairs
+    aliases: [Regulatory, RA]
+    ic_role: Regulatory Affairs Specialist
+    ic_abbrev: RA Specialist
+    function: Regulatory Affairs
+    function_abbrev: RA
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [pharmaceuticals, healthcare]
+
+  underwriting:
+    name: Underwriting
+    aliases: [UW, Risk Selection]
+    ic_role: Underwriter
+    ic_abbrev: UW
+    function: Underwriting
+    function_abbrev: UW
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [insurance, banking, financial_services]
+
+  claims:
+    name: Claims
+    aliases: [Claims Handling, Claims Operations]
+    ic_role: Claims Adjuster
+    ic_abbrev: Adjuster
+    function: Claims
+    function_abbrev: Claims
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [insurance]
+    legacy_titles:
+      ic: [Claims Handler, Claims Examiner]
+
+  actuarial:
+    name: Actuarial
+    aliases: [Pricing, Actuarial Services]
+    ic_role: Actuarial Analyst
+    ic_abbrev: Actuarial Analyst
+    function: Actuarial
+    function_abbrev: Actl
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    industries: [insurance, financial_services]
+
+  relationship_banking:
+    name: Relationship Banking
+    aliases: [Commercial Banking, Corporate Banking]
+    ic_role: Relationship Manager
+    ic_abbrev: RM
+    function: Relationship Banking
+    function_abbrev: RB
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [banking, financial_services]
+    legacy_titles:
+      ic: [Loan Officer, Banker]
+
+  network_engineering:
+    name: Network Engineering
+    aliases: [Network, NetOps, Network Operations]
+    ic_role: Network Engineer
+    ic_abbrev: NetEng
+    function: Network Engineering
+    function_abbrev: Net Eng
+    legacy_titles:
+      ic: [Network Technician, Network Administrator]
+
+  consulting:
+    name: Consulting
+    aliases: [Advisory, Client Delivery]
+    ic_role: Consultant
+    ic_abbrev: Cnslt
+    function: Consulting
+    function_abbrev: Consulting
+    ic_levels: [intern, junior, ic, senior_ic, staff, principal]
+    legacy_titles:
+      ic: [Associate Consultant, Advisor]
+
+  editorial:
+    name: Editorial
+    aliases: [Content, Newsroom, Journalism]
+    ic_role: Editor
+    ic_abbrev: Ed
+    function: Editorial
+    function_abbrev: Editorial
+    ic_levels: [intern, junior, ic, senior_ic, staff]
+    industries: [media, education]
+    legacy_titles:
+      ic: [Copy Editor, Reporter, Writer]
+
+  field_operations:
+    name: Field Operations
+    aliases: [Field Services, Site Operations]
+    ic_role: Field Technician
+    ic_abbrev: Field Tech
+    function: Field Operations
+    function_abbrev: Field Ops
+    ic_levels: [junior, ic, senior_ic, staff]
+    legacy_titles:
+      ic: [Lineman, Site Technician, Service Technician]
+
+  retail_operations:
+    name: Retail Operations
+    aliases: [Stores, Store Operations, Retail]
+    ic_role: Store Associate
+    ic_abbrev: Store Assoc
+    function: Store Operations
+    function_abbrev: Store Ops
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [retail, ecommerce, consumer_goods]
+    legacy_titles:
+      ic: [Sales Clerk, Cashier, Shop Assistant]
+
+  merchandising:
+    name: Merchandising
+    aliases: [Buying, Category Management]
+    ic_role: Merchandiser
+    ic_abbrev: Merch
+    function: Merchandising
+    function_abbrev: Merch
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [retail, ecommerce, consumer_goods]
+
+  academic:
+    name: Academic
+    aliases: [Faculty, Teaching, Instruction]
+    ic_role: Lecturer
+    ic_abbrev: Lect
+    function: Academic Affairs
+    function_abbrev: Academics
+    industries: [education]
+    legacy_titles:
+      ic: [Instructor, Tutor]
+
+  student_services:
+    name: Student Services
+    aliases: [Student Affairs, Admissions, Advising]
+    ic_role: Student Advisor
+    ic_abbrev: Advisor
+    function: Student Services
+    function_abbrev: Student Svcs
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [education]
+    legacy_titles:
+      ic: [Admissions Officer, Academic Counselor]
+
+  property_management:
+    name: Property Management
+    aliases: [Real Estate Operations, Leasing, Facilities]
+    ic_role: Property Specialist
+    ic_abbrev: Property Spec
+    function: Property Management
+    function_abbrev: Property Mgmt
+    ic_levels: [junior, ic, senior_ic, staff]
+    industries: [real_estate]
+    legacy_titles:
+      ic: [Leasing Agent, Building Superintendent]

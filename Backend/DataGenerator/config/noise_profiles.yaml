@@ -1,0 +1,183 @@
+# Noise profiles; synthetic settings, not real-world rates
+profiles:
+  clean:
+    description: No injected noise. Fields a source never carries (e.g. job family in a directory) are still absent.
+    title_corruption_probability: 0.0
+    max_title_operations: 1
+    missing_title_probability: 0.0
+    missing_department_probability: 0.0
+    missing_location_probability: 0.0
+    missing_job_family_probability: 0.0
+    missing_source_probability: 0.0
+    missing_timestamp_probability: 0.0
+    stale_observation_probability: 0.0
+    source_conflict_probability: 0.0
+    department_inconsistency_probability: 0.0
+    location_noise_probability: 0.0
+    ambiguity_probability: 0.0
+    historical_manager_probability: 0.0
+    promotion_rate: 0.0
+    transfer_rate: 0.0
+    departed_employee_rate: 0.0
+    source_coverage_multiplier: 1.0
+
+  low_noise:
+    description: Mostly consistent records with occasional variants and gaps.
+    title_corruption_probability: 0.15
+    max_title_operations: 1
+    missing_title_probability: 0.01
+    missing_department_probability: 0.04
+    missing_location_probability: 0.04
+    missing_job_family_probability: 0.05
+    missing_source_probability: 0.005
+    missing_timestamp_probability: 0.01
+    stale_observation_probability: 0.05
+    source_conflict_probability: 0.03
+    department_inconsistency_probability: 0.10
+    location_noise_probability: 0.10
+    ambiguity_probability: 0.03
+    historical_manager_probability: 0.30
+    promotion_rate: 0.08
+    transfer_rate: 0.04
+    departed_employee_rate: 0.01
+    source_coverage_multiplier: 1.0
+
+  medium_noise:
+    description: Typical multi-source mess - abbreviations, gaps, stale profiles and conflicts.
+    title_corruption_probability: 0.35
+    max_title_operations: 2
+    missing_title_probability: 0.03
+    missing_department_probability: 0.12
+    missing_location_probability: 0.10
+    missing_job_family_probability: 0.15
+    missing_source_probability: 0.01
+    missing_timestamp_probability: 0.03
+    stale_observation_probability: 0.12
+    source_conflict_probability: 0.08
+    department_inconsistency_probability: 0.25
+    location_noise_probability: 0.25
+    ambiguity_probability: 0.08
+    historical_manager_probability: 0.40
+    promotion_rate: 0.12
+    transfer_rate: 0.07
+    departed_employee_rate: 0.03
+    source_coverage_multiplier: 1.0
+
+  high_noise:
+    description: Heavy corruption, many missing fields and frequent cross-source disagreement.
+    title_corruption_probability: 0.60
+    max_title_operations: 3
+    missing_title_probability: 0.08
+    missing_department_probability: 0.25
+    missing_location_probability: 0.20
+    missing_job_family_probability: 0.30
+    missing_source_probability: 0.03
+    missing_timestamp_probability: 0.06
+    stale_observation_probability: 0.22
+    source_conflict_probability: 0.15
+    department_inconsistency_probability: 0.40
+    location_noise_probability: 0.40
+    ambiguity_probability: 0.18
+    historical_manager_probability: 0.45
+    promotion_rate: 0.18
+    transfer_rate: 0.12
+    departed_employee_rate: 0.06
+    source_coverage_multiplier: 0.9
+
+  enterprise_complexity:
+    description: High noise plus heavy leadership ambiguity, staleness and departures typical of large reorganizing enterprises.
+    title_corruption_probability: 0.55
+    max_title_operations: 3
+    missing_title_probability: 0.06
+    missing_department_probability: 0.22
+    missing_location_probability: 0.18
+    missing_job_family_probability: 0.28
+    missing_source_probability: 0.02
+    missing_timestamp_probability: 0.05
+    stale_observation_probability: 0.28
+    source_conflict_probability: 0.20
+    department_inconsistency_probability: 0.45
+    location_noise_probability: 0.35
+    ambiguity_probability: 0.30
+    historical_manager_probability: 0.50
+    promotion_rate: 0.22
+    transfer_rate: 0.18
+    departed_employee_rate: 0.07
+    source_coverage_multiplier: 1.0
+
+title_noise_weights:
+  variant: 4.0
+  abbreviation: 3.0
+  punctuation: 2.0
+  capitalization: 2.0
+  department_suffix: 1.5
+  seniority_removal: 1.5
+  typo: 1.0
+  regional_suffix: 1.0
+  business_unit_suffix: 1.0
+  truncation: 0.8
+  legacy_title: 0.6
+  generic_replacement: 0.6
+
+department_noise_weights:
+  abbreviation: 3.0
+  alias: 3.0
+  parent_department: 2.0
+  segment_prefix: 1.5
+  case_format: 1.0
+
+location_noise_weights:
+  city_alias: 3.0
+  formatting: 3.0
+  region_instead: 2.0
+
+chained_operation_probability: 0.35
+
+abbreviations:
+  Vice President: [VP, V.P.]
+  Senior Vice President: [SVP, Sr. VP]
+  Senior: [Sr, Sr.]
+  Junior: [Jr, Jr.]
+  Manager: [Mgr, Mngr]
+  Management: [Mgmt]
+  Director: [Dir, Dir.]
+  Engineering: [Engg, Eng]
+  Engineer: [Eng, Engr]
+  Software: [SW, S/W]
+  Development: [Dev]
+  Operations: [Ops]
+  Marketing: [Mktg]
+  Technology: [Tech]
+  Information: [Info]
+  Associate: [Assoc, Assoc.]
+  Assistant: [Asst, Asst.]
+  Department: [Dept]
+  Human Resources: [HR]
+  Customer: [Cust]
+  Executive: [Exec]
+  Specialist: [Spec, Spclst]
+  Analyst: [Anlst]
+  Principal: [Princ, Prin.]
+  International: [Intl]
+  Administration: [Admin]
+  Representative: [Rep]
+  Coordinator: [Coord]
+  Product: [Prod]
+  Professor: [Prof.]
+  President: [Pres.]
+  Chief: [Ch.]
+  Officer: [Ofcr]
+
+seniority_markers: [Senior, Sr., Sr, Junior, Jr., Jr, Lead, Staff, Principal, Associate, Chief, II, III, IV, V, I]
+
+generic_titles:
+  executive: [Executive, Senior Leader, President, Leadership Team, Head]
+  vp: [Vice President, VP, Senior Leader, Head of Department]
+  director: [Director, Head of Department, Department Head, Head]
+  manager: [Manager, Team Lead, Lead, Supervisor, People Manager]
+  individual: [Associate, Specialist, Team Member, Staff, Employee, Analyst, Consultant, Professional]
+
+department_suffix_formats: [" - {value}", ", {value}", " ({value})", " | {value}", " {value}"]
+regional_suffix_formats: [" - {value}", ", {value}", " ({value})", " {value}"]
+segment_prefix_formats: ["{segment} - {department}", "{segment} {department}", "{department} ({segment})", "{segment}/{department}"]
+truncation_max_chars: 18

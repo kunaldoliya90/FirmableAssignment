@@ -1,0 +1,14 @@
+# Backend ignore rules; only the shipped dataset is committed, other datasets and artifacts are not
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.env
+
+DataGenerator/datasets/*
+!DataGenerator/datasets/FirmableAssignmentDataset/

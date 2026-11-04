@@ -1,0 +1,70 @@
+# Dataset defaults: scale, seed, splits, workforce mix and benchmark penalty
+dataset_version: "1.0.0"
+
+companies: 500
+min_employees_per_company: 100
+target_employees: 50000
+size_diversity_multiplier: 2.0
+
+seed: 42
+noise_profile: medium_noise
+challenge_noise_profile: enterprise_complexity
+
+reference_date: "2026-01-01"
+
+output_dir: datasets/FirmableAssignmentDataset
+batch_size: 25
+
+splits:
+  fractions:
+    train: 0.60
+    validation: 0.15
+    test: 0.15
+    challenge: 0.10
+  challenge_archetype_weights:
+    enterprise: 4.0
+    matrix: 3.0
+    business_unit: 2.5
+    regional: 2.0
+    product_based: 1.5
+    functional: 1.0
+    flat_startup: 0.5
+  challenge_size_weights:
+    small: 0.5
+    mid_small: 1.0
+    mid_market: 1.5
+    large: 2.5
+    enterprise: 3.0
+  holdout_industries: []
+
+workforce:
+  ic_seniority_mix:
+    intern: 0.03
+    junior: 0.14
+    ic: 0.38
+    senior_ic: 0.29
+    staff: 0.11
+    principal: 0.05
+  leader_direct_ic_mix:
+    senior_ic: 0.2
+    staff: 0.45
+    principal: 0.35
+  employment_type_mix:
+    full_time: 0.90
+    contractor: 0.07
+    part_time: 0.03
+  mixed_team_probability: 0.15
+  min_department_headcount: 2
+  min_subdepartment_headcount: 3
+  department_direct_share: 0.08
+  executive_support_per_employees: 900
+  executive_support_max: 5
+  department_weight_jitter: 0.3
+  remote_probability: 0.06
+  hq_location_probability: 0.55
+  on_leave_probability: 0.01
+
+evaluation:
+  wrong_edge_penalty: 2.0
+  calibration_bins: 10
+  confidence_thresholds: [0.5, 0.7, 0.9]

@@ -1,0 +1,11 @@
+# Keeps datasets, caches and tests out of the image build context
+**/__pycache__
+**/*.pyc
+**/.venv
+**/.mypy_cache
+**/.ruff_cache
+**/.pytest_cache
+.env
+DataGenerator/datasets
+**/tests
+**/*.md

@@ -1,0 +1,35 @@
+# orggraph-dataset package
+[project]
+name = "orggraph-dataset"
+version = "0.1.0"
+description = "Synthetic org-chart dataset generation, validation and benchmarking for OrgGraph"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "OrgGraph" }]
+dependencies = [
+    "pydantic>=2.7",
+    "faker>=25.0",
+    "numpy>=1.26",
+    "typer>=0.12",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+orggraph-dataset = "orggraph_dataset.cli:app"
+
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/orggraph_dataset"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"config" = "orggraph_dataset/_bundled_config"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -m 'not fullscale'"
+markers = [
+    "fullscale: generates the full minimum dataset (500 companies); run with -m fullscale",
+]

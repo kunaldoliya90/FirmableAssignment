@@ -1,0 +1,94 @@
+# Org archetypes: levels, spans, team sizes and segment layers
+defaults:
+  levels: [manager, senior_manager, director, senior_director, vp, svp]
+  level_min_headcount: {manager: 2, senior_manager: 14, director: 24, senior_director: 90, vp: 140, svp: 500}
+  level_size_scale: 1.0
+  span_of_control:
+    manager: [4, 10]
+    senior_manager: [2, 4]
+    director: [2, 6]
+    senior_director: [2, 5]
+    vp: [2, 6]
+    svp: [2, 5]
+  ic_team_size: [4, 10]
+  manager_max_team_size: 14
+  large_span_probability: 0.05
+  leader_direct_ic_probability: 0.3
+  exec_layer_min_employees: 300
+  exec_min_group_headcount: 25
+  corporate_head_cap: svp
+  small_company_head_cap: vp
+  segmentation: []
+  secondary_reporting_probability: 0.0
+  secondary_member_departments: []
+  secondary_manager_departments: []
+  expected_depth: [3, 7]
+  min_employees: 100
+  max_employees: null
+  size_weights: {small: 1, mid_small: 1, mid_market: 1, large: 1, enterprise: 1}
+
+division_name_patterns: ["{parent} Products", "{parent} Services", "{parent} Solutions", "{parent} Platforms", "{parent} International"]
+
+archetypes:
+  functional:
+    description: Departments grouped by function under C-level executives.
+    size_weights: {small: 3, mid_small: 3, mid_market: 2.5, large: 1.5, enterprise: 0.8}
+    expected_depth: [3, 7]
+
+  product_based:
+    description: General managers own product lines with embedded engineering, product and design teams; shared services stay corporate.
+    min_employees: 150
+    size_weights: {small: 1, mid_small: 2, mid_market: 2.5, large: 2.5, enterprise: 1.5}
+    segmentation:
+      - {kind: product_line, head_role: general_manager, count: [2, 5], department_tags: [product_line], min_headcount: 40}
+    expected_depth: [4, 8]
+
+  regional:
+    description: Regional presidents run customer-facing functions per region; corporate functions are global.
+    min_employees: 150
+    size_weights: {small: 1, mid_small: 1.5, mid_market: 2.5, large: 3, enterprise: 2}
+    segmentation:
+      - {kind: region, head_role: regional_president, count: [2, 4], department_tags: [regional], min_headcount: 40}
+    expected_depth: [4, 8]
+
+  business_unit:
+    description: Business-unit presidents own line functions for their unit; shared services report to corporate executives.
+    min_employees: 400
+    size_weights: {small: 0, mid_small: 1, mid_market: 2, large: 3, enterprise: 2.5}
+    segmentation:
+      - {kind: business_unit, head_role: bu_president, count: [2, 4], department_tags: [line, product_line], min_headcount: 80}
+    expected_depth: [4, 9]
+
+  flat_startup:
+    description: Shallow startup hierarchy with inflated titles, wide spans and few management layers.
+    max_employees: 600
+    size_weights: {small: 4, mid_small: 2, mid_market: 0.5, large: 0, enterprise: 0}
+    levels: [manager, director, vp]
+    level_min_headcount: {manager: 2, director: 24, vp: 140}
+    level_size_scale: 0.4
+    span_of_control: {manager: [6, 14], director: [3, 8], vp: [3, 8]}
+    ic_team_size: [6, 14]
+    manager_max_team_size: 20
+    leader_direct_ic_probability: 0.45
+    exec_layer_min_employees: 100000
+    exec_min_group_headcount: 60
+    expected_depth: [2, 5]
+
+  enterprise:
+    description: CEO -> business unit -> division -> VP -> director -> manager -> IC, with a full C-suite for shared services.
+    min_employees: 2000
+    size_weights: {small: 0, mid_small: 0, mid_market: 0, large: 2, enterprise: 4}
+    exec_layer_min_employees: 0
+    segmentation:
+      - {kind: business_unit, head_role: bu_president, count: [2, 4], department_tags: [line, product_line], min_headcount: 300}
+      - {kind: division, head_role: division_president, count: [2, 3], department_tags: [line, product_line], min_headcount: 150}
+    expected_depth: [6, 11]
+
+  matrix:
+    description: Functional primary reporting with dotted-line (secondary) reporting from delivery teams to product leaders.
+    min_employees: 150
+    size_weights: {small: 1, mid_small: 1.5, mid_market: 2, large: 2.5, enterprise: 2}
+    secondary_reporting_probability: 0.55
+    secondary_member_departments: [engineering, technology, data_analytics, design, infrastructure, industrial_engineering, product_development, research_development, consulting_delivery]
+    secondary_manager_departments: [product, product_development, consulting_delivery, research_development]
+    expected_depth: [3, 8]

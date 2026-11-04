@@ -1,0 +1,398 @@
+# Department catalog: families, owning executive, segment tags and sub-departments
+departments:
+  executive_office:
+    name: Executive Office
+    abbreviations: [Exec, EO, Exec Office]
+    aliases: [Office of the CEO, Leadership, Executive Team, Executive]
+    families: {executive_support: 1.0}
+    tags: [executive]
+
+  engineering:
+    name: Engineering
+    abbreviations: [Eng, Engg, ENG]
+    aliases: [Software Engineering, Product Engineering, R&D, Development]
+    families: {software_engineering: 0.88, qa_engineering: 0.12}
+    management_family: software_engineering
+    executive: cto
+    tags: [line, product_line]
+    subdepartments:
+      - {key: platform_engineering, name: Platform Engineering, weight: 1.0, min_parent_headcount: 40, abbreviations: [Platform Eng, Platform]}
+      - {key: backend_engineering, name: Backend Engineering, weight: 1.4, min_parent_headcount: 40, abbreviations: [Backend Eng, BE, Back-end]}
+      - {key: frontend_engineering, name: Frontend Engineering, weight: 1.0, min_parent_headcount: 60, abbreviations: [Frontend Eng, FE, Web Engineering]}
+      - {key: mobile_engineering, name: Mobile Engineering, weight: 0.6, min_parent_headcount: 120, abbreviations: [Mobile Eng, Mobile]}
+      - {key: quality_engineering, name: Quality Engineering, weight: 0.5, min_parent_headcount: 150, families: {qa_engineering: 1.0}, abbreviations: [QE, QA]}
+
+  technology:
+    name: Technology
+    abbreviations: [Tech, T&O]
+    aliases: [Technology & Operations, Engineering, IT & Engineering, Technology Services]
+    families: {software_engineering: 0.6, infrastructure: 0.2, it: 0.2}
+    management_family: software_engineering
+    executive: cto
+    tags: [line, product_line]
+    subdepartments:
+      - {key: application_development, name: Application Development, weight: 1.5, min_parent_headcount: 50, families: {software_engineering: 1.0}, abbreviations: [AppDev, App Dev]}
+      - {key: technology_infrastructure, name: Infrastructure & Operations, weight: 1.0, min_parent_headcount: 50, families: {infrastructure: 0.6, it: 0.4}, abbreviations: [I&O, Infra Ops]}
+      - {key: enterprise_architecture, name: Enterprise Architecture, weight: 0.3, min_parent_headcount: 150, families: {software_engineering: 1.0}, abbreviations: [EA, Architecture]}
+
+  data_analytics:
+    name: Data & Analytics
+    abbreviations: [D&A, Data, DnA]
+    aliases: [Data and Analytics, Data Science & Analytics, Data Platform, Business Intelligence]
+    families: {data_engineering: 0.4, analytics: 0.35, data_science: 0.15, machine_learning: 0.1}
+    management_family: data_engineering
+    executive: cto
+    tags: [line, product_line]
+    subdepartments:
+      - {key: data_engineering_team, name: Data Engineering, weight: 1.2, min_parent_headcount: 30, families: {data_engineering: 1.0}, abbreviations: [DE, Data Eng]}
+      - {key: analytics_team, name: Analytics, weight: 1.0, min_parent_headcount: 30, families: {analytics: 1.0}, abbreviations: [BI, Insights]}
+      - {key: machine_learning_team, name: Machine Learning, weight: 0.8, min_parent_headcount: 45, families: {machine_learning: 0.6, data_science: 0.4}, abbreviations: [ML, AI/ML]}
+
+  product:
+    name: Product
+    abbreviations: [PM, Prod]
+    aliases: [Product Management, Product Org, Product Team]
+    families: {product_management: 1.0}
+    executive: cpo
+    tags: [line, product_line]
+
+  design:
+    name: Design
+    abbreviations: [UX, UXD]
+    aliases: [User Experience, Product Design, UX Design, Experience Design]
+    families: {design: 1.0}
+    executive: cpo
+    tags: [line, product_line]
+
+  security:
+    name: Security
+    abbreviations: [Sec, InfoSec, IS]
+    aliases: [Information Security, Cybersecurity, Security Engineering, Cyber]
+    families: {security: 1.0}
+    executive: ciso
+    tags: [corporate]
+    min_company_employees: 150
+    subdepartments:
+      - {key: security_engineering, name: Security Engineering, weight: 1.0, min_parent_headcount: 40, abbreviations: [SecEng, Sec Eng]}
+      - {key: security_operations, name: Security Operations, weight: 1.0, min_parent_headcount: 40, abbreviations: [SecOps, SOC]}
+      - {key: governance_risk_compliance, name: GRC, weight: 0.5, min_parent_headcount: 60, abbreviations: [GRC, Security GRC]}
+
+  infrastructure:
+    name: Infrastructure
+    abbreviations: [Infra]
+    aliases: [Cloud Infrastructure, SRE, DevOps, Platform Operations]
+    families: {infrastructure: 1.0}
+    executive: cto
+    tags: [line]
+
+  it:
+    name: IT
+    abbreviations: [IT, I.T.]
+    aliases: [Information Technology, IT Services, Corporate IT, Tech Support]
+    families: {it: 1.0}
+    executive: cio
+    tags: [corporate]
+
+  sales:
+    name: Sales
+    abbreviations: [Sls, SLS]
+    aliases: [Commercial, Business Development, Revenue, Go-To-Market]
+    families: {sales: 1.0}
+    executive: cro
+    tags: [line, regional]
+    subdepartments:
+      - {key: enterprise_sales, name: Enterprise Sales, weight: 1.2, min_parent_headcount: 60, abbreviations: [Ent Sales]}
+      - {key: inside_sales, name: Inside Sales, weight: 1.0, min_parent_headcount: 60, abbreviations: [ISR, Inside]}
+      - {key: sales_operations, name: Sales Operations, weight: 0.4, min_parent_headcount: 90, families: {operations: 1.0}, abbreviations: [Sales Ops, SalesOps]}
+
+  marketing:
+    name: Marketing
+    abbreviations: [Mktg, MKT]
+    aliases: [Growth, Brand & Marketing, Communications, Marketing & Communications]
+    families: {marketing: 1.0}
+    executive: cmo
+    tags: [line, regional]
+    subdepartments:
+      - {key: product_marketing, name: Product Marketing, weight: 1.0, min_parent_headcount: 50, abbreviations: [PMM, Prod Mktg]}
+      - {key: growth_marketing, name: Growth Marketing, weight: 1.0, min_parent_headcount: 50, abbreviations: [Growth, Demand Gen]}
+      - {key: brand_communications, name: Brand & Communications, weight: 0.7, min_parent_headcount: 70, abbreviations: [Brand, Comms]}
+
+  finance:
+    name: Finance
+    abbreviations: [Fin, FIN]
+    aliases: [Finance & Accounting, Financial Planning, Office of the CFO]
+    families: {finance: 0.6, accounting: 0.4}
+    management_family: finance
+    executive: cfo
+    tags: [corporate]
+    subdepartments:
+      - {key: fpa, name: FP&A, weight: 1.0, min_parent_headcount: 40, families: {finance: 1.0}, abbreviations: [FPA, Planning]}
+      - {key: accounting_team, name: Accounting, weight: 1.2, min_parent_headcount: 40, families: {accounting: 1.0}, abbreviations: [Acctg, Controllership]}
+      - {key: treasury, name: Treasury, weight: 0.4, min_parent_headcount: 80, families: {finance: 1.0}, abbreviations: [Treas]}
+
+  hr:
+    name: Human Resources
+    abbreviations: [HR, People]
+    aliases: [People Operations, People & Culture, Talent, Human Capital]
+    families: {hr: 0.65, recruiting: 0.35}
+    management_family: hr
+    executive: chro
+    tags: [corporate]
+    subdepartments:
+      - {key: talent_acquisition, name: Talent Acquisition, weight: 1.0, min_parent_headcount: 35, families: {recruiting: 1.0}, abbreviations: [TA, Recruiting]}
+      - {key: people_operations, name: People Operations, weight: 1.3, min_parent_headcount: 35, families: {hr: 1.0}, abbreviations: [PeopleOps, People Ops]}
+
+  operations:
+    name: Operations
+    abbreviations: [Ops, OPS]
+    aliases: [Business Operations, BizOps, Operations Management]
+    families: {operations: 1.0}
+    executive: coo
+    tags: [line, regional]
+
+  legal:
+    name: Legal
+    abbreviations: [LGL]
+    aliases: [Legal Affairs, Office of General Counsel, Legal & Corporate Affairs]
+    families: {legal: 1.0}
+    executive: clo
+    tags: [corporate]
+
+  customer_success:
+    name: Customer Success
+    abbreviations: [CS, CX]
+    aliases: [Customer Experience, Client Services, Account Management, Customer Care]
+    families: {customer_success: 0.6, customer_support: 0.4}
+    management_family: customer_success
+    executive: cro
+    tags: [line, regional]
+    subdepartments:
+      - {key: customer_support_team, name: Customer Support, weight: 1.0, min_parent_headcount: 50, families: {customer_support: 1.0}, abbreviations: [Support, CS Support]}
+      - {key: account_management, name: Account Management, weight: 1.0, min_parent_headcount: 50, families: {customer_success: 1.0}, abbreviations: [AM, Accounts]}
+
+  risk:
+    name: Risk
+    abbreviations: [RSK]
+    aliases: [Risk Management, Enterprise Risk, Risk & Controls]
+    families: {risk: 1.0}
+    executive: chief_risk_officer
+    tags: [corporate]
+    subdepartments:
+      - {key: credit_risk, name: Credit Risk, weight: 1.2, min_parent_headcount: 60}
+      - {key: operational_risk, name: Operational Risk, weight: 1.0, min_parent_headcount: 60, abbreviations: [Op Risk, ORM]}
+      - {key: market_risk, name: Market Risk, weight: 0.8, min_parent_headcount: 80}
+
+  compliance:
+    name: Compliance
+    abbreviations: [CMP, Compl]
+    aliases: [Regulatory Compliance, Compliance & Ethics, Financial Crime Compliance]
+    families: {compliance: 1.0}
+    executive: cco
+    tags: [corporate]
+
+  internal_audit:
+    name: Internal Audit
+    abbreviations: [IA, Audit]
+    aliases: [Audit & Assurance, Internal Audit Services]
+    families: {internal_audit: 1.0}
+    executive: chief_audit_executive
+    tags: [corporate]
+    min_company_employees: 500
+
+  manufacturing_operations:
+    name: Manufacturing Operations
+    abbreviations: [MFG Ops, Mfg, MFG]
+    aliases: [Manufacturing, Production, Plant Operations]
+    families: {manufacturing: 1.0}
+    executive: coo
+    tags: [line, regional]
+    subdepartments:
+      - {key: assembly, name: Assembly, weight: 1.3, min_parent_headcount: 60}
+      - {key: fabrication, name: Fabrication, weight: 1.0, min_parent_headcount: 60, abbreviations: [Fab]}
+      - {key: plant_maintenance, name: Plant Maintenance, weight: 0.6, min_parent_headcount: 90, abbreviations: [Maintenance]}
+
+  industrial_engineering:
+    name: Engineering
+    abbreviations: [Eng, Engg]
+    aliases: [Product Engineering, Mechanical Engineering, R&D Engineering]
+    families: {hardware_engineering: 1.0}
+    executive: cto
+    tags: [line, product_line]
+
+  supply_chain:
+    name: Supply Chain
+    abbreviations: [SCM, SC]
+    aliases: [Supply Chain Management, Logistics & Supply Chain, Planning]
+    families: {supply_chain: 0.7, logistics: 0.3}
+    management_family: supply_chain
+    executive: chief_supply_chain_officer
+    tags: [line, regional]
+
+  quality:
+    name: Quality
+    abbreviations: [QA, QC, QMS]
+    aliases: [Quality Assurance, Quality Control, Quality Management]
+    families: {quality: 1.0}
+    executive: coo
+    tags: [line]
+
+  procurement:
+    name: Procurement
+    abbreviations: [Proc, Purch]
+    aliases: [Purchasing, Sourcing, Strategic Sourcing]
+    families: {procurement: 1.0}
+    executive: coo
+    tags: [corporate]
+
+  product_development:
+    name: Product Development
+    abbreviations: [PD, NPD]
+    aliases: [New Product Development, R&D, Product Innovation]
+    families: {hardware_engineering: 0.6, product_management: 0.4}
+    management_family: hardware_engineering
+    executive: cto
+    tags: [line, product_line]
+
+  clinical_operations:
+    name: Clinical Operations
+    abbreviations: [Clin Ops, ClinOps]
+    aliases: [Clinical Services, Patient Care, Clinical]
+    families: {clinical: 1.0}
+    executive: chief_medical_officer
+    tags: [line, regional]
+
+  research_development:
+    name: Research & Development
+    abbreviations: [R&D, RnD]
+    aliases: [Research, Discovery, Drug Development]
+    families: {research: 1.0}
+    executive: chief_scientific_officer
+    tags: [line, product_line]
+    subdepartments:
+      - {key: discovery_research, name: Discovery, weight: 1.0, min_parent_headcount: 60}
+      - {key: preclinical, name: Preclinical, weight: 0.8, min_parent_headcount: 60, abbreviations: [Pre-clinical]}
+      - {key: clinical_development, name: Clinical Development, weight: 1.2, min_parent_headcount: 80, abbreviations: [Clin Dev]}
+
+  regulatory_affairs:
+    name: Regulatory Affairs
+    abbreviations: [RA, Reg Affairs]
+    aliases: [Regulatory, Regulatory Operations]
+    families: {regulatory_affairs: 1.0}
+    executive: cco
+    tags: [corporate]
+
+  underwriting:
+    name: Underwriting
+    abbreviations: [UW, U/W]
+    aliases: [Underwriting Operations, Risk Selection]
+    families: {underwriting: 1.0}
+    executive: coo
+    tags: [line]
+
+  claims:
+    name: Claims
+    abbreviations: [CLM]
+    aliases: [Claims Operations, Claims Management]
+    families: {claims: 1.0}
+    executive: coo
+    tags: [line, regional]
+
+  actuarial:
+    name: Actuarial
+    abbreviations: [ACT, Actl]
+    aliases: [Actuarial Services, Pricing & Actuarial]
+    families: {actuarial: 1.0}
+    executive: cfo
+    tags: [corporate]
+
+  commercial_banking:
+    name: Commercial Banking
+    abbreviations: [CB, Comm Banking]
+    aliases: [Corporate Banking, Business Banking, Relationship Banking]
+    families: {relationship_banking: 1.0}
+    executive: cro
+    tags: [line, regional]
+
+  network_operations:
+    name: Network Operations
+    abbreviations: [NetOps, NOC]
+    aliases: [Network Engineering, Network Services, Network]
+    families: {network_engineering: 1.0}
+    executive: cto
+    tags: [line, regional]
+
+  consulting_delivery:
+    name: Consulting
+    abbreviations: [CNS, Consult]
+    aliases: [Client Delivery, Advisory, Delivery]
+    families: {consulting: 1.0}
+    executive: coo
+    tags: [line, regional]
+    subdepartments:
+      - {key: strategy_consulting, name: Strategy Consulting, weight: 1.0, min_parent_headcount: 80, abbreviations: [Strategy]}
+      - {key: technology_consulting, name: Technology Consulting, weight: 1.3, min_parent_headcount: 80, abbreviations: [Tech Consulting]}
+      - {key: operations_consulting, name: Operations Consulting, weight: 0.8, min_parent_headcount: 100, abbreviations: [Ops Consulting]}
+
+  editorial:
+    name: Editorial & Content
+    abbreviations: [Editorial, Content]
+    aliases: [Newsroom, Content Studio, Programming]
+    families: {editorial: 1.0}
+    executive: chief_content_officer
+    tags: [line, product_line]
+
+  transportation:
+    name: Transportation
+    abbreviations: [Transport, TMS]
+    aliases: [Fleet Operations, Freight, Line Haul]
+    families: {logistics: 1.0}
+    executive: coo
+    tags: [line, regional]
+
+  field_operations:
+    name: Field Operations
+    abbreviations: [Field Ops, FO]
+    aliases: [Field Services, Site Operations, Asset Operations]
+    families: {field_operations: 1.0}
+    executive: coo
+    tags: [line, regional]
+
+  store_operations:
+    name: Store Operations
+    abbreviations: [Stores, Retail Ops]
+    aliases: [Retail Operations, Store Network, Field Retail]
+    families: {retail_operations: 1.0}
+    executive: coo
+    tags: [line, regional]
+
+  merchandising:
+    name: Merchandising
+    abbreviations: [Merch]
+    aliases: [Buying & Merchandising, Category Management, Assortment]
+    families: {merchandising: 1.0}
+    executive: coo
+    tags: [line, product_line]
+
+  academic_affairs:
+    name: Academic Affairs
+    abbreviations: [Academics, AA]
+    aliases: [Faculty, Academic Programs, Instruction]
+    families: {academic: 1.0}
+    executive: chief_academic_officer
+    tags: [line, product_line]
+
+  student_services:
+    name: Student Services
+    abbreviations: [Student Svcs, SS]
+    aliases: [Student Success, Student Affairs, Admissions]
+    families: {student_services: 1.0}
+    executive: chief_academic_officer
+    tags: [line, regional]
+
+  property_management:
+    name: Property Management
+    abbreviations: [Property Mgmt, PropMgmt]
+    aliases: [Asset Management, Property Operations, Leasing]
+    families: {property_management: 1.0}
+    executive: coo
+    tags: [line, regional]

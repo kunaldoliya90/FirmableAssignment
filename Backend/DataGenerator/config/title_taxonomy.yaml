@@ -1,0 +1,147 @@
+# Title taxonomy: ladder patterns, per-family overrides and variant patterns
+seniority_levels:
+  - {key: intern, label: Intern, tier: 8, management: false, executive: false}
+  - {key: junior, label: Junior, tier: 8, management: false, executive: false}
+  - {key: ic, label: Individual Contributor, tier: 8, management: false, executive: false}
+  - {key: senior_ic, label: Senior Individual Contributor, tier: 8, management: false, executive: false}
+  - {key: staff, label: Staff, tier: 8, management: false, executive: false}
+  - {key: principal, label: Principal, tier: 8, management: false, executive: false}
+  - {key: manager, label: Manager, tier: 7, management: true, executive: false}
+  - {key: senior_manager, label: Senior Manager, tier: 6, management: true, executive: false}
+  - {key: director, label: Director, tier: 5, management: true, executive: false}
+  - {key: senior_director, label: Senior Director, tier: 4, management: true, executive: false}
+  - {key: vp, label: Vice President, tier: 3, management: true, executive: true}
+  - {key: svp, label: Senior Vice President, tier: 2, management: true, executive: true}
+  - {key: executive, label: Executive, tier: 1, management: true, executive: true}
+  - {key: c_level, label: C-level, tier: 0, management: true, executive: true}
+
+ladder_patterns:
+  intern: "{function} Intern"
+  junior: "Junior {ic_role}"
+  ic: "{ic_role}"
+  senior_ic: "Senior {ic_role}"
+  staff: "Staff {ic_role}"
+  principal: "Principal {ic_role}"
+  manager: "{function} Manager"
+  senior_manager: "Senior {function} Manager"
+  director: "Director of {function}"
+  senior_director: "Senior Director of {function}"
+  vp: "VP {function}"
+  svp: "SVP {function}"
+
+variant_patterns:
+  intern: ["{function} Intern", "Intern - {function}", "{function_abbrev} Intern", "Intern, {function}", "Summer Intern"]
+  junior: ["Jr {ic_role}", "Jr. {ic_role}", "Associate {ic_role}", "{ic_role} I", "Junior {ic_abbrev}", "Jr. {ic_abbrev}"]
+  ic: ["{ic_abbrev}", "{ic_role} II", "{ic_role} (Mid-level)"]
+  senior_ic: ["Sr {ic_role}", "Sr. {ic_role}", "Senior {ic_abbrev}", "Sr. {ic_abbrev}", "Sr {ic_abbrev}", "{ic_role} III", "{ic_role}, Senior"]
+  staff: ["Staff {ic_abbrev}", "Lead {ic_role}", "{ic_role} IV", "Lead {ic_abbrev}"]
+  principal: ["Principal {ic_abbrev}", "Princ. {ic_role}", "{ic_role} V", "Principal {ic_role} (IC)"]
+  manager: ["{function_abbrev} Mgr", "{function} Mgr", "Manager, {function}", "Manager - {function}", "Mgr {function}", "{function_abbrev} Manager"]
+  senior_manager: ["Sr Mgr - {function_abbrev}", "Sr. {function} Manager", "Senior Manager, {function}", "Sr Manager {function}", "Sr. Mgr, {function}"]
+  director: ["Dir {function}", "Director, {function}", "{function} Director", "Dir. of {function}", "Director - {function_abbrev}", "{function_abbrev} Director"]
+  senior_director: ["Sr Director, {function}", "Sr. Dir {function}", "Senior Director, {function}", "Sr Dir - {function_abbrev}"]
+  vp: ["VP - {function}", "Vice President, {function}", "VP of {function}", "Vice President of {function}", "VP {function_abbrev}"]
+  svp: ["SVP - {function}", "Senior Vice President, {function}", "Sr. VP {function}", "SVP {function_abbrev}"]
+
+overrides:
+  executive_support:
+    staff: {title: Chief of Staff, variants: [CoS, Chief-of-Staff, Chief of Staff to the CEO]}
+  software_engineering:
+    intern: {title: Software Engineering Intern, variants: [SWE Intern, Software Intern, Engineering Intern]}
+    principal: {title: Principal Engineer, variants: [Principal SWE, Principal Software Engineer, Princ. Engineer]}
+    manager: {title: Engineering Manager, variants: [Engg Mgr, Eng Manager, EM, Engineering Mgr, "Mgr, Engineering"]}
+    senior_manager: {title: Senior Engineering Manager, variants: [Sr Mgr - Engg, Sr. Engineering Manager, Sr EM, Senior EM]}
+    director: {title: Director of Engineering, variants: [Dir Engineering, Engineering Director, "Director, Engineering", Dir. of Engg]}
+    senior_director: {title: Senior Director of Engineering, variants: ["Sr Director, Engineering", Sr. Dir Engineering, Senior Engineering Director]}
+    vp: {title: VP Engineering, variants: [VP - Engineering, "Vice President, Engineering", VP of Engineering, VP Engg]}
+    svp: {title: SVP Engineering, variants: [SVP - Engineering, "Senior Vice President, Engineering", Sr. VP Engineering]}
+  qa_engineering:
+    intern: {title: QA Intern, variants: [Test Intern, Quality Engineering Intern]}
+  product_management:
+    junior: {title: Associate Product Manager, variants: [APM, Assoc. Product Manager, Jr Product Manager]}
+    staff: {title: Lead Product Manager, variants: [Lead PM, Product Lead]}
+    principal: {title: Principal Product Manager, variants: [Principal PM, Princ. PM]}
+    manager: {title: Group Product Manager, variants: [GPM, Group PM, Grp Product Manager]}
+    senior_manager: {title: Senior Group Product Manager, variants: [Sr GPM, Sr. Group Product Manager]}
+    director: {title: Director of Product Management, variants: [Director of Product, Product Director, "Director, Product", Dir Product]}
+    senior_director: {title: Senior Director of Product Management, variants: [Sr Director of Product, "Sr. Director, Product"]}
+    vp: {title: VP Product, variants: [VP of Product, "Vice President, Product", VP - Product, VP Product Management]}
+    svp: {title: SVP Product, variants: [SVP of Product, "Senior Vice President, Product"]}
+  analytics:
+    intern: {title: Analytics Intern, variants: [Data Analyst Intern, BI Intern]}
+  hr:
+    staff: {title: HR Business Partner, variants: [HRBP, HR BP, People Partner, HR Biz Partner]}
+  sales:
+    intern: {title: Sales Intern, variants: [Sales Intern - SDR, Business Development Intern]}
+    junior: {title: Sales Development Representative, variants: [SDR, BDR, Business Development Representative, Sales Dev Rep]}
+    staff: {title: Strategic Account Executive, variants: [Strategic AE, Enterprise Account Executive, Sr. Strategic AE]}
+  legal:
+    junior: {title: Paralegal, variants: [Legal Assistant, Para-legal]}
+    staff: {title: Lead Counsel, variants: [Senior Counsel, Lead Legal Counsel]}
+    director: {title: Deputy General Counsel, variants: [Deputy GC, DGC, Associate General Counsel]}
+  customer_success:
+    manager: {title: "Manager, Customer Success", variants: [CS Team Manager, Customer Success Team Lead, CS Manager]}
+    senior_manager: {title: "Senior Manager, Customer Success", variants: [Sr Manager - CS, Sr. CS Team Manager]}
+  manufacturing:
+    staff: {title: Lead Production Technician, variants: [Lead Technician, Production Lead]}
+    manager: {title: Production Manager, variants: [Prod Mgr, Production Mgr, Manufacturing Manager]}
+    senior_manager: {title: Senior Production Manager, variants: [Sr Production Manager, Sr. Prod Mgr]}
+    director: {title: Director of Manufacturing, variants: [Manufacturing Director, Plant Director, Dir Manufacturing]}
+  research:
+    intern: {title: Research Intern, variants: [Lab Intern, R&D Intern]}
+    junior: {title: Associate Scientist, variants: [Research Associate, Assoc. Scientist]}
+    staff: {title: Principal Scientist, variants: [Princ. Scientist, Lead Scientist]}
+    principal: {title: Distinguished Scientist, variants: [Distinguished Research Scientist, Fellow]}
+  retail_operations:
+    staff: {title: Shift Lead, variants: [Shift Supervisor, Key Holder, Team Lead - Store]}
+    manager: {title: Store Manager, variants: [Store Mgr, SM, General Store Manager]}
+    senior_manager: {title: District Manager, variants: [District Mgr, DM, Area Manager]}
+  consulting:
+    intern: {title: Consulting Intern, variants: [Summer Associate, Consulting Summer Intern]}
+    junior: {title: Consulting Analyst, variants: [Analyst - Consulting, Business Analyst - Consulting]}
+    staff: {title: Lead Consultant, variants: [Consulting Lead, Lead Cnslt]}
+    manager: {title: Engagement Manager, variants: [EM - Consulting, Engagement Mgr, Project Manager - Consulting]}
+    senior_manager: {title: Senior Engagement Manager, variants: [Sr Engagement Manager, Sr. EM]}
+    director: {title: Director of Consulting, variants: [Consulting Director, Associate Partner]}
+    vp: {title: Partner, variants: [Practice Partner, Partner - Consulting]}
+    svp: {title: Senior Partner, variants: [Sr Partner, Managing Partner]}
+  academic:
+    intern: {title: Teaching Intern, variants: [Student Teacher, Teaching Fellow]}
+    junior: {title: Teaching Assistant, variants: [TA, Graduate Teaching Assistant]}
+    staff: {title: Associate Professor, variants: [Assoc. Professor, Assoc Prof]}
+    principal: {title: Professor, variants: [Prof., Full Professor]}
+    manager: {title: Academic Program Manager, variants: [Program Coordinator, Program Manager - Academics]}
+    senior_manager: {title: Department Chair, variants: [Dept Chair, Chair of Department, Head of Department]}
+    director: {title: Associate Dean, variants: [Assoc. Dean, Asst Dean]}
+    senior_director: {title: Dean, variants: [Dean of Faculty, Faculty Dean]}
+    vp: {title: Vice Provost, variants: [Vice-Provost, VP Academic Affairs]}
+    svp: {title: Provost, variants: [Provost & VP, Chief Academic Provost]}
+  property_management:
+    manager: {title: Property Manager, variants: [Property Mgr, PM - Property]}
+    senior_manager: {title: Senior Property Manager, variants: [Sr Property Manager, Sr. Property Mgr]}
+
+executive_roles:
+  ceo: {title: Chief Executive Officer, seniority: c_level, variants: [CEO, Chief Exec Officer, President & CEO, Founder & CEO, "Co-Founder, CEO", President and Chief Executive Officer]}
+  coo: {title: Chief Operating Officer, seniority: c_level, variants: [COO, Chief Operations Officer, EVP Operations]}
+  cfo: {title: Chief Financial Officer, seniority: c_level, variants: [CFO, Chief Finance Officer, EVP Finance & CFO]}
+  cto: {title: Chief Technology Officer, seniority: c_level, variants: [CTO, Chief Technical Officer, "EVP, Technology"]}
+  cio: {title: Chief Information Officer, seniority: c_level, variants: [CIO, Chief Info Officer]}
+  ciso: {title: Chief Information Security Officer, seniority: c_level, variants: [CISO, Chief Security Officer, Head of Information Security]}
+  cmo: {title: Chief Marketing Officer, seniority: c_level, variants: [CMO, Chief Growth Officer]}
+  cro: {title: Chief Revenue Officer, seniority: c_level, variants: [CRO, Chief Commercial Officer, Chief Sales Officer]}
+  chro: {title: Chief Human Resources Officer, seniority: c_level, variants: [CHRO, Chief People Officer, CPO - People]}
+  cpo: {title: Chief Product Officer, seniority: c_level, variants: [CPO, Chief Product & Design Officer]}
+  cdo: {title: Chief Data Officer, seniority: c_level, variants: [CDO, Chief Data & Analytics Officer, CDAO]}
+  clo: {title: General Counsel, seniority: c_level, variants: [Chief Legal Officer, GC, CLO, General Counsel & Secretary]}
+  chief_risk_officer: {title: Chief Risk Officer, seniority: c_level, variants: [CRO, Chief Risk Exec]}
+  cco: {title: Chief Compliance Officer, seniority: c_level, variants: [CCO, Chief Compliance & Ethics Officer]}
+  chief_audit_executive: {title: Chief Audit Executive, seniority: c_level, variants: [CAE, Head of Internal Audit, Chief Auditor]}
+  chief_medical_officer: {title: Chief Medical Officer, seniority: c_level, variants: [CMO, Chief Clinical Officer, Medical Director]}
+  chief_scientific_officer: {title: Chief Scientific Officer, seniority: c_level, variants: [CSO, Chief Science Officer, Head of R&D]}
+  chief_supply_chain_officer: {title: Chief Supply Chain Officer, seniority: c_level, variants: [CSCO, Chief Supply Officer]}
+  chief_content_officer: {title: Chief Content Officer, seniority: c_level, variants: [CCO, Editor-in-Chief, Chief Editor]}
+  chief_academic_officer: {title: Chief Academic Officer, seniority: c_level, variants: [CAO, Chief Academic Off.]}
+  bu_president: {title: Business Unit President, seniority: executive, variants: [BU President, President - Business Unit, BU Head, Head of Business Unit, EVP & General Manager]}
+  division_president: {title: Division President, seniority: svp, variants: [Division Head, Head of Division, President - Division, Divisional President]}
+  regional_president: {title: Regional President, seniority: executive, variants: [Regional Head, Regional Managing Director, President - Region, Regional MD]}
+  general_manager: {title: General Manager, seniority: executive, variants: [GM, General Mgr, Product Line GM, Head of Product Line]}
