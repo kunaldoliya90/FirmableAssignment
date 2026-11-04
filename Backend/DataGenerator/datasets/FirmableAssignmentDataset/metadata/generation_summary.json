@@ -1,0 +1,159 @@
+{
+  "companies": 500,
+  "departed_employees": 4035,
+  "elapsed_seconds": 41.9,
+  "employees": 100000,
+  "hierarchy_depth_by_archetype": {
+    "business_unit": {
+      "companies": 1,
+      "max": 5,
+      "mean": 5.0,
+      "min": 5
+    },
+    "enterprise": {
+      "companies": 1,
+      "max": 8,
+      "mean": 8.0,
+      "min": 8
+    },
+    "flat_startup": {
+      "companies": 119,
+      "max": 5,
+      "mean": 3.78,
+      "min": 3
+    },
+    "functional": {
+      "companies": 326,
+      "max": 8,
+      "mean": 4.46,
+      "min": 3
+    },
+    "matrix": {
+      "companies": 21,
+      "max": 8,
+      "mean": 5.48,
+      "min": 4
+    },
+    "product_based": {
+      "companies": 9,
+      "max": 5,
+      "mean": 5.0,
+      "min": 5
+    },
+    "regional": {
+      "companies": 23,
+      "max": 8,
+      "mean": 4.52,
+      "min": 3
+    }
+  },
+  "hierarchy_depth_by_size": {
+    "enterprise": {
+      "companies": 2,
+      "max": 8,
+      "mean": 8.0,
+      "min": 8
+    },
+    "large": {
+      "companies": 5,
+      "max": 8,
+      "mean": 8.0,
+      "min": 8
+    },
+    "mid_market": {
+      "companies": 5,
+      "max": 7,
+      "mean": 5.8,
+      "min": 5
+    },
+    "mid_small": {
+      "companies": 6,
+      "max": 7,
+      "mean": 5.17,
+      "min": 4
+    },
+    "small": {
+      "companies": 482,
+      "max": 6,
+      "mean": 4.28,
+      "min": 3
+    }
+  },
+  "missing_field_counts": {
+    "observed_at": 10138,
+    "observed_department": 46196,
+    "observed_job_family": 148350,
+    "observed_location": 27540,
+    "observed_title": 8213,
+    "source": 3584
+  },
+  "noise_operation_counts": {
+    "ambiguity_department_dropped": 3151,
+    "ambiguity_generic_leadership": 6509,
+    "ambiguity_seniority_dropped": 16684,
+    "department_abbreviation": 29969,
+    "department_alias": 22523,
+    "department_case_format": 9799,
+    "department_parent_department": 6891,
+    "department_segment_prefix": 1416,
+    "historical_manager": 14403,
+    "job_family_alias": 24297,
+    "location_city_alias": 29616,
+    "location_formatting": 29416,
+    "location_region_instead": 19790,
+    "missing_department": 43045,
+    "missing_job_family": 17684,
+    "missing_location": 27540,
+    "missing_source": 3584,
+    "missing_timestamp": 10138,
+    "missing_title": 8213,
+    "previous_department": 7096,
+    "source_conflict_department": 5537,
+    "source_conflict_title": 12935,
+    "stale_title": 9652,
+    "title_abbreviation": 17690,
+    "title_business_unit_suffix": 1055,
+    "title_capitalization": 14837,
+    "title_department_suffix": 11305,
+    "title_generic_replacement": 4175,
+    "title_legacy_title": 1498,
+    "title_punctuation": 14926,
+    "title_regional_suffix": 7617,
+    "title_seniority_removal": 5598,
+    "title_truncation": 5671,
+    "title_typo": 7288,
+    "title_variant": 27529
+  },
+  "observations": 295899,
+  "observations_by_source": {
+    "company_directory": 72071,
+    "historical_snapshot": 34139,
+    "hr_export": 81235,
+    "internal_directory": 49859,
+    "public_profile": 58595
+  },
+  "observations_per_employee": 2.959,
+  "reporting_edges": 99500,
+  "secondary_edges": 2636,
+  "seniority_distribution": {
+    "c_level": 1183,
+    "director": 1503,
+    "executive": 65,
+    "ic": 31355,
+    "intern": 1681,
+    "junior": 12023,
+    "manager": 12967,
+    "principal": 1318,
+    "senior_director": 131,
+    "senior_ic": 23496,
+    "senior_manager": 1743,
+    "staff": 12409,
+    "svp": 15,
+    "vp": 111
+  },
+  "span_of_control": {
+    "managers": 17718,
+    "max": 39,
+    "mean": 5.62
+  }
+}

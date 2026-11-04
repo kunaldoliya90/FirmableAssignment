@@ -1,0 +1,940 @@
+{"company_id":"company_00015","department_id":"dept_00015_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0002","department_key":"network_operations","department_name":"Network Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0003","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0004","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0005","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0006","department_key":"field_operations","department_name":"Field Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0008","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0009","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00015","department_id":"dept_00015_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0003","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0005","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0006","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0007","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0008","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0009","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0011","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0012","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00018","department_id":"dept_00018_0013","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0002","department_key":"property_management","department_name":"Property Management","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0004","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0005","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0007","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0008","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00026","department_id":"dept_00026_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0003","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0006","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0007","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0009","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0010","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00031","department_id":"dept_00031_0014","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0002","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0004","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0005","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0006","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0007","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0008","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0009","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0010","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0011","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00040","department_id":"dept_00040_0012","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0002","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0004","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0005","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0007","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00054","department_id":"dept_00054_0008","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0003","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0004","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0006","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0007","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0008","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0010","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0011","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0013","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00058","department_id":"dept_00058_0014","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0003","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0004","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0006","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00063","department_id":"dept_00063_0012","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0003","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0004","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0006","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0007","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0008","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00071","department_id":"dept_00071_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0002","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0004","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0005","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0007","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0008","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0009","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0010","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0011","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0012","department_key":"security","department_name":"Security","department_type":"function","parent_department_id":null}
+{"company_id":"company_00090","department_id":"dept_00090_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0002","department_key":"transportation","department_name":"Transportation","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0004","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0009","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00106","department_id":"dept_00106_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0003","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0004","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0006","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00126","department_id":"dept_00126_0012","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0002","department_key":"region","department_name":"EMEA","department_type":"region","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0003","department_key":"claims","department_name":"Claims","department_type":"function","parent_department_id":"dept_00130_0002"}
+{"company_id":"company_00130","department_id":"dept_00130_0004","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":"dept_00130_0002"}
+{"company_id":"company_00130","department_id":"dept_00130_0005","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":"dept_00130_0002"}
+{"company_id":"company_00130","department_id":"dept_00130_0006","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":"dept_00130_0002"}
+{"company_id":"company_00130","department_id":"dept_00130_0007","department_key":"region","department_name":"North America","department_type":"region","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0008","department_key":"claims","department_name":"Claims","department_type":"function","parent_department_id":"dept_00130_0007"}
+{"company_id":"company_00130","department_id":"dept_00130_0009","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":"dept_00130_0007"}
+{"company_id":"company_00130","department_id":"dept_00130_0010","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":"dept_00130_0007"}
+{"company_id":"company_00130","department_id":"dept_00130_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":"dept_00130_0007"}
+{"company_id":"company_00130","department_id":"dept_00130_0012","department_key":"underwriting","department_name":"Underwriting","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0013","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0014","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0015","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0016","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0017","department_key":"actuarial","department_name":"Actuarial","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0018","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00130","department_id":"dept_00130_0019","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0002","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0004","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0005","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0006","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0007","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0009","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0010","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00139","department_id":"dept_00139_0012","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0002","department_key":"transportation","department_name":"Transportation","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0008","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0009","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0010","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0011","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00141","department_id":"dept_00141_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0002","department_key":"editorial","department_name":"Editorial & Content","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0004","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0005","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0006","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0008","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0009","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0010","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00151","department_id":"dept_00151_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0002","department_key":"research_development","department_name":"Research & Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0004","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0006","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0007","department_key":"regulatory_affairs","department_name":"Regulatory Affairs","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0008","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0010","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0012","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00154","department_id":"dept_00154_0013","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0004","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0005","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0006","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0007","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0008","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0010","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00155","department_id":"dept_00155_0013","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0002","department_key":"commercial_banking","department_name":"Commercial Banking","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0004","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0005","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0006","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0007","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0008","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0009","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00158","department_id":"dept_00158_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0002","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0003","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0004","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0006","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0007","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0008","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0009","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0011","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00189","department_id":"dept_00189_0014","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0003","department_key":"assembly","department_name":"Assembly","department_type":"sub_function","parent_department_id":"dept_00209_0002"}
+{"company_id":"company_00209","department_id":"dept_00209_0004","department_key":"fabrication","department_name":"Fabrication","department_type":"sub_function","parent_department_id":"dept_00209_0002"}
+{"company_id":"company_00209","department_id":"dept_00209_0005","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0006","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0007","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0009","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0011","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0012","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00209","department_id":"dept_00209_0014","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0002","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0005","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0007","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0008","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0009","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00212","department_id":"dept_00212_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0002","department_key":"claims","department_name":"Claims","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0003","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0004","department_key":"underwriting","department_name":"Underwriting","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0005","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0006","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0007","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0008","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0009","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0010","department_key":"actuarial","department_name":"Actuarial","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0011","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0012","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0013","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00217","department_id":"dept_00217_0014","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0002","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0003","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0004","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0005","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0006","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0007","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00229","department_id":"dept_00229_0010","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0003","department_key":"assembly","department_name":"Assembly","department_type":"sub_function","parent_department_id":"dept_00230_0002"}
+{"company_id":"company_00230","department_id":"dept_00230_0004","department_key":"fabrication","department_name":"Fabrication","department_type":"sub_function","parent_department_id":"dept_00230_0002"}
+{"company_id":"company_00230","department_id":"dept_00230_0005","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0006","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0007","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0009","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00230","department_id":"dept_00230_0013","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0002","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0003","department_key":"strategy_consulting","department_name":"Strategy Consulting","department_type":"sub_function","parent_department_id":"dept_00239_0002"}
+{"company_id":"company_00239","department_id":"dept_00239_0004","department_key":"technology_consulting","department_name":"Technology Consulting","department_type":"sub_function","parent_department_id":"dept_00239_0002"}
+{"company_id":"company_00239","department_id":"dept_00239_0005","department_key":"operations_consulting","department_name":"Operations Consulting","department_type":"sub_function","parent_department_id":"dept_00239_0002"}
+{"company_id":"company_00239","department_id":"dept_00239_0006","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0007","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0009","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0010","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00239","department_id":"dept_00239_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0002","department_key":"field_operations","department_name":"Field Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0003","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0007","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0008","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0009","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0012","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00256","department_id":"dept_00256_0013","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0002","department_key":"academic_affairs","department_name":"Academic Affairs","department_type":"function","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0004","department_key":"student_services","department_name":"Student Services","department_type":"function","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0005","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00260","department_id":"dept_00260_0008","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0002","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0004","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0005","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0006","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0007","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0009","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00262","department_id":"dept_00262_0012","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0006","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0007","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0011","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0012","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00270","department_id":"dept_00270_0013","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0002","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0003","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0006","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0009","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0011","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00279","department_id":"dept_00279_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0002","department_key":"research_development","department_name":"Research & Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0004","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0005","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0006","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0007","department_key":"regulatory_affairs","department_name":"Regulatory Affairs","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0008","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0009","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0010","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0012","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0013","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0014","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00293","department_id":"dept_00293_0015","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0003","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0004","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0006","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0007","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0009","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00294","department_id":"dept_00294_0013","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0003","department_key":"platform_engineering","department_name":"Platform Engineering","department_type":"sub_function","parent_department_id":"dept_00296_0002"}
+{"company_id":"company_00296","department_id":"dept_00296_0004","department_key":"backend_engineering","department_name":"Backend Engineering","department_type":"sub_function","parent_department_id":"dept_00296_0002"}
+{"company_id":"company_00296","department_id":"dept_00296_0005","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0006","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0007","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0008","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0009","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0010","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0012","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0013","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00296","department_id":"dept_00296_0014","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0003","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0004","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0005","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0006","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0008","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0009","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0011","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0012","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00300","department_id":"dept_00300_0013","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0002","department_key":"transportation","department_name":"Transportation","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0007","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00301","department_id":"dept_00301_0012","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0003","department_key":"platform_engineering","department_name":"Platform Engineering","department_type":"sub_function","parent_department_id":"dept_00303_0002"}
+{"company_id":"company_00303","department_id":"dept_00303_0004","department_key":"backend_engineering","department_name":"Backend Engineering","department_type":"sub_function","parent_department_id":"dept_00303_0002"}
+{"company_id":"company_00303","department_id":"dept_00303_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0006","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0007","department_key":"data_engineering_team","department_name":"Data Engineering","department_type":"sub_function","parent_department_id":"dept_00303_0006"}
+{"company_id":"company_00303","department_id":"dept_00303_0008","department_key":"analytics_team","department_name":"Analytics","department_type":"sub_function","parent_department_id":"dept_00303_0006"}
+{"company_id":"company_00303","department_id":"dept_00303_0009","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0010","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0013","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0014","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0015","department_key":"security","department_name":"Security","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0016","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00303","department_id":"dept_00303_0017","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0002","department_key":"academic_affairs","department_name":"Academic Affairs","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0003","department_key":"student_services","department_name":"Student Services","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0005","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0007","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0008","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00305","department_id":"dept_00305_0009","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0002","department_key":"transportation","department_name":"Transportation","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0006","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0007","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00314","department_id":"dept_00314_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0004","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0006","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0007","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0008","department_key":"infrastructure","department_name":"Infrastructure","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0009","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0011","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00320","department_id":"dept_00320_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0002","department_key":"property_management","department_name":"Property Management","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0004","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0005","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0006","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0007","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0008","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0009","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00321","department_id":"dept_00321_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0006","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00322","department_id":"dept_00322_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0003","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0004","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0006","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0007","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0009","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0011","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00323","department_id":"dept_00323_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0002","department_key":"transportation","department_name":"Transportation","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0004","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0006","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00331","department_id":"dept_00331_0010","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0003","department_key":"platform_engineering","department_name":"Platform Engineering","department_type":"sub_function","parent_department_id":"dept_00333_0002"}
+{"company_id":"company_00333","department_id":"dept_00333_0004","department_key":"backend_engineering","department_name":"Backend Engineering","department_type":"sub_function","parent_department_id":"dept_00333_0002"}
+{"company_id":"company_00333","department_id":"dept_00333_0005","department_key":"frontend_engineering","department_name":"Frontend Engineering","department_type":"sub_function","parent_department_id":"dept_00333_0002"}
+{"company_id":"company_00333","department_id":"dept_00333_0006","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0007","department_key":"infrastructure","department_name":"Infrastructure","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0008","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0009","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0011","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0012","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0013","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0014","department_key":"security","department_name":"Security","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0015","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0016","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0017","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00333","department_id":"dept_00333_0018","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0002","department_key":"transportation","department_name":"Transportation","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0005","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0006","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0007","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0011","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00348","department_id":"dept_00348_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0003","department_key":"platform_engineering","department_name":"Platform Engineering","department_type":"sub_function","parent_department_id":"dept_00353_0002"}
+{"company_id":"company_00353","department_id":"dept_00353_0004","department_key":"backend_engineering","department_name":"Backend Engineering","department_type":"sub_function","parent_department_id":"dept_00353_0002"}
+{"company_id":"company_00353","department_id":"dept_00353_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0006","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0007","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0008","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0009","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0011","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00353","department_id":"dept_00353_0013","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0002","department_key":"research_development","department_name":"Research & Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0003","department_key":"discovery_research","department_name":"Discovery","department_type":"sub_function","parent_department_id":"dept_00354_0002"}
+{"company_id":"company_00354","department_id":"dept_00354_0004","department_key":"preclinical","department_name":"Preclinical","department_type":"sub_function","parent_department_id":"dept_00354_0002"}
+{"company_id":"company_00354","department_id":"dept_00354_0005","department_key":"clinical_development","department_name":"Clinical Development","department_type":"sub_function","parent_department_id":"dept_00354_0002"}
+{"company_id":"company_00354","department_id":"dept_00354_0006","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0007","department_key":"assembly","department_name":"Assembly","department_type":"sub_function","parent_department_id":"dept_00354_0006"}
+{"company_id":"company_00354","department_id":"dept_00354_0008","department_key":"fabrication","department_name":"Fabrication","department_type":"sub_function","parent_department_id":"dept_00354_0006"}
+{"company_id":"company_00354","department_id":"dept_00354_0009","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0010","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0011","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0012","department_key":"regulatory_affairs","department_name":"Regulatory Affairs","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0013","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0014","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0015","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0016","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0017","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0018","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0019","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00354","department_id":"dept_00354_0020","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0003","department_key":"assembly","department_name":"Assembly","department_type":"sub_function","parent_department_id":"dept_00358_0002"}
+{"company_id":"company_00358","department_id":"dept_00358_0004","department_key":"fabrication","department_name":"Fabrication","department_type":"sub_function","parent_department_id":"dept_00358_0002"}
+{"company_id":"company_00358","department_id":"dept_00358_0005","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0006","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0007","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0010","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0011","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0012","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00358","department_id":"dept_00358_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0002","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0003","department_key":"strategy_consulting","department_name":"Strategy Consulting","department_type":"sub_function","parent_department_id":"dept_00361_0002"}
+{"company_id":"company_00361","department_id":"dept_00361_0004","department_key":"technology_consulting","department_name":"Technology Consulting","department_type":"sub_function","parent_department_id":"dept_00361_0002"}
+{"company_id":"company_00361","department_id":"dept_00361_0005","department_key":"operations_consulting","department_name":"Operations Consulting","department_type":"sub_function","parent_department_id":"dept_00361_0002"}
+{"company_id":"company_00361","department_id":"dept_00361_0006","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0008","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0009","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00361","department_id":"dept_00361_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0003","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0004","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0006","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0007","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0010","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0011","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00367","department_id":"dept_00367_0013","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0002","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0003","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0005","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0006","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0007","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0009","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0010","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00371","department_id":"dept_00371_0012","department_key":"security","department_name":"Security","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0002","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0003","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0005","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0008","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00382","department_id":"dept_00382_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0003","department_key":"platform_engineering","department_name":"Platform Engineering","department_type":"sub_function","parent_department_id":"dept_00384_0002"}
+{"company_id":"company_00384","department_id":"dept_00384_0004","department_key":"backend_engineering","department_name":"Backend Engineering","department_type":"sub_function","parent_department_id":"dept_00384_0002"}
+{"company_id":"company_00384","department_id":"dept_00384_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0006","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0007","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0008","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0009","department_key":"infrastructure","department_name":"Infrastructure","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0010","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0012","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0013","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00384","department_id":"dept_00384_0014","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0002","department_key":"field_operations","department_name":"Field Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0004","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0005","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0006","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0007","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0009","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0011","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00406","department_id":"dept_00406_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0002","department_key":"property_management","department_name":"Property Management","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0005","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0008","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0009","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00409","department_id":"dept_00409_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0002","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0003","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0005","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0006","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0007","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0009","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00414","department_id":"dept_00414_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00420","department_id":"dept_00420_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00420","department_id":"dept_00420_0002","department_key":"region","department_name":"LATAM","department_type":"region","parent_department_id":null}
+{"company_id":"company_00420","department_id":"dept_00420_0003","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":"dept_00420_0002"}
+{"company_id":"company_00420","department_id":"dept_00420_0004","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":"dept_00420_0002"}
+{"company_id":"company_00420","department_id":"dept_00420_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":"dept_00420_0002"}
+{"company_id":"company_00420","department_id":"dept_00420_0006","department_key":"region","department_name":"EMEA","department_type":"region","parent_department_id":null}
+{"company_id":"company_00420","department_id":"dept_00420_0007","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":"dept_00420_0006"}
+{"company_id":"company_00420","department_id":"dept_00420_0008","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":"dept_00420_0006"}
+{"company_id":"company_00420","department_id":"dept_00420_0009","department_key":"region","department_name":"APAC","department_type":"region","parent_department_id":null}
+{"company_id":"company_00420","department_id":"dept_00420_0010","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":"dept_00420_0009"}
+{"company_id":"company_00420","department_id":"dept_00420_0011","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":"dept_00420_0009"}
+{"company_id":"company_00420","department_id":"dept_00420_0012","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":"dept_00420_0009"}
+{"company_id":"company_00420","department_id":"dept_00420_0013","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00420","department_id":"dept_00420_0014","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00420","department_id":"dept_00420_0015","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0002","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0004","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0005","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0006","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0007","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0009","department_key":"security","department_name":"Security","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0010","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0012","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00433","department_id":"dept_00433_0013","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0003","department_key":"assembly","department_name":"Assembly","department_type":"sub_function","parent_department_id":"dept_00438_0002"}
+{"company_id":"company_00438","department_id":"dept_00438_0004","department_key":"fabrication","department_name":"Fabrication","department_type":"sub_function","parent_department_id":"dept_00438_0002"}
+{"company_id":"company_00438","department_id":"dept_00438_0005","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0006","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0007","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0008","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0009","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0011","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0012","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0013","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0014","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00438","department_id":"dept_00438_0015","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0002","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0003","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0004","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0005","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0006","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0007","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00440","department_id":"dept_00440_0008","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0002","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0003","department_key":"platform_engineering","department_name":"Platform Engineering","department_type":"sub_function","parent_department_id":"dept_00441_0002"}
+{"company_id":"company_00441","department_id":"dept_00441_0004","department_key":"backend_engineering","department_name":"Backend Engineering","department_type":"sub_function","parent_department_id":"dept_00441_0002"}
+{"company_id":"company_00441","department_id":"dept_00441_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0006","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0007","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0008","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0009","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0010","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0011","department_key":"infrastructure","department_name":"Infrastructure","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0012","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00441","department_id":"dept_00441_0013","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0002","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0003","department_key":"commercial_banking","department_name":"Commercial Banking","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0005","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0007","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00442","department_id":"dept_00442_0011","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0002","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0004","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0005","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0009","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00448","department_id":"dept_00448_0011","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0002","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0003","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0004","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0005","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0006","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0008","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0009","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0010","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00449","department_id":"dept_00449_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0002","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0004","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0005","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0006","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0008","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00452","department_id":"dept_00452_0011","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0002","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0004","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0005","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0006","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0007","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0008","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0009","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0010","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00455","department_id":"dept_00455_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0002","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0003","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0004","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0005","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0006","department_key":"product","department_name":"Product","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0007","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0008","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0009","department_key":"design","department_name":"Design","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0010","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00472","department_id":"dept_00472_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0002","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0003","department_key":"technology","department_name":"Technology","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0005","department_key":"risk","department_name":"Risk","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0007","department_key":"data_analytics","department_name":"Data & Analytics","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0008","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0009","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0010","department_key":"security","department_name":"Security","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0011","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00476","department_id":"dept_00476_0013","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0002","department_key":"property_management","department_name":"Property Management","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0003","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0005","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0006","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0007","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0008","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00482","department_id":"dept_00482_0009","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0002","department_key":"consulting_delivery","department_name":"Consulting","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0003","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0004","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0005","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0006","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0007","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0008","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0009","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0010","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00483","department_id":"dept_00483_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0002","department_key":"clinical_operations","department_name":"Clinical Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0003","department_key":"operations","department_name":"Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0004","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0005","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0006","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0007","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0009","department_key":"compliance","department_name":"Compliance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00485","department_id":"dept_00485_0010","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0002","department_key":"manufacturing_operations","department_name":"Manufacturing Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0003","department_key":"assembly","department_name":"Assembly","department_type":"sub_function","parent_department_id":"dept_00486_0002"}
+{"company_id":"company_00486","department_id":"dept_00486_0004","department_key":"fabrication","department_name":"Fabrication","department_type":"sub_function","parent_department_id":"dept_00486_0002"}
+{"company_id":"company_00486","department_id":"dept_00486_0005","department_key":"plant_maintenance","department_name":"Plant Maintenance","department_type":"sub_function","parent_department_id":"dept_00486_0002"}
+{"company_id":"company_00486","department_id":"dept_00486_0006","department_key":"industrial_engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0007","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0008","department_key":"quality","department_name":"Quality","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0009","department_key":"sales","department_name":"Sales","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0010","department_key":"product_development","department_name":"Product Development","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0011","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0012","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0013","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00486","department_id":"dept_00486_0014","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0002","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0003","department_key":"engineering","department_name":"Engineering","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0004","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0006","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0007","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0008","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0009","department_key":"customer_success","department_name":"Customer Success","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0010","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0011","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00491","department_id":"dept_00491_0012","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0001","department_key":"executive_office","department_name":"Executive Office","department_type":"executive","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0002","department_key":"region","department_name":"North America","department_type":"region","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0003","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":"dept_00495_0002"}
+{"company_id":"company_00495","department_id":"dept_00495_0004","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":"dept_00495_0002"}
+{"company_id":"company_00495","department_id":"dept_00495_0005","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":"dept_00495_0002"}
+{"company_id":"company_00495","department_id":"dept_00495_0006","department_key":"product_marketing","department_name":"Product Marketing","department_type":"sub_function","parent_department_id":"dept_00495_0005"}
+{"company_id":"company_00495","department_id":"dept_00495_0007","department_key":"growth_marketing","department_name":"Growth Marketing","department_type":"sub_function","parent_department_id":"dept_00495_0005"}
+{"company_id":"company_00495","department_id":"dept_00495_0008","department_key":"region","department_name":"EMEA","department_type":"region","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0009","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":"dept_00495_0008"}
+{"company_id":"company_00495","department_id":"dept_00495_0010","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":"dept_00495_0008"}
+{"company_id":"company_00495","department_id":"dept_00495_0011","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":"dept_00495_0008"}
+{"company_id":"company_00495","department_id":"dept_00495_0012","department_key":"product_marketing","department_name":"Product Marketing","department_type":"sub_function","parent_department_id":"dept_00495_0011"}
+{"company_id":"company_00495","department_id":"dept_00495_0013","department_key":"growth_marketing","department_name":"Growth Marketing","department_type":"sub_function","parent_department_id":"dept_00495_0011"}
+{"company_id":"company_00495","department_id":"dept_00495_0014","department_key":"brand_communications","department_name":"Brand & Communications","department_type":"sub_function","parent_department_id":"dept_00495_0011"}
+{"company_id":"company_00495","department_id":"dept_00495_0015","department_key":"region","department_name":"LATAM","department_type":"region","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0016","department_key":"store_operations","department_name":"Store Operations","department_type":"function","parent_department_id":"dept_00495_0015"}
+{"company_id":"company_00495","department_id":"dept_00495_0017","department_key":"supply_chain","department_name":"Supply Chain","department_type":"function","parent_department_id":"dept_00495_0015"}
+{"company_id":"company_00495","department_id":"dept_00495_0018","department_key":"marketing","department_name":"Marketing","department_type":"function","parent_department_id":"dept_00495_0015"}
+{"company_id":"company_00495","department_id":"dept_00495_0019","department_key":"merchandising","department_name":"Merchandising","department_type":"function","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0020","department_key":"hr","department_name":"Human Resources","department_type":"function","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0021","department_key":"talent_acquisition","department_name":"Talent Acquisition","department_type":"sub_function","parent_department_id":"dept_00495_0020"}
+{"company_id":"company_00495","department_id":"dept_00495_0022","department_key":"people_operations","department_name":"People Operations","department_type":"sub_function","parent_department_id":"dept_00495_0020"}
+{"company_id":"company_00495","department_id":"dept_00495_0023","department_key":"finance","department_name":"Finance","department_type":"function","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0024","department_key":"fpa","department_name":"FP&A","department_type":"sub_function","parent_department_id":"dept_00495_0023"}
+{"company_id":"company_00495","department_id":"dept_00495_0025","department_key":"accounting_team","department_name":"Accounting","department_type":"sub_function","parent_department_id":"dept_00495_0023"}
+{"company_id":"company_00495","department_id":"dept_00495_0026","department_key":"treasury","department_name":"Treasury","department_type":"sub_function","parent_department_id":"dept_00495_0023"}
+{"company_id":"company_00495","department_id":"dept_00495_0027","department_key":"it","department_name":"IT","department_type":"function","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0028","department_key":"procurement","department_name":"Procurement","department_type":"function","parent_department_id":null}
+{"company_id":"company_00495","department_id":"dept_00495_0029","department_key":"legal","department_name":"Legal","department_type":"function","parent_department_id":null}

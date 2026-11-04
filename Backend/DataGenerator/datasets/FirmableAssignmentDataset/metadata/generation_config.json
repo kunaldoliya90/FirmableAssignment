@@ -1,0 +1,6596 @@
+{
+  "config": {
+    "archetypes": {
+      "archetypes": {
+        "business_unit": {
+          "description": "Business-unit presidents own line functions for their unit; shared services report to corporate executives.",
+          "expected_depth": [
+            4,
+            9
+          ],
+          "min_employees": 400,
+          "segmentation": [
+            {
+              "count": [
+                2,
+                4
+              ],
+              "department_tags": [
+                "line",
+                "product_line"
+              ],
+              "head_role": "bu_president",
+              "kind": "business_unit",
+              "min_headcount": 80
+            }
+          ],
+          "size_weights": {
+            "enterprise": 2.5,
+            "large": 3,
+            "mid_market": 2,
+            "mid_small": 1,
+            "small": 0
+          }
+        },
+        "enterprise": {
+          "description": "CEO -> business unit -> division -> VP -> director -> manager -> IC, with a full C-suite for shared services.",
+          "exec_layer_min_employees": 0,
+          "expected_depth": [
+            6,
+            11
+          ],
+          "min_employees": 2000,
+          "segmentation": [
+            {
+              "count": [
+                2,
+                4
+              ],
+              "department_tags": [
+                "line",
+                "product_line"
+              ],
+              "head_role": "bu_president",
+              "kind": "business_unit",
+              "min_headcount": 300
+            },
+            {
+              "count": [
+                2,
+                3
+              ],
+              "department_tags": [
+                "line",
+                "product_line"
+              ],
+              "head_role": "division_president",
+              "kind": "division",
+              "min_headcount": 150
+            }
+          ],
+          "size_weights": {
+            "enterprise": 4,
+            "large": 2,
+            "mid_market": 0,
+            "mid_small": 0,
+            "small": 0
+          }
+        },
+        "flat_startup": {
+          "description": "Shallow startup hierarchy with inflated titles, wide spans and few management layers.",
+          "exec_layer_min_employees": 100000,
+          "exec_min_group_headcount": 60,
+          "expected_depth": [
+            2,
+            5
+          ],
+          "ic_team_size": [
+            6,
+            14
+          ],
+          "leader_direct_ic_probability": 0.45,
+          "level_min_headcount": {
+            "director": 24,
+            "manager": 2,
+            "vp": 140
+          },
+          "level_size_scale": 0.4,
+          "levels": [
+            "manager",
+            "director",
+            "vp"
+          ],
+          "manager_max_team_size": 20,
+          "max_employees": 600,
+          "size_weights": {
+            "enterprise": 0,
+            "large": 0,
+            "mid_market": 0.5,
+            "mid_small": 2,
+            "small": 4
+          },
+          "span_of_control": {
+            "director": [
+              3,
+              8
+            ],
+            "manager": [
+              6,
+              14
+            ],
+            "vp": [
+              3,
+              8
+            ]
+          }
+        },
+        "functional": {
+          "description": "Departments grouped by function under C-level executives.",
+          "expected_depth": [
+            3,
+            7
+          ],
+          "size_weights": {
+            "enterprise": 0.8,
+            "large": 1.5,
+            "mid_market": 2.5,
+            "mid_small": 3,
+            "small": 3
+          }
+        },
+        "matrix": {
+          "description": "Functional primary reporting with dotted-line (secondary) reporting from delivery teams to product leaders.",
+          "expected_depth": [
+            3,
+            8
+          ],
+          "min_employees": 150,
+          "secondary_manager_departments": [
+            "product",
+            "product_development",
+            "consulting_delivery",
+            "research_development"
+          ],
+          "secondary_member_departments": [
+            "engineering",
+            "technology",
+            "data_analytics",
+            "design",
+            "infrastructure",
+            "industrial_engineering",
+            "product_development",
+            "research_development",
+            "consulting_delivery"
+          ],
+          "secondary_reporting_probability": 0.55,
+          "size_weights": {
+            "enterprise": 2,
+            "large": 2.5,
+            "mid_market": 2,
+            "mid_small": 1.5,
+            "small": 1
+          }
+        },
+        "product_based": {
+          "description": "General managers own product lines with embedded engineering, product and design teams; shared services stay corporate.",
+          "expected_depth": [
+            4,
+            8
+          ],
+          "min_employees": 150,
+          "segmentation": [
+            {
+              "count": [
+                2,
+                5
+              ],
+              "department_tags": [
+                "product_line"
+              ],
+              "head_role": "general_manager",
+              "kind": "product_line",
+              "min_headcount": 40
+            }
+          ],
+          "size_weights": {
+            "enterprise": 1.5,
+            "large": 2.5,
+            "mid_market": 2.5,
+            "mid_small": 2,
+            "small": 1
+          }
+        },
+        "regional": {
+          "description": "Regional presidents run customer-facing functions per region; corporate functions are global.",
+          "expected_depth": [
+            4,
+            8
+          ],
+          "min_employees": 150,
+          "segmentation": [
+            {
+              "count": [
+                2,
+                4
+              ],
+              "department_tags": [
+                "regional"
+              ],
+              "head_role": "regional_president",
+              "kind": "region",
+              "min_headcount": 40
+            }
+          ],
+          "size_weights": {
+            "enterprise": 2,
+            "large": 3,
+            "mid_market": 2.5,
+            "mid_small": 1.5,
+            "small": 1
+          }
+        }
+      },
+      "defaults": {
+        "corporate_head_cap": "svp",
+        "exec_layer_min_employees": 300,
+        "exec_min_group_headcount": 25,
+        "expected_depth": [
+          3,
+          7
+        ],
+        "ic_team_size": [
+          4,
+          10
+        ],
+        "large_span_probability": 0.05,
+        "leader_direct_ic_probability": 0.3,
+        "level_min_headcount": {
+          "director": 24,
+          "manager": 2,
+          "senior_director": 90,
+          "senior_manager": 14,
+          "svp": 500,
+          "vp": 140
+        },
+        "level_size_scale": 1.0,
+        "levels": [
+          "manager",
+          "senior_manager",
+          "director",
+          "senior_director",
+          "vp",
+          "svp"
+        ],
+        "manager_max_team_size": 14,
+        "max_employees": null,
+        "min_employees": 100,
+        "secondary_manager_departments": [],
+        "secondary_member_departments": [],
+        "secondary_reporting_probability": 0.0,
+        "segmentation": [],
+        "size_weights": {
+          "enterprise": 1,
+          "large": 1,
+          "mid_market": 1,
+          "mid_small": 1,
+          "small": 1
+        },
+        "small_company_head_cap": "vp",
+        "span_of_control": {
+          "director": [
+            2,
+            6
+          ],
+          "manager": [
+            4,
+            10
+          ],
+          "senior_director": [
+            2,
+            5
+          ],
+          "senior_manager": [
+            2,
+            4
+          ],
+          "svp": [
+            2,
+            5
+          ],
+          "vp": [
+            2,
+            6
+          ]
+        }
+      },
+      "division_name_patterns": [
+        "{parent} Products",
+        "{parent} Services",
+        "{parent} Solutions",
+        "{parent} Platforms",
+        "{parent} International"
+      ]
+    },
+    "company_sizes": {
+      "keep_min_per_segment": 5,
+      "segments": {
+        "enterprise": {
+          "default_count": 20,
+          "label": "Enterprise",
+          "max": 20000,
+          "min": 5000
+        },
+        "large": {
+          "default_count": 60,
+          "label": "Large",
+          "max": 4999,
+          "min": 1000
+        },
+        "mid_market": {
+          "default_count": 100,
+          "label": "Mid-market",
+          "max": 999,
+          "min": 500
+        },
+        "mid_small": {
+          "default_count": 140,
+          "label": "Mid-small",
+          "max": 499,
+          "min": 250
+        },
+        "small": {
+          "default_count": 180,
+          "label": "Small",
+          "max": 249,
+          "min": 100
+        }
+      },
+      "within_segment_skew": 2.0
+    },
+    "dataset": {
+      "batch_size": 25,
+      "challenge_noise_profile": "enterprise_complexity",
+      "companies": 500,
+      "dataset_version": "1.0.0",
+      "evaluation": {
+        "calibration_bins": 10,
+        "confidence_thresholds": [
+          0.5,
+          0.7,
+          0.9
+        ],
+        "wrong_edge_penalty": 2.0
+      },
+      "min_employees_per_company": 100,
+      "noise_profile": "medium_noise",
+      "output_dir": "datasets/FirmableAssignmentDataset",
+      "reference_date": "2026-01-01",
+      "seed": 42,
+      "size_diversity_multiplier": 2.0,
+      "splits": {
+        "challenge_archetype_weights": {
+          "business_unit": 2.5,
+          "enterprise": 4.0,
+          "flat_startup": 0.5,
+          "functional": 1.0,
+          "matrix": 3.0,
+          "product_based": 1.5,
+          "regional": 2.0
+        },
+        "challenge_size_weights": {
+          "enterprise": 3.0,
+          "large": 2.5,
+          "mid_market": 1.5,
+          "mid_small": 1.0,
+          "small": 0.5
+        },
+        "fractions": {
+          "challenge": 0.1,
+          "test": 0.15,
+          "train": 0.6,
+          "validation": 0.15
+        },
+        "holdout_industries": []
+      },
+      "target_employees": 50000,
+      "workforce": {
+        "department_direct_share": 0.08,
+        "department_weight_jitter": 0.3,
+        "employment_type_mix": {
+          "contractor": 0.07,
+          "full_time": 0.9,
+          "part_time": 0.03
+        },
+        "executive_support_max": 5,
+        "executive_support_per_employees": 900,
+        "hq_location_probability": 0.55,
+        "ic_seniority_mix": {
+          "ic": 0.38,
+          "intern": 0.03,
+          "junior": 0.14,
+          "principal": 0.05,
+          "senior_ic": 0.29,
+          "staff": 0.11
+        },
+        "leader_direct_ic_mix": {
+          "principal": 0.35,
+          "senior_ic": 0.2,
+          "staff": 0.45
+        },
+        "min_department_headcount": 2,
+        "min_subdepartment_headcount": 3,
+        "mixed_team_probability": 0.15,
+        "on_leave_probability": 0.01,
+        "remote_probability": 0.06
+      }
+    },
+    "departments": {
+      "departments": {
+        "academic_affairs": {
+          "abbreviations": [
+            "Academics",
+            "AA"
+          ],
+          "aliases": [
+            "Faculty",
+            "Academic Programs",
+            "Instruction"
+          ],
+          "executive": "chief_academic_officer",
+          "families": {
+            "academic": 1.0
+          },
+          "name": "Academic Affairs",
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "actuarial": {
+          "abbreviations": [
+            "ACT",
+            "Actl"
+          ],
+          "aliases": [
+            "Actuarial Services",
+            "Pricing & Actuarial"
+          ],
+          "executive": "cfo",
+          "families": {
+            "actuarial": 1.0
+          },
+          "name": "Actuarial",
+          "tags": [
+            "corporate"
+          ]
+        },
+        "claims": {
+          "abbreviations": [
+            "CLM"
+          ],
+          "aliases": [
+            "Claims Operations",
+            "Claims Management"
+          ],
+          "executive": "coo",
+          "families": {
+            "claims": 1.0
+          },
+          "name": "Claims",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "clinical_operations": {
+          "abbreviations": [
+            "Clin Ops",
+            "ClinOps"
+          ],
+          "aliases": [
+            "Clinical Services",
+            "Patient Care",
+            "Clinical"
+          ],
+          "executive": "chief_medical_officer",
+          "families": {
+            "clinical": 1.0
+          },
+          "name": "Clinical Operations",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "commercial_banking": {
+          "abbreviations": [
+            "CB",
+            "Comm Banking"
+          ],
+          "aliases": [
+            "Corporate Banking",
+            "Business Banking",
+            "Relationship Banking"
+          ],
+          "executive": "cro",
+          "families": {
+            "relationship_banking": 1.0
+          },
+          "name": "Commercial Banking",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "compliance": {
+          "abbreviations": [
+            "CMP",
+            "Compl"
+          ],
+          "aliases": [
+            "Regulatory Compliance",
+            "Compliance & Ethics",
+            "Financial Crime Compliance"
+          ],
+          "executive": "cco",
+          "families": {
+            "compliance": 1.0
+          },
+          "name": "Compliance",
+          "tags": [
+            "corporate"
+          ]
+        },
+        "consulting_delivery": {
+          "abbreviations": [
+            "CNS",
+            "Consult"
+          ],
+          "aliases": [
+            "Client Delivery",
+            "Advisory",
+            "Delivery"
+          ],
+          "executive": "coo",
+          "families": {
+            "consulting": 1.0
+          },
+          "name": "Consulting",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "Strategy"
+              ],
+              "key": "strategy_consulting",
+              "min_parent_headcount": 80,
+              "name": "Strategy Consulting",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Tech Consulting"
+              ],
+              "key": "technology_consulting",
+              "min_parent_headcount": 80,
+              "name": "Technology Consulting",
+              "weight": 1.3
+            },
+            {
+              "abbreviations": [
+                "Ops Consulting"
+              ],
+              "key": "operations_consulting",
+              "min_parent_headcount": 100,
+              "name": "Operations Consulting",
+              "weight": 0.8
+            }
+          ],
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "customer_success": {
+          "abbreviations": [
+            "CS",
+            "CX"
+          ],
+          "aliases": [
+            "Customer Experience",
+            "Client Services",
+            "Account Management",
+            "Customer Care"
+          ],
+          "executive": "cro",
+          "families": {
+            "customer_success": 0.6,
+            "customer_support": 0.4
+          },
+          "management_family": "customer_success",
+          "name": "Customer Success",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "Support",
+                "CS Support"
+              ],
+              "families": {
+                "customer_support": 1.0
+              },
+              "key": "customer_support_team",
+              "min_parent_headcount": 50,
+              "name": "Customer Support",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "AM",
+                "Accounts"
+              ],
+              "families": {
+                "customer_success": 1.0
+              },
+              "key": "account_management",
+              "min_parent_headcount": 50,
+              "name": "Account Management",
+              "weight": 1.0
+            }
+          ],
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "data_analytics": {
+          "abbreviations": [
+            "D&A",
+            "Data",
+            "DnA"
+          ],
+          "aliases": [
+            "Data and Analytics",
+            "Data Science & Analytics",
+            "Data Platform",
+            "Business Intelligence"
+          ],
+          "executive": "cto",
+          "families": {
+            "analytics": 0.35,
+            "data_engineering": 0.4,
+            "data_science": 0.15,
+            "machine_learning": 0.1
+          },
+          "management_family": "data_engineering",
+          "name": "Data & Analytics",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "DE",
+                "Data Eng"
+              ],
+              "families": {
+                "data_engineering": 1.0
+              },
+              "key": "data_engineering_team",
+              "min_parent_headcount": 30,
+              "name": "Data Engineering",
+              "weight": 1.2
+            },
+            {
+              "abbreviations": [
+                "BI",
+                "Insights"
+              ],
+              "families": {
+                "analytics": 1.0
+              },
+              "key": "analytics_team",
+              "min_parent_headcount": 30,
+              "name": "Analytics",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "ML",
+                "AI/ML"
+              ],
+              "families": {
+                "data_science": 0.4,
+                "machine_learning": 0.6
+              },
+              "key": "machine_learning_team",
+              "min_parent_headcount": 45,
+              "name": "Machine Learning",
+              "weight": 0.8
+            }
+          ],
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "design": {
+          "abbreviations": [
+            "UX",
+            "UXD"
+          ],
+          "aliases": [
+            "User Experience",
+            "Product Design",
+            "UX Design",
+            "Experience Design"
+          ],
+          "executive": "cpo",
+          "families": {
+            "design": 1.0
+          },
+          "name": "Design",
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "editorial": {
+          "abbreviations": [
+            "Editorial",
+            "Content"
+          ],
+          "aliases": [
+            "Newsroom",
+            "Content Studio",
+            "Programming"
+          ],
+          "executive": "chief_content_officer",
+          "families": {
+            "editorial": 1.0
+          },
+          "name": "Editorial & Content",
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "engineering": {
+          "abbreviations": [
+            "Eng",
+            "Engg",
+            "ENG"
+          ],
+          "aliases": [
+            "Software Engineering",
+            "Product Engineering",
+            "R&D",
+            "Development"
+          ],
+          "executive": "cto",
+          "families": {
+            "qa_engineering": 0.12,
+            "software_engineering": 0.88
+          },
+          "management_family": "software_engineering",
+          "name": "Engineering",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "Platform Eng",
+                "Platform"
+              ],
+              "key": "platform_engineering",
+              "min_parent_headcount": 40,
+              "name": "Platform Engineering",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Backend Eng",
+                "BE",
+                "Back-end"
+              ],
+              "key": "backend_engineering",
+              "min_parent_headcount": 40,
+              "name": "Backend Engineering",
+              "weight": 1.4
+            },
+            {
+              "abbreviations": [
+                "Frontend Eng",
+                "FE",
+                "Web Engineering"
+              ],
+              "key": "frontend_engineering",
+              "min_parent_headcount": 60,
+              "name": "Frontend Engineering",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Mobile Eng",
+                "Mobile"
+              ],
+              "key": "mobile_engineering",
+              "min_parent_headcount": 120,
+              "name": "Mobile Engineering",
+              "weight": 0.6
+            },
+            {
+              "abbreviations": [
+                "QE",
+                "QA"
+              ],
+              "families": {
+                "qa_engineering": 1.0
+              },
+              "key": "quality_engineering",
+              "min_parent_headcount": 150,
+              "name": "Quality Engineering",
+              "weight": 0.5
+            }
+          ],
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "executive_office": {
+          "abbreviations": [
+            "Exec",
+            "EO",
+            "Exec Office"
+          ],
+          "aliases": [
+            "Office of the CEO",
+            "Leadership",
+            "Executive Team",
+            "Executive"
+          ],
+          "families": {
+            "executive_support": 1.0
+          },
+          "name": "Executive Office",
+          "tags": [
+            "executive"
+          ]
+        },
+        "field_operations": {
+          "abbreviations": [
+            "Field Ops",
+            "FO"
+          ],
+          "aliases": [
+            "Field Services",
+            "Site Operations",
+            "Asset Operations"
+          ],
+          "executive": "coo",
+          "families": {
+            "field_operations": 1.0
+          },
+          "name": "Field Operations",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "finance": {
+          "abbreviations": [
+            "Fin",
+            "FIN"
+          ],
+          "aliases": [
+            "Finance & Accounting",
+            "Financial Planning",
+            "Office of the CFO"
+          ],
+          "executive": "cfo",
+          "families": {
+            "accounting": 0.4,
+            "finance": 0.6
+          },
+          "management_family": "finance",
+          "name": "Finance",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "FPA",
+                "Planning"
+              ],
+              "families": {
+                "finance": 1.0
+              },
+              "key": "fpa",
+              "min_parent_headcount": 40,
+              "name": "FP&A",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Acctg",
+                "Controllership"
+              ],
+              "families": {
+                "accounting": 1.0
+              },
+              "key": "accounting_team",
+              "min_parent_headcount": 40,
+              "name": "Accounting",
+              "weight": 1.2
+            },
+            {
+              "abbreviations": [
+                "Treas"
+              ],
+              "families": {
+                "finance": 1.0
+              },
+              "key": "treasury",
+              "min_parent_headcount": 80,
+              "name": "Treasury",
+              "weight": 0.4
+            }
+          ],
+          "tags": [
+            "corporate"
+          ]
+        },
+        "hr": {
+          "abbreviations": [
+            "HR",
+            "People"
+          ],
+          "aliases": [
+            "People Operations",
+            "People & Culture",
+            "Talent",
+            "Human Capital"
+          ],
+          "executive": "chro",
+          "families": {
+            "hr": 0.65,
+            "recruiting": 0.35
+          },
+          "management_family": "hr",
+          "name": "Human Resources",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "TA",
+                "Recruiting"
+              ],
+              "families": {
+                "recruiting": 1.0
+              },
+              "key": "talent_acquisition",
+              "min_parent_headcount": 35,
+              "name": "Talent Acquisition",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "PeopleOps",
+                "People Ops"
+              ],
+              "families": {
+                "hr": 1.0
+              },
+              "key": "people_operations",
+              "min_parent_headcount": 35,
+              "name": "People Operations",
+              "weight": 1.3
+            }
+          ],
+          "tags": [
+            "corporate"
+          ]
+        },
+        "industrial_engineering": {
+          "abbreviations": [
+            "Eng",
+            "Engg"
+          ],
+          "aliases": [
+            "Product Engineering",
+            "Mechanical Engineering",
+            "R&D Engineering"
+          ],
+          "executive": "cto",
+          "families": {
+            "hardware_engineering": 1.0
+          },
+          "name": "Engineering",
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "infrastructure": {
+          "abbreviations": [
+            "Infra"
+          ],
+          "aliases": [
+            "Cloud Infrastructure",
+            "SRE",
+            "DevOps",
+            "Platform Operations"
+          ],
+          "executive": "cto",
+          "families": {
+            "infrastructure": 1.0
+          },
+          "name": "Infrastructure",
+          "tags": [
+            "line"
+          ]
+        },
+        "internal_audit": {
+          "abbreviations": [
+            "IA",
+            "Audit"
+          ],
+          "aliases": [
+            "Audit & Assurance",
+            "Internal Audit Services"
+          ],
+          "executive": "chief_audit_executive",
+          "families": {
+            "internal_audit": 1.0
+          },
+          "min_company_employees": 500,
+          "name": "Internal Audit",
+          "tags": [
+            "corporate"
+          ]
+        },
+        "it": {
+          "abbreviations": [
+            "IT",
+            "I.T."
+          ],
+          "aliases": [
+            "Information Technology",
+            "IT Services",
+            "Corporate IT",
+            "Tech Support"
+          ],
+          "executive": "cio",
+          "families": {
+            "it": 1.0
+          },
+          "name": "IT",
+          "tags": [
+            "corporate"
+          ]
+        },
+        "legal": {
+          "abbreviations": [
+            "LGL"
+          ],
+          "aliases": [
+            "Legal Affairs",
+            "Office of General Counsel",
+            "Legal & Corporate Affairs"
+          ],
+          "executive": "clo",
+          "families": {
+            "legal": 1.0
+          },
+          "name": "Legal",
+          "tags": [
+            "corporate"
+          ]
+        },
+        "manufacturing_operations": {
+          "abbreviations": [
+            "MFG Ops",
+            "Mfg",
+            "MFG"
+          ],
+          "aliases": [
+            "Manufacturing",
+            "Production",
+            "Plant Operations"
+          ],
+          "executive": "coo",
+          "families": {
+            "manufacturing": 1.0
+          },
+          "name": "Manufacturing Operations",
+          "subdepartments": [
+            {
+              "key": "assembly",
+              "min_parent_headcount": 60,
+              "name": "Assembly",
+              "weight": 1.3
+            },
+            {
+              "abbreviations": [
+                "Fab"
+              ],
+              "key": "fabrication",
+              "min_parent_headcount": 60,
+              "name": "Fabrication",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Maintenance"
+              ],
+              "key": "plant_maintenance",
+              "min_parent_headcount": 90,
+              "name": "Plant Maintenance",
+              "weight": 0.6
+            }
+          ],
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "marketing": {
+          "abbreviations": [
+            "Mktg",
+            "MKT"
+          ],
+          "aliases": [
+            "Growth",
+            "Brand & Marketing",
+            "Communications",
+            "Marketing & Communications"
+          ],
+          "executive": "cmo",
+          "families": {
+            "marketing": 1.0
+          },
+          "name": "Marketing",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "PMM",
+                "Prod Mktg"
+              ],
+              "key": "product_marketing",
+              "min_parent_headcount": 50,
+              "name": "Product Marketing",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Growth",
+                "Demand Gen"
+              ],
+              "key": "growth_marketing",
+              "min_parent_headcount": 50,
+              "name": "Growth Marketing",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Brand",
+                "Comms"
+              ],
+              "key": "brand_communications",
+              "min_parent_headcount": 70,
+              "name": "Brand & Communications",
+              "weight": 0.7
+            }
+          ],
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "merchandising": {
+          "abbreviations": [
+            "Merch"
+          ],
+          "aliases": [
+            "Buying & Merchandising",
+            "Category Management",
+            "Assortment"
+          ],
+          "executive": "coo",
+          "families": {
+            "merchandising": 1.0
+          },
+          "name": "Merchandising",
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "network_operations": {
+          "abbreviations": [
+            "NetOps",
+            "NOC"
+          ],
+          "aliases": [
+            "Network Engineering",
+            "Network Services",
+            "Network"
+          ],
+          "executive": "cto",
+          "families": {
+            "network_engineering": 1.0
+          },
+          "name": "Network Operations",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "operations": {
+          "abbreviations": [
+            "Ops",
+            "OPS"
+          ],
+          "aliases": [
+            "Business Operations",
+            "BizOps",
+            "Operations Management"
+          ],
+          "executive": "coo",
+          "families": {
+            "operations": 1.0
+          },
+          "name": "Operations",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "procurement": {
+          "abbreviations": [
+            "Proc",
+            "Purch"
+          ],
+          "aliases": [
+            "Purchasing",
+            "Sourcing",
+            "Strategic Sourcing"
+          ],
+          "executive": "coo",
+          "families": {
+            "procurement": 1.0
+          },
+          "name": "Procurement",
+          "tags": [
+            "corporate"
+          ]
+        },
+        "product": {
+          "abbreviations": [
+            "PM",
+            "Prod"
+          ],
+          "aliases": [
+            "Product Management",
+            "Product Org",
+            "Product Team"
+          ],
+          "executive": "cpo",
+          "families": {
+            "product_management": 1.0
+          },
+          "name": "Product",
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "product_development": {
+          "abbreviations": [
+            "PD",
+            "NPD"
+          ],
+          "aliases": [
+            "New Product Development",
+            "R&D",
+            "Product Innovation"
+          ],
+          "executive": "cto",
+          "families": {
+            "hardware_engineering": 0.6,
+            "product_management": 0.4
+          },
+          "management_family": "hardware_engineering",
+          "name": "Product Development",
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "property_management": {
+          "abbreviations": [
+            "Property Mgmt",
+            "PropMgmt"
+          ],
+          "aliases": [
+            "Asset Management",
+            "Property Operations",
+            "Leasing"
+          ],
+          "executive": "coo",
+          "families": {
+            "property_management": 1.0
+          },
+          "name": "Property Management",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "quality": {
+          "abbreviations": [
+            "QA",
+            "QC",
+            "QMS"
+          ],
+          "aliases": [
+            "Quality Assurance",
+            "Quality Control",
+            "Quality Management"
+          ],
+          "executive": "coo",
+          "families": {
+            "quality": 1.0
+          },
+          "name": "Quality",
+          "tags": [
+            "line"
+          ]
+        },
+        "regulatory_affairs": {
+          "abbreviations": [
+            "RA",
+            "Reg Affairs"
+          ],
+          "aliases": [
+            "Regulatory",
+            "Regulatory Operations"
+          ],
+          "executive": "cco",
+          "families": {
+            "regulatory_affairs": 1.0
+          },
+          "name": "Regulatory Affairs",
+          "tags": [
+            "corporate"
+          ]
+        },
+        "research_development": {
+          "abbreviations": [
+            "R&D",
+            "RnD"
+          ],
+          "aliases": [
+            "Research",
+            "Discovery",
+            "Drug Development"
+          ],
+          "executive": "chief_scientific_officer",
+          "families": {
+            "research": 1.0
+          },
+          "name": "Research & Development",
+          "subdepartments": [
+            {
+              "key": "discovery_research",
+              "min_parent_headcount": 60,
+              "name": "Discovery",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Pre-clinical"
+              ],
+              "key": "preclinical",
+              "min_parent_headcount": 60,
+              "name": "Preclinical",
+              "weight": 0.8
+            },
+            {
+              "abbreviations": [
+                "Clin Dev"
+              ],
+              "key": "clinical_development",
+              "min_parent_headcount": 80,
+              "name": "Clinical Development",
+              "weight": 1.2
+            }
+          ],
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "risk": {
+          "abbreviations": [
+            "RSK"
+          ],
+          "aliases": [
+            "Risk Management",
+            "Enterprise Risk",
+            "Risk & Controls"
+          ],
+          "executive": "chief_risk_officer",
+          "families": {
+            "risk": 1.0
+          },
+          "name": "Risk",
+          "subdepartments": [
+            {
+              "key": "credit_risk",
+              "min_parent_headcount": 60,
+              "name": "Credit Risk",
+              "weight": 1.2
+            },
+            {
+              "abbreviations": [
+                "Op Risk",
+                "ORM"
+              ],
+              "key": "operational_risk",
+              "min_parent_headcount": 60,
+              "name": "Operational Risk",
+              "weight": 1.0
+            },
+            {
+              "key": "market_risk",
+              "min_parent_headcount": 80,
+              "name": "Market Risk",
+              "weight": 0.8
+            }
+          ],
+          "tags": [
+            "corporate"
+          ]
+        },
+        "sales": {
+          "abbreviations": [
+            "Sls",
+            "SLS"
+          ],
+          "aliases": [
+            "Commercial",
+            "Business Development",
+            "Revenue",
+            "Go-To-Market"
+          ],
+          "executive": "cro",
+          "families": {
+            "sales": 1.0
+          },
+          "name": "Sales",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "Ent Sales"
+              ],
+              "key": "enterprise_sales",
+              "min_parent_headcount": 60,
+              "name": "Enterprise Sales",
+              "weight": 1.2
+            },
+            {
+              "abbreviations": [
+                "ISR",
+                "Inside"
+              ],
+              "key": "inside_sales",
+              "min_parent_headcount": 60,
+              "name": "Inside Sales",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "Sales Ops",
+                "SalesOps"
+              ],
+              "families": {
+                "operations": 1.0
+              },
+              "key": "sales_operations",
+              "min_parent_headcount": 90,
+              "name": "Sales Operations",
+              "weight": 0.4
+            }
+          ],
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "security": {
+          "abbreviations": [
+            "Sec",
+            "InfoSec",
+            "IS"
+          ],
+          "aliases": [
+            "Information Security",
+            "Cybersecurity",
+            "Security Engineering",
+            "Cyber"
+          ],
+          "executive": "ciso",
+          "families": {
+            "security": 1.0
+          },
+          "min_company_employees": 150,
+          "name": "Security",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "SecEng",
+                "Sec Eng"
+              ],
+              "key": "security_engineering",
+              "min_parent_headcount": 40,
+              "name": "Security Engineering",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "SecOps",
+                "SOC"
+              ],
+              "key": "security_operations",
+              "min_parent_headcount": 40,
+              "name": "Security Operations",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "GRC",
+                "Security GRC"
+              ],
+              "key": "governance_risk_compliance",
+              "min_parent_headcount": 60,
+              "name": "GRC",
+              "weight": 0.5
+            }
+          ],
+          "tags": [
+            "corporate"
+          ]
+        },
+        "store_operations": {
+          "abbreviations": [
+            "Stores",
+            "Retail Ops"
+          ],
+          "aliases": [
+            "Retail Operations",
+            "Store Network",
+            "Field Retail"
+          ],
+          "executive": "coo",
+          "families": {
+            "retail_operations": 1.0
+          },
+          "name": "Store Operations",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "student_services": {
+          "abbreviations": [
+            "Student Svcs",
+            "SS"
+          ],
+          "aliases": [
+            "Student Success",
+            "Student Affairs",
+            "Admissions"
+          ],
+          "executive": "chief_academic_officer",
+          "families": {
+            "student_services": 1.0
+          },
+          "name": "Student Services",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "supply_chain": {
+          "abbreviations": [
+            "SCM",
+            "SC"
+          ],
+          "aliases": [
+            "Supply Chain Management",
+            "Logistics & Supply Chain",
+            "Planning"
+          ],
+          "executive": "chief_supply_chain_officer",
+          "families": {
+            "logistics": 0.3,
+            "supply_chain": 0.7
+          },
+          "management_family": "supply_chain",
+          "name": "Supply Chain",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "technology": {
+          "abbreviations": [
+            "Tech",
+            "T&O"
+          ],
+          "aliases": [
+            "Technology & Operations",
+            "Engineering",
+            "IT & Engineering",
+            "Technology Services"
+          ],
+          "executive": "cto",
+          "families": {
+            "infrastructure": 0.2,
+            "it": 0.2,
+            "software_engineering": 0.6
+          },
+          "management_family": "software_engineering",
+          "name": "Technology",
+          "subdepartments": [
+            {
+              "abbreviations": [
+                "AppDev",
+                "App Dev"
+              ],
+              "families": {
+                "software_engineering": 1.0
+              },
+              "key": "application_development",
+              "min_parent_headcount": 50,
+              "name": "Application Development",
+              "weight": 1.5
+            },
+            {
+              "abbreviations": [
+                "I&O",
+                "Infra Ops"
+              ],
+              "families": {
+                "infrastructure": 0.6,
+                "it": 0.4
+              },
+              "key": "technology_infrastructure",
+              "min_parent_headcount": 50,
+              "name": "Infrastructure & Operations",
+              "weight": 1.0
+            },
+            {
+              "abbreviations": [
+                "EA",
+                "Architecture"
+              ],
+              "families": {
+                "software_engineering": 1.0
+              },
+              "key": "enterprise_architecture",
+              "min_parent_headcount": 150,
+              "name": "Enterprise Architecture",
+              "weight": 0.3
+            }
+          ],
+          "tags": [
+            "line",
+            "product_line"
+          ]
+        },
+        "transportation": {
+          "abbreviations": [
+            "Transport",
+            "TMS"
+          ],
+          "aliases": [
+            "Fleet Operations",
+            "Freight",
+            "Line Haul"
+          ],
+          "executive": "coo",
+          "families": {
+            "logistics": 1.0
+          },
+          "name": "Transportation",
+          "tags": [
+            "line",
+            "regional"
+          ]
+        },
+        "underwriting": {
+          "abbreviations": [
+            "UW",
+            "U/W"
+          ],
+          "aliases": [
+            "Underwriting Operations",
+            "Risk Selection"
+          ],
+          "executive": "coo",
+          "families": {
+            "underwriting": 1.0
+          },
+          "name": "Underwriting",
+          "tags": [
+            "line"
+          ]
+        }
+      }
+    },
+    "industries": {
+      "industries": {
+        "automotive": {
+          "archetype_weights": {
+            "business_unit": 3,
+            "enterprise": 2.5,
+            "flat_startup": 0.3,
+            "functional": 3,
+            "matrix": 2.5,
+            "product_based": 1,
+            "regional": 2
+          },
+          "business_units": [
+            "Passenger Vehicles",
+            "Commercial Vehicles",
+            "Powertrain",
+            "Aftersales"
+          ],
+          "departments": {
+            "engineering": [
+              0.7,
+              8
+            ],
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "industrial_engineering": [
+              1.0,
+              14
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              0.8,
+              1.5
+            ],
+            "manufacturing_operations": [
+              1.0,
+              32
+            ],
+            "marketing": [
+              0.9,
+              3
+            ],
+            "procurement": [
+              1.0,
+              4
+            ],
+            "product_development": [
+              1.0,
+              7
+            ],
+            "quality": [
+              1.0,
+              6
+            ],
+            "sales": [
+              1.0,
+              7
+            ],
+            "supply_chain": [
+              1.0,
+              8
+            ]
+          },
+          "name": "Automotive",
+          "name_suffixes": [
+            "Motors",
+            "Automotive",
+            "Mobility",
+            "Auto Systems"
+          ],
+          "product_lines": [
+            "Electric Vehicles",
+            "Infotainment",
+            "Driver Assistance",
+            "Chassis"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 4,
+            "latam": 1,
+            "north_america": 3
+          },
+          "size_weights": {
+            "enterprise": 1.6,
+            "large": 1.4,
+            "mid_market": 1.1,
+            "mid_small": 0.9,
+            "small": 0.7
+          },
+          "weight": 0.7
+        },
+        "banking": {
+          "archetype_weights": {
+            "business_unit": 3,
+            "enterprise": 3,
+            "flat_startup": 0.2,
+            "functional": 2,
+            "matrix": 1.5,
+            "product_based": 0.5,
+            "regional": 3
+          },
+          "business_units": [
+            "Retail Banking",
+            "Commercial Banking",
+            "Private Banking",
+            "Corporate Banking"
+          ],
+          "departments": {
+            "commercial_banking": [
+              1.0,
+              16
+            ],
+            "compliance": [
+              1.0,
+              7
+            ],
+            "customer_success": [
+              0.9,
+              8
+            ],
+            "data_analytics": [
+              0.7,
+              4
+            ],
+            "finance": [
+              1.0,
+              6
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "internal_audit": [
+              1.0,
+              2
+            ],
+            "legal": [
+              1.0,
+              2
+            ],
+            "marketing": [
+              0.8,
+              3
+            ],
+            "operations": [
+              1.0,
+              14
+            ],
+            "risk": [
+              1.0,
+              9
+            ],
+            "security": [
+              0.9,
+              3
+            ],
+            "technology": [
+              1.0,
+              12
+            ]
+          },
+          "executive_overrides": {
+            "data_analytics": "cdo"
+          },
+          "name": "Banking",
+          "name_suffixes": [
+            "Bank",
+            "Bancorp",
+            "Savings Bank",
+            "Trust"
+          ],
+          "product_lines": [
+            "Mortgages",
+            "Cards",
+            "Deposits",
+            "Business Lending"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 4,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.6,
+            "large": 1.4,
+            "mid_market": 1.1,
+            "mid_small": 0.9,
+            "small": 0.7
+          },
+          "weight": 1.0
+        },
+        "consulting": {
+          "archetype_weights": {
+            "business_unit": 2.5,
+            "enterprise": 1.5,
+            "flat_startup": 1.5,
+            "functional": 2,
+            "matrix": 3,
+            "product_based": 0.5,
+            "regional": 3
+          },
+          "business_units": [
+            "Strategy & Transformation",
+            "Technology Advisory",
+            "Operations Advisory",
+            "Risk Advisory"
+          ],
+          "departments": {
+            "consulting_delivery": [
+              1.0,
+              60
+            ],
+            "data_analytics": [
+              0.5,
+              3
+            ],
+            "finance": [
+              1.0,
+              3
+            ],
+            "hr": [
+              1.0,
+              4
+            ],
+            "it": [
+              1.0,
+              2
+            ],
+            "legal": [
+              0.8,
+              1
+            ],
+            "marketing": [
+              0.9,
+              3
+            ],
+            "operations": [
+              0.7,
+              3
+            ],
+            "sales": [
+              0.9,
+              5
+            ]
+          },
+          "name": "Consulting",
+          "name_suffixes": [
+            "Consulting",
+            "Advisory",
+            "Associates",
+            "Group"
+          ],
+          "product_lines": [
+            "Digital",
+            "Strategy",
+            "Operations"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 4,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.0,
+            "large": 1.0,
+            "mid_market": 1.0,
+            "mid_small": 1.1,
+            "small": 1.1
+          },
+          "weight": 0.9
+        },
+        "consumer_goods": {
+          "archetype_weights": {
+            "business_unit": 3,
+            "enterprise": 2,
+            "flat_startup": 0.5,
+            "functional": 3,
+            "matrix": 2,
+            "product_based": 1.5,
+            "regional": 2.5
+          },
+          "business_units": [
+            "Personal Care",
+            "Household",
+            "Food & Beverage",
+            "Pet Care"
+          ],
+          "departments": {
+            "data_analytics": [
+              0.6,
+              2
+            ],
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              0.8,
+              1.5
+            ],
+            "manufacturing_operations": [
+              1.0,
+              22
+            ],
+            "marketing": [
+              1.0,
+              10
+            ],
+            "merchandising": [
+              0.5,
+              3
+            ],
+            "procurement": [
+              1.0,
+              3
+            ],
+            "product_development": [
+              1.0,
+              6
+            ],
+            "quality": [
+              1.0,
+              4
+            ],
+            "sales": [
+              1.0,
+              12
+            ],
+            "supply_chain": [
+              1.0,
+              10
+            ]
+          },
+          "name": "Consumer Goods",
+          "name_suffixes": [
+            "Brands",
+            "Consumer Products",
+            "Goods Co.",
+            "Home & Living"
+          ],
+          "product_lines": [
+            "Snacks",
+            "Skincare",
+            "Cleaning",
+            "Beverages"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 3,
+            "latam": 1.5,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.3,
+            "large": 1.2,
+            "mid_market": 1.1,
+            "mid_small": 1.0,
+            "small": 0.9
+          },
+          "weight": 0.8
+        },
+        "ecommerce": {
+          "archetype_weights": {
+            "business_unit": 1.5,
+            "enterprise": 1,
+            "flat_startup": 2.5,
+            "functional": 3,
+            "matrix": 2,
+            "product_based": 3.5,
+            "regional": 1.5
+          },
+          "business_units": [
+            "Marketplace",
+            "Retail",
+            "Logistics Services",
+            "Advertising"
+          ],
+          "departments": {
+            "customer_success": [
+              1.0,
+              10
+            ],
+            "data_analytics": [
+              0.9,
+              6
+            ],
+            "design": [
+              0.9,
+              3
+            ],
+            "engineering": [
+              1.0,
+              24
+            ],
+            "finance": [
+              1.0,
+              3
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "it": [
+              0.7,
+              2
+            ],
+            "legal": [
+              0.7,
+              1.5
+            ],
+            "marketing": [
+              1.0,
+              8
+            ],
+            "merchandising": [
+              0.7,
+              4
+            ],
+            "operations": [
+              1.0,
+              8
+            ],
+            "product": [
+              1.0,
+              6
+            ],
+            "security": [
+              0.6,
+              2
+            ],
+            "supply_chain": [
+              0.9,
+              10
+            ]
+          },
+          "name": "E-commerce",
+          "name_suffixes": [
+            "Commerce",
+            "Marketplace",
+            "Online",
+            "Direct",
+            "Shop"
+          ],
+          "product_lines": [
+            "Checkout",
+            "Search & Discovery",
+            "Seller Tools",
+            "Fulfillment",
+            "Ads"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 3,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 0.7,
+            "large": 0.9,
+            "mid_market": 1.0,
+            "mid_small": 1.2,
+            "small": 1.3
+          },
+          "weight": 1.0
+        },
+        "education": {
+          "archetype_weights": {
+            "business_unit": 2,
+            "enterprise": 1,
+            "flat_startup": 1.5,
+            "functional": 3,
+            "matrix": 1.5,
+            "product_based": 1,
+            "regional": 2
+          },
+          "business_units": [
+            "Undergraduate",
+            "Graduate Programs",
+            "Online Learning",
+            "Continuing Education"
+          ],
+          "departments": {
+            "academic_affairs": [
+              1.0,
+              40
+            ],
+            "data_analytics": [
+              0.5,
+              2
+            ],
+            "engineering": [
+              0.4,
+              6
+            ],
+            "finance": [
+              1.0,
+              5
+            ],
+            "hr": [
+              1.0,
+              4
+            ],
+            "it": [
+              1.0,
+              5
+            ],
+            "legal": [
+              0.6,
+              1
+            ],
+            "marketing": [
+              0.9,
+              4
+            ],
+            "operations": [
+              1.0,
+              8
+            ],
+            "student_services": [
+              1.0,
+              12
+            ]
+          },
+          "name": "Education",
+          "name_suffixes": [
+            "Academy",
+            "Learning",
+            "Education",
+            "Institute",
+            "University"
+          ],
+          "product_lines": [
+            "K-12",
+            "Higher Education",
+            "Professional Certificates"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 3,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 0.7,
+            "large": 1.0,
+            "mid_market": 1.0,
+            "mid_small": 1.1,
+            "small": 1.1
+          },
+          "weight": 0.7
+        },
+        "energy": {
+          "archetype_weights": {
+            "business_unit": 3,
+            "enterprise": 2.5,
+            "flat_startup": 0.3,
+            "functional": 3,
+            "matrix": 1.5,
+            "product_based": 0.5,
+            "regional": 2.5
+          },
+          "business_units": [
+            "Upstream",
+            "Midstream",
+            "Renewables",
+            "Power Generation",
+            "Retail Energy"
+          ],
+          "departments": {
+            "compliance": [
+              1.0,
+              3
+            ],
+            "field_operations": [
+              1.0,
+              30
+            ],
+            "finance": [
+              1.0,
+              5
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "industrial_engineering": [
+              1.0,
+              12
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              1.0,
+              2
+            ],
+            "operations": [
+              1.0,
+              10
+            ],
+            "procurement": [
+              0.8,
+              2
+            ],
+            "quality": [
+              0.6,
+              3
+            ],
+            "sales": [
+              0.8,
+              5
+            ],
+            "security": [
+              0.6,
+              2
+            ],
+            "supply_chain": [
+              0.8,
+              5
+            ]
+          },
+          "name": "Energy",
+          "name_suffixes": [
+            "Energy",
+            "Power",
+            "Utilities",
+            "Resources",
+            "Renewables"
+          ],
+          "product_lines": [
+            "Solar",
+            "Wind",
+            "Grid Services",
+            "Storage"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 2,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.5,
+            "large": 1.4,
+            "mid_market": 1.1,
+            "mid_small": 0.9,
+            "small": 0.7
+          },
+          "weight": 0.7
+        },
+        "financial_services": {
+          "archetype_weights": {
+            "business_unit": 3,
+            "enterprise": 2.5,
+            "flat_startup": 0.5,
+            "functional": 3,
+            "matrix": 2,
+            "product_based": 1,
+            "regional": 1.5
+          },
+          "business_units": [
+            "Wealth Management",
+            "Asset Management",
+            "Capital Markets",
+            "Retail Finance"
+          ],
+          "departments": {
+            "compliance": [
+              1.0,
+              6
+            ],
+            "customer_success": [
+              0.6,
+              5
+            ],
+            "data_analytics": [
+              0.85,
+              6
+            ],
+            "finance": [
+              1.0,
+              7
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "internal_audit": [
+              0.9,
+              2
+            ],
+            "legal": [
+              1.0,
+              3
+            ],
+            "marketing": [
+              0.9,
+              4
+            ],
+            "operations": [
+              1.0,
+              12
+            ],
+            "product": [
+              0.7,
+              4
+            ],
+            "risk": [
+              1.0,
+              9
+            ],
+            "sales": [
+              1.0,
+              12
+            ],
+            "security": [
+              0.9,
+              3
+            ],
+            "technology": [
+              1.0,
+              18
+            ]
+          },
+          "executive_overrides": {
+            "data_analytics": "cdo"
+          },
+          "name": "Financial Services",
+          "name_suffixes": [
+            "Capital",
+            "Financial",
+            "Partners",
+            "Investments",
+            "Wealth"
+          ],
+          "product_lines": [
+            "Lending",
+            "Payments",
+            "Investments",
+            "Advisory"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 4,
+            "latam": 0.5,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.4,
+            "large": 1.3,
+            "mid_market": 1.1,
+            "mid_small": 1.0,
+            "small": 0.9
+          },
+          "weight": 1.2
+        },
+        "healthcare": {
+          "archetype_weights": {
+            "business_unit": 1.5,
+            "enterprise": 1.5,
+            "flat_startup": 0.5,
+            "functional": 3,
+            "matrix": 1.5,
+            "product_based": 0.5,
+            "regional": 3
+          },
+          "business_units": [
+            "Hospital Services",
+            "Outpatient Care",
+            "Home Health",
+            "Diagnostics"
+          ],
+          "departments": {
+            "clinical_operations": [
+              1.0,
+              40
+            ],
+            "compliance": [
+              1.0,
+              4
+            ],
+            "customer_success": [
+              0.7,
+              6
+            ],
+            "data_analytics": [
+              0.6,
+              3
+            ],
+            "finance": [
+              1.0,
+              6
+            ],
+            "hr": [
+              1.0,
+              5
+            ],
+            "it": [
+              1.0,
+              5
+            ],
+            "legal": [
+              0.9,
+              2
+            ],
+            "marketing": [
+              0.7,
+              2
+            ],
+            "operations": [
+              1.0,
+              10
+            ],
+            "procurement": [
+              0.6,
+              2
+            ],
+            "quality": [
+              0.8,
+              3
+            ],
+            "security": [
+              0.6,
+              2
+            ]
+          },
+          "name": "Healthcare",
+          "name_suffixes": [
+            "Health",
+            "Healthcare",
+            "Medical Group",
+            "Care Partners"
+          ],
+          "product_lines": [
+            "Primary Care",
+            "Specialty Care",
+            "Diagnostics",
+            "Telehealth"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 1,
+            "north_america": 5
+          },
+          "size_weights": {
+            "enterprise": 1.0,
+            "large": 1.2,
+            "mid_market": 1.1,
+            "mid_small": 1.0,
+            "small": 1.0
+          },
+          "weight": 1.1
+        },
+        "insurance": {
+          "archetype_weights": {
+            "business_unit": 2.5,
+            "enterprise": 2,
+            "flat_startup": 0.3,
+            "functional": 3,
+            "matrix": 1.5,
+            "product_based": 1,
+            "regional": 2
+          },
+          "business_units": [
+            "Personal Lines",
+            "Commercial Lines",
+            "Life & Annuities",
+            "Specialty"
+          ],
+          "departments": {
+            "actuarial": [
+              1.0,
+              5
+            ],
+            "claims": [
+              1.0,
+              16
+            ],
+            "compliance": [
+              1.0,
+              4
+            ],
+            "customer_success": [
+              0.9,
+              8
+            ],
+            "data_analytics": [
+              0.8,
+              4
+            ],
+            "finance": [
+              1.0,
+              5
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "internal_audit": [
+              0.8,
+              1.5
+            ],
+            "legal": [
+              1.0,
+              2
+            ],
+            "marketing": [
+              0.8,
+              3
+            ],
+            "risk": [
+              1.0,
+              4
+            ],
+            "sales": [
+              1.0,
+              10
+            ],
+            "technology": [
+              1.0,
+              10
+            ],
+            "underwriting": [
+              1.0,
+              12
+            ]
+          },
+          "name": "Insurance",
+          "name_suffixes": [
+            "Insurance",
+            "Assurance",
+            "Mutual",
+            "Insurance Group"
+          ],
+          "product_lines": [
+            "Auto",
+            "Home",
+            "Life",
+            "Health",
+            "Specialty"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.2,
+            "large": 1.3,
+            "mid_market": 1.1,
+            "mid_small": 1.0,
+            "small": 0.8
+          },
+          "weight": 0.9
+        },
+        "logistics": {
+          "archetype_weights": {
+            "business_unit": 2,
+            "enterprise": 2,
+            "flat_startup": 0.5,
+            "functional": 3,
+            "matrix": 1,
+            "product_based": 0.5,
+            "regional": 4
+          },
+          "business_units": [
+            "Freight Forwarding",
+            "Contract Logistics",
+            "Parcel",
+            "Ocean & Air"
+          ],
+          "departments": {
+            "customer_success": [
+              1.0,
+              7
+            ],
+            "engineering": [
+              0.5,
+              5
+            ],
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              0.7,
+              1
+            ],
+            "operations": [
+              1.0,
+              16
+            ],
+            "procurement": [
+              0.7,
+              2
+            ],
+            "quality": [
+              0.5,
+              2
+            ],
+            "sales": [
+              1.0,
+              6
+            ],
+            "supply_chain": [
+              1.0,
+              10
+            ],
+            "transportation": [
+              1.0,
+              30
+            ]
+          },
+          "name": "Logistics",
+          "name_suffixes": [
+            "Logistics",
+            "Freight",
+            "Express",
+            "Transport",
+            "Shipping"
+          ],
+          "product_lines": [
+            "Last Mile",
+            "Warehousing",
+            "Cross-Border"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 3,
+            "latam": 1.5,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.2,
+            "large": 1.2,
+            "mid_market": 1.1,
+            "mid_small": 1.0,
+            "small": 0.9
+          },
+          "weight": 0.8
+        },
+        "manufacturing": {
+          "archetype_weights": {
+            "business_unit": 2.5,
+            "enterprise": 2,
+            "flat_startup": 0.3,
+            "functional": 4,
+            "matrix": 1.5,
+            "product_based": 1,
+            "regional": 2
+          },
+          "business_units": [
+            "Industrial Products",
+            "Components",
+            "Aftermarket",
+            "Specialty Materials"
+          ],
+          "departments": {
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "industrial_engineering": [
+              1.0,
+              9
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              0.6,
+              1
+            ],
+            "manufacturing_operations": [
+              1.0,
+              40
+            ],
+            "marketing": [
+              0.6,
+              2
+            ],
+            "operations": [
+              0.5,
+              3
+            ],
+            "procurement": [
+              1.0,
+              4
+            ],
+            "product_development": [
+              0.8,
+              5
+            ],
+            "quality": [
+              1.0,
+              6
+            ],
+            "sales": [
+              1.0,
+              7
+            ],
+            "supply_chain": [
+              1.0,
+              8
+            ]
+          },
+          "name": "Manufacturing",
+          "name_suffixes": [
+            "Manufacturing",
+            "Industries",
+            "Works",
+            "Fabrication",
+            "Industrial"
+          ],
+          "product_lines": [
+            "Precision Parts",
+            "Assemblies",
+            "Controls",
+            "Packaging"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 4,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.2,
+            "large": 1.3,
+            "mid_market": 1.2,
+            "mid_small": 1.0,
+            "small": 0.9
+          },
+          "weight": 1.1
+        },
+        "media": {
+          "archetype_weights": {
+            "business_unit": 2.5,
+            "enterprise": 1,
+            "flat_startup": 2,
+            "functional": 3,
+            "matrix": 1.5,
+            "product_based": 2,
+            "regional": 1
+          },
+          "business_units": [
+            "News",
+            "Entertainment",
+            "Sports",
+            "Digital Media"
+          ],
+          "departments": {
+            "data_analytics": [
+              0.6,
+              3
+            ],
+            "design": [
+              0.8,
+              4
+            ],
+            "editorial": [
+              1.0,
+              30
+            ],
+            "engineering": [
+              0.8,
+              10
+            ],
+            "finance": [
+              1.0,
+              3
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "it": [
+              0.8,
+              2
+            ],
+            "legal": [
+              1.0,
+              3
+            ],
+            "marketing": [
+              1.0,
+              7
+            ],
+            "operations": [
+              0.8,
+              4
+            ],
+            "product": [
+              0.7,
+              3
+            ],
+            "sales": [
+              1.0,
+              10
+            ]
+          },
+          "name": "Media",
+          "name_suffixes": [
+            "Media",
+            "Studios",
+            "Publishing",
+            "Broadcasting",
+            "Entertainment"
+          ],
+          "product_lines": [
+            "Streaming",
+            "Podcasts",
+            "Print",
+            "Events"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 0.7,
+            "large": 0.9,
+            "mid_market": 1.0,
+            "mid_small": 1.1,
+            "small": 1.2
+          },
+          "weight": 0.7
+        },
+        "pharmaceuticals": {
+          "archetype_weights": {
+            "business_unit": 2.5,
+            "enterprise": 2,
+            "flat_startup": 0.5,
+            "functional": 3,
+            "matrix": 3,
+            "product_based": 1,
+            "regional": 1.5
+          },
+          "business_units": [
+            "Oncology",
+            "Immunology",
+            "Neuroscience",
+            "Vaccines",
+            "Rare Diseases"
+          ],
+          "departments": {
+            "clinical_operations": [
+              0.7,
+              8
+            ],
+            "compliance": [
+              1.0,
+              3
+            ],
+            "data_analytics": [
+              0.6,
+              3
+            ],
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              1.0,
+              2
+            ],
+            "manufacturing_operations": [
+              0.9,
+              14
+            ],
+            "marketing": [
+              1.0,
+              5
+            ],
+            "quality": [
+              1.0,
+              6
+            ],
+            "regulatory_affairs": [
+              1.0,
+              5
+            ],
+            "research_development": [
+              1.0,
+              28
+            ],
+            "sales": [
+              1.0,
+              12
+            ],
+            "supply_chain": [
+              0.8,
+              4
+            ]
+          },
+          "name": "Pharmaceuticals",
+          "name_suffixes": [
+            "Pharma",
+            "Therapeutics",
+            "Biosciences",
+            "Pharmaceuticals"
+          ],
+          "product_lines": [
+            "Oncology",
+            "Cardiometabolic",
+            "Immunology",
+            "Specialty"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 4,
+            "latam": 0.5,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.3,
+            "large": 1.3,
+            "mid_market": 1.1,
+            "mid_small": 1.0,
+            "small": 0.9
+          },
+          "weight": 0.8
+        },
+        "professional_services": {
+          "archetype_weights": {
+            "business_unit": 2,
+            "enterprise": 1,
+            "flat_startup": 1.5,
+            "functional": 3,
+            "matrix": 2,
+            "product_based": 0.5,
+            "regional": 2.5
+          },
+          "business_units": [
+            "Tax",
+            "Audit & Assurance",
+            "Legal Services",
+            "Staffing"
+          ],
+          "departments": {
+            "compliance": [
+              0.5,
+              2
+            ],
+            "consulting_delivery": [
+              1.0,
+              40
+            ],
+            "customer_success": [
+              0.8,
+              6
+            ],
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              4
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              0.9,
+              3
+            ],
+            "marketing": [
+              0.8,
+              2
+            ],
+            "operations": [
+              1.0,
+              10
+            ],
+            "sales": [
+              1.0,
+              6
+            ]
+          },
+          "name": "Professional Services",
+          "name_suffixes": [
+            "Services",
+            "Solutions",
+            "Partners",
+            "Professional Group"
+          ],
+          "product_lines": [
+            "Managed Services",
+            "Outsourcing",
+            "Advisory"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 0.8,
+            "large": 0.9,
+            "mid_market": 1.0,
+            "mid_small": 1.1,
+            "small": 1.2
+          },
+          "weight": 0.8
+        },
+        "real_estate": {
+          "archetype_weights": {
+            "business_unit": 2,
+            "enterprise": 1,
+            "flat_startup": 1.5,
+            "functional": 3,
+            "matrix": 1,
+            "product_based": 0.5,
+            "regional": 3.5
+          },
+          "business_units": [
+            "Residential",
+            "Commercial",
+            "Industrial",
+            "Hospitality"
+          ],
+          "departments": {
+            "customer_success": [
+              0.6,
+              4
+            ],
+            "finance": [
+              1.0,
+              7
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "it": [
+              0.8,
+              2
+            ],
+            "legal": [
+              1.0,
+              3
+            ],
+            "marketing": [
+              1.0,
+              5
+            ],
+            "operations": [
+              1.0,
+              10
+            ],
+            "procurement": [
+              0.4,
+              2
+            ],
+            "property_management": [
+              1.0,
+              35
+            ],
+            "sales": [
+              1.0,
+              14
+            ]
+          },
+          "name": "Real Estate",
+          "name_suffixes": [
+            "Realty",
+            "Properties",
+            "Real Estate",
+            "Land Holdings",
+            "Estates"
+          ],
+          "product_lines": [
+            "Leasing",
+            "Development",
+            "Facilities Services"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 1,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 0.6,
+            "large": 0.8,
+            "mid_market": 1.0,
+            "mid_small": 1.2,
+            "small": 1.3
+          },
+          "weight": 0.6
+        },
+        "retail": {
+          "archetype_weights": {
+            "business_unit": 2,
+            "enterprise": 2,
+            "flat_startup": 0.5,
+            "functional": 3,
+            "matrix": 1,
+            "product_based": 1,
+            "regional": 3.5
+          },
+          "business_units": [
+            "Apparel",
+            "Home",
+            "Grocery",
+            "Electronics",
+            "Beauty"
+          ],
+          "departments": {
+            "customer_success": [
+              0.8,
+              4
+            ],
+            "data_analytics": [
+              0.6,
+              2
+            ],
+            "engineering": [
+              0.6,
+              5
+            ],
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              4
+            ],
+            "it": [
+              1.0,
+              3
+            ],
+            "legal": [
+              0.8,
+              1.5
+            ],
+            "marketing": [
+              1.0,
+              5
+            ],
+            "merchandising": [
+              1.0,
+              7
+            ],
+            "procurement": [
+              0.7,
+              2
+            ],
+            "store_operations": [
+              1.0,
+              45
+            ],
+            "supply_chain": [
+              1.0,
+              9
+            ]
+          },
+          "name": "Retail",
+          "name_suffixes": [
+            "Stores",
+            "Retail",
+            "Outfitters",
+            "Market",
+            "Trading Co."
+          ],
+          "product_lines": [
+            "Private Label",
+            "Online Store",
+            "Loyalty"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 1.5,
+            "north_america": 4
+          },
+          "size_weights": {
+            "enterprise": 1.4,
+            "large": 1.3,
+            "mid_market": 1.1,
+            "mid_small": 1.0,
+            "small": 0.9
+          },
+          "weight": 1.0
+        },
+        "technology": {
+          "archetype_weights": {
+            "business_unit": 1,
+            "enterprise": 1.5,
+            "flat_startup": 3,
+            "functional": 3,
+            "matrix": 2,
+            "product_based": 4,
+            "regional": 1
+          },
+          "business_units": [
+            "Cloud",
+            "Consumer",
+            "Enterprise",
+            "Payments",
+            "Developer Platform"
+          ],
+          "departments": {
+            "customer_success": [
+              0.95,
+              8
+            ],
+            "data_analytics": [
+              0.85,
+              7
+            ],
+            "design": [
+              0.9,
+              3
+            ],
+            "engineering": [
+              1.0,
+              32
+            ],
+            "finance": [
+              1.0,
+              3
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "infrastructure": [
+              0.8,
+              5
+            ],
+            "it": [
+              0.8,
+              2
+            ],
+            "legal": [
+              0.8,
+              1.5
+            ],
+            "marketing": [
+              1.0,
+              6
+            ],
+            "operations": [
+              0.6,
+              3
+            ],
+            "product": [
+              1.0,
+              6
+            ],
+            "sales": [
+              1.0,
+              12
+            ],
+            "security": [
+              0.8,
+              3
+            ]
+          },
+          "name": "Technology",
+          "name_suffixes": [
+            "Technologies",
+            "Labs",
+            "Systems",
+            "Software",
+            "Digital"
+          ],
+          "product_lines": [
+            "Core Platform",
+            "Mobile Apps",
+            "Analytics Suite",
+            "Marketplace",
+            "Integrations",
+            "Identity"
+          ],
+          "region_weights": {
+            "apac": 2,
+            "emea": 3,
+            "latam": 0.5,
+            "north_america": 5
+          },
+          "size_weights": {
+            "enterprise": 0.8,
+            "large": 0.9,
+            "mid_market": 1.0,
+            "mid_small": 1.2,
+            "small": 1.3
+          },
+          "weight": 1.6
+        },
+        "telecommunications": {
+          "archetype_weights": {
+            "business_unit": 2,
+            "enterprise": 2.5,
+            "flat_startup": 0.3,
+            "functional": 3,
+            "matrix": 2,
+            "product_based": 1,
+            "regional": 3
+          },
+          "business_units": [
+            "Consumer Mobile",
+            "Enterprise Solutions",
+            "Broadband",
+            "Wholesale"
+          ],
+          "departments": {
+            "compliance": [
+              0.7,
+              2
+            ],
+            "customer_success": [
+              1.0,
+              12
+            ],
+            "engineering": [
+              0.9,
+              10
+            ],
+            "field_operations": [
+              0.9,
+              12
+            ],
+            "finance": [
+              1.0,
+              4
+            ],
+            "hr": [
+              1.0,
+              3
+            ],
+            "it": [
+              1.0,
+              4
+            ],
+            "legal": [
+              1.0,
+              2
+            ],
+            "marketing": [
+              1.0,
+              4
+            ],
+            "network_operations": [
+              1.0,
+              24
+            ],
+            "product": [
+              0.8,
+              3
+            ],
+            "sales": [
+              1.0,
+              10
+            ],
+            "security": [
+              0.9,
+              2
+            ]
+          },
+          "name": "Telecommunications",
+          "name_suffixes": [
+            "Telecom",
+            "Communications",
+            "Networks",
+            "Mobile",
+            "Connect"
+          ],
+          "product_lines": [
+            "5G",
+            "Fiber",
+            "IoT",
+            "Unified Communications"
+          ],
+          "region_weights": {
+            "apac": 3,
+            "emea": 4,
+            "latam": 2,
+            "north_america": 3
+          },
+          "size_weights": {
+            "enterprise": 1.6,
+            "large": 1.4,
+            "mid_market": 1.1,
+            "mid_small": 0.9,
+            "small": 0.7
+          },
+          "weight": 0.8
+        }
+      },
+      "naming": {
+        "first_parts": [
+          "Aster",
+          "Bluefin",
+          "Cobalt",
+          "Driftwood",
+          "Ember",
+          "Fernhill",
+          "Granite",
+          "Harbor",
+          "Ironleaf",
+          "Juniper",
+          "Keystone",
+          "Larkspur",
+          "Meridian",
+          "Northwind",
+          "Oakridge",
+          "Pinecrest",
+          "Quarry",
+          "Redwing",
+          "Silverline",
+          "Tidewater",
+          "Umber",
+          "Vantage",
+          "Willowmere",
+          "Xylo",
+          "Yellowtail",
+          "Zephyr",
+          "Amberly",
+          "Brightwater",
+          "Cedarbrook",
+          "Duskfall",
+          "Evergale",
+          "Foxglove",
+          "Glimmer",
+          "Highmoor",
+          "Inkwell",
+          "Jadeport",
+          "Kestrel",
+          "Lumen",
+          "Mistral",
+          "Novaline"
+        ],
+        "second_parts": [
+          "Ridge",
+          "Forge",
+          "Point",
+          "Field",
+          "Stone",
+          "Gate",
+          "Works",
+          "Crest",
+          "Bay",
+          "Peak",
+          "Haven",
+          "Brook",
+          "Vale",
+          "Line",
+          "Path",
+          "Spire",
+          "Bridge",
+          "Harbor",
+          "Glen",
+          "Mark",
+          "Shore",
+          "Vista",
+          "Wharf",
+          "Grove"
+        ]
+      }
+    },
+    "job_families": {
+      "families": {
+        "academic": {
+          "aliases": [
+            "Faculty",
+            "Teaching",
+            "Instruction"
+          ],
+          "function": "Academic Affairs",
+          "function_abbrev": "Academics",
+          "ic_abbrev": "Lect",
+          "ic_role": "Lecturer",
+          "industries": [
+            "education"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Instructor",
+              "Tutor"
+            ]
+          },
+          "name": "Academic"
+        },
+        "accounting": {
+          "aliases": [
+            "Finance",
+            "Controllership"
+          ],
+          "function": "Accounting",
+          "function_abbrev": "Acctg",
+          "ic_abbrev": "Acct",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Accountant",
+          "legacy_titles": {
+            "ic": [
+              "Bookkeeper",
+              "Accounts Clerk"
+            ]
+          },
+          "name": "Accounting"
+        },
+        "actuarial": {
+          "aliases": [
+            "Pricing",
+            "Actuarial Services"
+          ],
+          "function": "Actuarial",
+          "function_abbrev": "Actl",
+          "ic_abbrev": "Actuarial Analyst",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Actuarial Analyst",
+          "industries": [
+            "insurance",
+            "financial_services"
+          ],
+          "name": "Actuarial"
+        },
+        "analytics": {
+          "aliases": [
+            "Business Intelligence",
+            "BI",
+            "Insights"
+          ],
+          "function": "Analytics",
+          "function_abbrev": "Analytics",
+          "ic_abbrev": "DA",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff",
+            "principal"
+          ],
+          "ic_role": "Data Analyst",
+          "legacy_titles": {
+            "ic": [
+              "Reporting Analyst",
+              "BI Analyst"
+            ],
+            "senior_ic": [
+              "Senior Reporting Analyst"
+            ]
+          },
+          "name": "Analytics"
+        },
+        "claims": {
+          "aliases": [
+            "Claims Handling",
+            "Claims Operations"
+          ],
+          "function": "Claims",
+          "function_abbrev": "Claims",
+          "ic_abbrev": "Adjuster",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Claims Adjuster",
+          "industries": [
+            "insurance"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Claims Handler",
+              "Claims Examiner"
+            ]
+          },
+          "name": "Claims"
+        },
+        "clinical": {
+          "aliases": [
+            "Clinical",
+            "Patient Care",
+            "Nursing"
+          ],
+          "function": "Clinical Operations",
+          "function_abbrev": "Clin Ops",
+          "ic_abbrev": "Clin Coord",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Clinical Coordinator",
+          "industries": [
+            "healthcare",
+            "pharmaceuticals"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Staff Nurse",
+              "Clinical Associate"
+            ]
+          },
+          "name": "Clinical Operations"
+        },
+        "compliance": {
+          "aliases": [
+            "Regulatory Compliance",
+            "Compliance & Ethics"
+          ],
+          "function": "Compliance",
+          "function_abbrev": "Compl",
+          "ic_abbrev": "Compliance Analyst",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Compliance Analyst",
+          "legacy_titles": {
+            "ic": [
+              "Compliance Officer"
+            ]
+          },
+          "name": "Compliance"
+        },
+        "consulting": {
+          "aliases": [
+            "Advisory",
+            "Client Delivery"
+          ],
+          "function": "Consulting",
+          "function_abbrev": "Consulting",
+          "ic_abbrev": "Cnslt",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff",
+            "principal"
+          ],
+          "ic_role": "Consultant",
+          "legacy_titles": {
+            "ic": [
+              "Associate Consultant",
+              "Advisor"
+            ]
+          },
+          "name": "Consulting"
+        },
+        "customer_success": {
+          "aliases": [
+            "Account Management",
+            "Client Services",
+            "CS"
+          ],
+          "function": "Customer Success",
+          "function_abbrev": "CS",
+          "ic_abbrev": "CSM",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Customer Success Manager",
+          "legacy_titles": {
+            "ic": [
+              "Account Manager",
+              "Client Relationship Manager"
+            ]
+          },
+          "name": "Customer Success"
+        },
+        "customer_support": {
+          "aliases": [
+            "Support",
+            "Customer Care",
+            "Help Desk"
+          ],
+          "function": "Customer Support",
+          "function_abbrev": "Support",
+          "ic_abbrev": "Support Spec",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Support Specialist",
+          "legacy_titles": {
+            "ic": [
+              "Customer Service Representative",
+              "Call Center Agent"
+            ]
+          },
+          "name": "Customer Support"
+        },
+        "data_engineering": {
+          "aliases": [
+            "Data",
+            "Data Platform",
+            "Data Eng"
+          ],
+          "function": "Data Engineering",
+          "function_abbrev": "Data Eng",
+          "ic_abbrev": "DE",
+          "ic_role": "Data Engineer",
+          "legacy_titles": {
+            "ic": [
+              "ETL Developer",
+              "BI Developer"
+            ],
+            "senior_ic": [
+              "Senior ETL Developer"
+            ]
+          },
+          "name": "Data Engineering"
+        },
+        "data_science": {
+          "aliases": [
+            "Data",
+            "Data Science & Analytics",
+            "Science"
+          ],
+          "function": "Data Science",
+          "function_abbrev": "DS",
+          "ic_abbrev": "DS",
+          "ic_role": "Data Scientist",
+          "legacy_titles": {
+            "ic": [
+              "Statistician",
+              "Quantitative Analyst"
+            ]
+          },
+          "name": "Data Science"
+        },
+        "design": {
+          "aliases": [
+            "UX",
+            "User Experience",
+            "Product Design"
+          ],
+          "function": "Design",
+          "function_abbrev": "Design",
+          "ic_abbrev": "Designer",
+          "ic_role": "Product Designer",
+          "legacy_titles": {
+            "ic": [
+              "UI Designer",
+              "Web Designer",
+              "Visual Designer"
+            ],
+            "senior_ic": [
+              "Senior UI Designer"
+            ]
+          },
+          "name": "Design"
+        },
+        "editorial": {
+          "aliases": [
+            "Content",
+            "Newsroom",
+            "Journalism"
+          ],
+          "function": "Editorial",
+          "function_abbrev": "Editorial",
+          "ic_abbrev": "Ed",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Editor",
+          "industries": [
+            "media",
+            "education"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Copy Editor",
+              "Reporter",
+              "Writer"
+            ]
+          },
+          "name": "Editorial"
+        },
+        "executive_support": {
+          "aliases": [
+            "Administration",
+            "Executive Administration"
+          ],
+          "function": "Executive Support",
+          "function_abbrev": "Exec Support",
+          "ic_abbrev": "EA",
+          "ic_levels": [
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Executive Assistant",
+          "management": false,
+          "name": "Executive Support"
+        },
+        "field_operations": {
+          "aliases": [
+            "Field Services",
+            "Site Operations"
+          ],
+          "function": "Field Operations",
+          "function_abbrev": "Field Ops",
+          "ic_abbrev": "Field Tech",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Field Technician",
+          "legacy_titles": {
+            "ic": [
+              "Lineman",
+              "Site Technician",
+              "Service Technician"
+            ]
+          },
+          "name": "Field Operations"
+        },
+        "finance": {
+          "aliases": [
+            "FP&A",
+            "Financial Planning"
+          ],
+          "function": "Finance",
+          "function_abbrev": "Fin",
+          "ic_abbrev": "FA",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Financial Analyst",
+          "legacy_titles": {
+            "ic": [
+              "Finance Executive",
+              "Budget Analyst"
+            ]
+          },
+          "name": "Finance"
+        },
+        "hardware_engineering": {
+          "aliases": [
+            "Mechanical Engineering",
+            "Engineering",
+            "Product Engineering"
+          ],
+          "function": "Mechanical Engineering",
+          "function_abbrev": "Mech Eng",
+          "ic_abbrev": "ME",
+          "ic_role": "Mechanical Engineer",
+          "legacy_titles": {
+            "ic": [
+              "Design Engineer",
+              "Draftsman"
+            ]
+          },
+          "name": "Hardware Engineering"
+        },
+        "hr": {
+          "aliases": [
+            "HR",
+            "People",
+            "People Operations"
+          ],
+          "function": "Human Resources",
+          "function_abbrev": "HR",
+          "ic_abbrev": "HR Spec",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "HR Specialist",
+          "legacy_titles": {
+            "ic": [
+              "Personnel Officer",
+              "HR Officer"
+            ],
+            "manager": [
+              "Personnel Manager"
+            ]
+          },
+          "name": "Human Resources"
+        },
+        "infrastructure": {
+          "aliases": [
+            "SRE",
+            "DevOps",
+            "Site Reliability"
+          ],
+          "function": "Infrastructure",
+          "function_abbrev": "Infra",
+          "ic_abbrev": "SRE",
+          "ic_role": "Site Reliability Engineer",
+          "legacy_titles": {
+            "ic": [
+              "Systems Administrator",
+              "DevOps Engineer"
+            ],
+            "senior_ic": [
+              "Senior Systems Administrator"
+            ]
+          },
+          "name": "Infrastructure"
+        },
+        "internal_audit": {
+          "aliases": [
+            "Audit",
+            "Assurance"
+          ],
+          "function": "Internal Audit",
+          "function_abbrev": "IA",
+          "ic_abbrev": "Auditor",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Internal Auditor",
+          "name": "Internal Audit"
+        },
+        "it": {
+          "aliases": [
+            "IT",
+            "IT Support",
+            "Tech Support"
+          ],
+          "function": "IT",
+          "function_abbrev": "IT",
+          "ic_abbrev": "IT Spec",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "IT Specialist",
+          "legacy_titles": {
+            "ic": [
+              "Help Desk Technician",
+              "Desktop Support Technician"
+            ]
+          },
+          "name": "Information Technology"
+        },
+        "legal": {
+          "aliases": [
+            "Legal Affairs",
+            "Counsel"
+          ],
+          "function": "Legal",
+          "function_abbrev": "Legal",
+          "ic_abbrev": "Counsel",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Legal Counsel",
+          "legacy_titles": {
+            "ic": [
+              "Corporate Lawyer",
+              "Attorney"
+            ]
+          },
+          "name": "Legal"
+        },
+        "logistics": {
+          "aliases": [
+            "Transportation",
+            "Distribution",
+            "Freight"
+          ],
+          "function": "Logistics",
+          "function_abbrev": "Log",
+          "ic_abbrev": "Logistics Coord",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Logistics Coordinator",
+          "legacy_titles": {
+            "ic": [
+              "Dispatcher",
+              "Shipping Clerk"
+            ]
+          },
+          "name": "Logistics"
+        },
+        "machine_learning": {
+          "aliases": [
+            "ML",
+            "AI",
+            "AI/ML"
+          ],
+          "function": "Machine Learning",
+          "function_abbrev": "ML",
+          "ic_abbrev": "MLE",
+          "ic_role": "Machine Learning Engineer",
+          "name": "Machine Learning"
+        },
+        "manufacturing": {
+          "aliases": [
+            "Production",
+            "Plant Operations"
+          ],
+          "function": "Manufacturing",
+          "function_abbrev": "Mfg",
+          "ic_abbrev": "Prod Tech",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Production Technician",
+          "legacy_titles": {
+            "ic": [
+              "Machine Operator",
+              "Assembler"
+            ],
+            "manager": [
+              "Plant Supervisor",
+              "Shift Supervisor"
+            ],
+            "senior_ic": [
+              "Senior Machine Operator"
+            ]
+          },
+          "name": "Manufacturing"
+        },
+        "marketing": {
+          "aliases": [
+            "Growth",
+            "Brand",
+            "Communications"
+          ],
+          "function": "Marketing",
+          "function_abbrev": "Mktg",
+          "ic_abbrev": "Mktg Spec",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Marketing Specialist",
+          "legacy_titles": {
+            "ic": [
+              "Marketing Coordinator",
+              "Marketing Executive"
+            ]
+          },
+          "name": "Marketing"
+        },
+        "merchandising": {
+          "aliases": [
+            "Buying",
+            "Category Management"
+          ],
+          "function": "Merchandising",
+          "function_abbrev": "Merch",
+          "ic_abbrev": "Merch",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Merchandiser",
+          "industries": [
+            "retail",
+            "ecommerce",
+            "consumer_goods"
+          ],
+          "name": "Merchandising"
+        },
+        "network_engineering": {
+          "aliases": [
+            "Network",
+            "NetOps",
+            "Network Operations"
+          ],
+          "function": "Network Engineering",
+          "function_abbrev": "Net Eng",
+          "ic_abbrev": "NetEng",
+          "ic_role": "Network Engineer",
+          "legacy_titles": {
+            "ic": [
+              "Network Technician",
+              "Network Administrator"
+            ]
+          },
+          "name": "Network Engineering"
+        },
+        "operations": {
+          "aliases": [
+            "Business Operations",
+            "Ops"
+          ],
+          "function": "Operations",
+          "function_abbrev": "Ops",
+          "ic_abbrev": "Ops Analyst",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Operations Analyst",
+          "legacy_titles": {
+            "ic": [
+              "Operations Coordinator",
+              "Operations Executive"
+            ]
+          },
+          "name": "Operations"
+        },
+        "procurement": {
+          "aliases": [
+            "Purchasing",
+            "Sourcing"
+          ],
+          "function": "Procurement",
+          "function_abbrev": "Proc",
+          "ic_abbrev": "Buyer",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Procurement Specialist",
+          "legacy_titles": {
+            "ic": [
+              "Buyer",
+              "Purchasing Agent"
+            ]
+          },
+          "name": "Procurement"
+        },
+        "product_management": {
+          "aliases": [
+            "Product",
+            "PM"
+          ],
+          "function": "Product Management",
+          "function_abbrev": "Product",
+          "ic_abbrev": "PM",
+          "ic_role": "Product Manager",
+          "legacy_titles": {
+            "ic": [
+              "Product Owner",
+              "Business Analyst"
+            ],
+            "senior_ic": [
+              "Senior Product Owner"
+            ]
+          },
+          "name": "Product Management"
+        },
+        "property_management": {
+          "aliases": [
+            "Real Estate Operations",
+            "Leasing",
+            "Facilities"
+          ],
+          "function": "Property Management",
+          "function_abbrev": "Property Mgmt",
+          "ic_abbrev": "Property Spec",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Property Specialist",
+          "industries": [
+            "real_estate"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Leasing Agent",
+              "Building Superintendent"
+            ]
+          },
+          "name": "Property Management"
+        },
+        "qa_engineering": {
+          "aliases": [
+            "QA",
+            "Testing",
+            "Quality Assurance Engineering"
+          ],
+          "function": "QA",
+          "function_abbrev": "QA",
+          "ic_abbrev": "QAE",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "QA Engineer",
+          "legacy_titles": {
+            "ic": [
+              "Software Tester",
+              "Test Engineer"
+            ],
+            "senior_ic": [
+              "Senior Test Engineer"
+            ]
+          },
+          "name": "Quality Engineering"
+        },
+        "quality": {
+          "aliases": [
+            "Quality Assurance",
+            "QA/QC",
+            "Quality Control"
+          ],
+          "function": "Quality",
+          "function_abbrev": "QC",
+          "ic_abbrev": "QE",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Quality Engineer",
+          "legacy_titles": {
+            "ic": [
+              "Quality Inspector",
+              "QC Technician"
+            ]
+          },
+          "name": "Quality"
+        },
+        "recruiting": {
+          "aliases": [
+            "Recruiting",
+            "Recruitment",
+            "TA"
+          ],
+          "function": "Talent Acquisition",
+          "function_abbrev": "TA",
+          "ic_abbrev": "Recruiter",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Recruiter",
+          "legacy_titles": {
+            "ic": [
+              "Recruitment Consultant",
+              "Staffing Specialist"
+            ]
+          },
+          "name": "Talent Acquisition"
+        },
+        "regulatory_affairs": {
+          "aliases": [
+            "Regulatory",
+            "RA"
+          ],
+          "function": "Regulatory Affairs",
+          "function_abbrev": "RA",
+          "ic_abbrev": "RA Specialist",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Regulatory Affairs Specialist",
+          "industries": [
+            "pharmaceuticals",
+            "healthcare"
+          ],
+          "name": "Regulatory Affairs"
+        },
+        "relationship_banking": {
+          "aliases": [
+            "Commercial Banking",
+            "Corporate Banking"
+          ],
+          "function": "Relationship Banking",
+          "function_abbrev": "RB",
+          "ic_abbrev": "RM",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Relationship Manager",
+          "industries": [
+            "banking",
+            "financial_services"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Loan Officer",
+              "Banker"
+            ]
+          },
+          "name": "Relationship Banking"
+        },
+        "research": {
+          "aliases": [
+            "R&D",
+            "Research & Development",
+            "Science"
+          ],
+          "function": "Research",
+          "function_abbrev": "R&D",
+          "ic_abbrev": "Sci",
+          "ic_role": "Scientist",
+          "industries": [
+            "pharmaceuticals",
+            "healthcare",
+            "energy",
+            "manufacturing",
+            "consumer_goods"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Research Chemist",
+              "Lab Scientist"
+            ]
+          },
+          "name": "Research"
+        },
+        "retail_operations": {
+          "aliases": [
+            "Stores",
+            "Store Operations",
+            "Retail"
+          ],
+          "function": "Store Operations",
+          "function_abbrev": "Store Ops",
+          "ic_abbrev": "Store Assoc",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Store Associate",
+          "industries": [
+            "retail",
+            "ecommerce",
+            "consumer_goods"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Sales Clerk",
+              "Cashier",
+              "Shop Assistant"
+            ]
+          },
+          "name": "Retail Operations"
+        },
+        "risk": {
+          "aliases": [
+            "Risk Management",
+            "Enterprise Risk"
+          ],
+          "function": "Risk",
+          "function_abbrev": "Risk",
+          "ic_abbrev": "Risk Analyst",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff",
+            "principal"
+          ],
+          "ic_role": "Risk Analyst",
+          "industries": [
+            "financial_services",
+            "banking",
+            "insurance",
+            "energy"
+          ],
+          "name": "Risk"
+        },
+        "sales": {
+          "aliases": [
+            "Business Development",
+            "Commercial",
+            "Revenue"
+          ],
+          "function": "Sales",
+          "function_abbrev": "Sls",
+          "ic_abbrev": "AE",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Account Executive",
+          "legacy_titles": {
+            "ic": [
+              "Sales Representative",
+              "Salesperson"
+            ],
+            "senior_ic": [
+              "Senior Sales Representative"
+            ]
+          },
+          "name": "Sales"
+        },
+        "security": {
+          "aliases": [
+            "Information Security",
+            "InfoSec",
+            "Cybersecurity"
+          ],
+          "function": "Security",
+          "function_abbrev": "Sec",
+          "ic_abbrev": "SecEng",
+          "ic_role": "Security Engineer",
+          "legacy_titles": {
+            "ic": [
+              "Information Security Analyst",
+              "IT Security Specialist"
+            ]
+          },
+          "name": "Security"
+        },
+        "software_engineering": {
+          "aliases": [
+            "Engineering",
+            "Software Development",
+            "SWE"
+          ],
+          "function": "Engineering",
+          "function_abbrev": "Engg",
+          "ic_abbrev": "SWE",
+          "ic_role": "Software Engineer",
+          "legacy_titles": {
+            "ic": [
+              "Software Developer",
+              "Programmer Analyst",
+              "Developer"
+            ],
+            "junior": [
+              "Programmer",
+              "Junior Developer"
+            ],
+            "manager": [
+              "Development Manager",
+              "Software Development Manager"
+            ],
+            "senior_ic": [
+              "Senior Developer",
+              "Senior Programmer Analyst"
+            ]
+          },
+          "name": "Software Engineering"
+        },
+        "student_services": {
+          "aliases": [
+            "Student Affairs",
+            "Admissions",
+            "Advising"
+          ],
+          "function": "Student Services",
+          "function_abbrev": "Student Svcs",
+          "ic_abbrev": "Advisor",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Student Advisor",
+          "industries": [
+            "education"
+          ],
+          "legacy_titles": {
+            "ic": [
+              "Admissions Officer",
+              "Academic Counselor"
+            ]
+          },
+          "name": "Student Services"
+        },
+        "supply_chain": {
+          "aliases": [
+            "SCM",
+            "Planning",
+            "Supply Planning"
+          ],
+          "function": "Supply Chain",
+          "function_abbrev": "SCM",
+          "ic_abbrev": "SC Analyst",
+          "ic_levels": [
+            "intern",
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Supply Chain Analyst",
+          "legacy_titles": {
+            "ic": [
+              "Materials Planner",
+              "Inventory Analyst"
+            ]
+          },
+          "name": "Supply Chain"
+        },
+        "underwriting": {
+          "aliases": [
+            "UW",
+            "Risk Selection"
+          ],
+          "function": "Underwriting",
+          "function_abbrev": "UW",
+          "ic_abbrev": "UW",
+          "ic_levels": [
+            "junior",
+            "ic",
+            "senior_ic",
+            "staff"
+          ],
+          "ic_role": "Underwriter",
+          "industries": [
+            "insurance",
+            "banking",
+            "financial_services"
+          ],
+          "name": "Underwriting"
+        }
+      }
+    },
+    "locations": {
+      "cities": [
+        {
+          "aliases": [
+            "NYC",
+            "New York City",
+            "NY"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "New York",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "SF",
+            "San Fran",
+            "Bay Area"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "San Francisco",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "CHI",
+            "Chi-town"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "Chicago",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "ATX"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "Austin",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "SEA"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "Seattle",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "BOS"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "Boston",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "ATL"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "Atlanta",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "DFW",
+            "Dallas-Fort Worth"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "Dallas",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "DEN"
+          ],
+          "country": "United States",
+          "country_code": "US",
+          "name": "Denver",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "TOR",
+            "YYZ",
+            "GTA"
+          ],
+          "country": "Canada",
+          "country_code": "CA",
+          "name": "Toronto",
+          "region": "north_america"
+        },
+        {
+          "aliases": [
+            "LDN",
+            "LON",
+            "Greater London"
+          ],
+          "country": "United Kingdom",
+          "country_code": "GB",
+          "name": "London",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "BER"
+          ],
+          "country": "Germany",
+          "country_code": "DE",
+          "name": "Berlin",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "MUC",
+            "München"
+          ],
+          "country": "Germany",
+          "country_code": "DE",
+          "name": "Munich",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "PAR",
+            "Île-de-France"
+          ],
+          "country": "France",
+          "country_code": "FR",
+          "name": "Paris",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "AMS",
+            "A'dam"
+          ],
+          "country": "Netherlands",
+          "country_code": "NL",
+          "name": "Amsterdam",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "DUB"
+          ],
+          "country": "Ireland",
+          "country_code": "IE",
+          "name": "Dublin",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "ZRH",
+            "Zürich"
+          ],
+          "country": "Switzerland",
+          "country_code": "CH",
+          "name": "Zurich",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "MAD"
+          ],
+          "country": "Spain",
+          "country_code": "ES",
+          "name": "Madrid",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "STO",
+            "STHLM"
+          ],
+          "country": "Sweden",
+          "country_code": "SE",
+          "name": "Stockholm",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "DXB"
+          ],
+          "country": "United Arab Emirates",
+          "country_code": "AE",
+          "name": "Dubai",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "JHB",
+            "Joburg"
+          ],
+          "country": "South Africa",
+          "country_code": "ZA",
+          "name": "Johannesburg",
+          "region": "emea"
+        },
+        {
+          "aliases": [
+            "SG",
+            "SIN"
+          ],
+          "country": "Singapore",
+          "country_code": "SG",
+          "name": "Singapore",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "SYD"
+          ],
+          "country": "Australia",
+          "country_code": "AU",
+          "name": "Sydney",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "MEL"
+          ],
+          "country": "Australia",
+          "country_code": "AU",
+          "name": "Melbourne",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "TYO",
+            "TKY"
+          ],
+          "country": "Japan",
+          "country_code": "JP",
+          "name": "Tokyo",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "Bangalore",
+            "BLR",
+            "Blr"
+          ],
+          "country": "India",
+          "country_code": "IN",
+          "name": "Bengaluru",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "Bombay",
+            "BOM"
+          ],
+          "country": "India",
+          "country_code": "IN",
+          "name": "Mumbai",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "HYD"
+          ],
+          "country": "India",
+          "country_code": "IN",
+          "name": "Hyderabad",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "HK",
+            "HKG"
+          ],
+          "country": "Hong Kong",
+          "country_code": "HK",
+          "name": "Hong Kong",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "SEL"
+          ],
+          "country": "South Korea",
+          "country_code": "KR",
+          "name": "Seoul",
+          "region": "apac"
+        },
+        {
+          "aliases": [
+            "Sao Paulo",
+            "SP",
+            "GRU",
+            "Sampa"
+          ],
+          "country": "Brazil",
+          "country_code": "BR",
+          "name": "São Paulo",
+          "region": "latam"
+        },
+        {
+          "aliases": [
+            "CDMX",
+            "Ciudad de México",
+            "MEX"
+          ],
+          "country": "Mexico",
+          "country_code": "MX",
+          "name": "Mexico City",
+          "region": "latam"
+        },
+        {
+          "aliases": [
+            "Bogota",
+            "BOG"
+          ],
+          "country": "Colombia",
+          "country_code": "CO",
+          "name": "Bogotá",
+          "region": "latam"
+        },
+        {
+          "aliases": [
+            "BA",
+            "BUE",
+            "CABA"
+          ],
+          "country": "Argentina",
+          "country_code": "AR",
+          "name": "Buenos Aires",
+          "region": "latam"
+        },
+        {
+          "aliases": [
+            "SCL",
+            "Santiago de Chile"
+          ],
+          "country": "Chile",
+          "country_code": "CL",
+          "name": "Santiago",
+          "region": "latam"
+        },
+        {
+          "aliases": [
+            "LIM"
+          ],
+          "country": "Peru",
+          "country_code": "PE",
+          "name": "Lima",
+          "region": "latam"
+        }
+      ],
+      "offices_per_region_by_size": {
+        "enterprise": [
+          2,
+          4
+        ],
+        "large": [
+          1,
+          3
+        ],
+        "mid_market": [
+          1,
+          2
+        ],
+        "mid_small": [
+          1,
+          2
+        ],
+        "small": [
+          1,
+          1
+        ]
+      },
+      "operating_regions_by_size": {
+        "enterprise": [
+          2,
+          3
+        ],
+        "large": [
+          1,
+          3
+        ],
+        "mid_market": [
+          0,
+          2
+        ],
+        "mid_small": [
+          0,
+          1
+        ],
+        "small": [
+          0,
+          1
+        ]
+      },
+      "regions": {
+        "apac": {
+          "aliases": [
+            "Asia Pacific",
+            "Asia-Pacific",
+            "AsiaPac",
+            "APJ"
+          ],
+          "faker_locales": [
+            "en_IN",
+            "en_IN",
+            "en_AU",
+            "en_NZ"
+          ],
+          "name": "APAC"
+        },
+        "emea": {
+          "aliases": [
+            "Europe",
+            "EU",
+            "Europe & Middle East",
+            "EMEA Region"
+          ],
+          "faker_locales": [
+            "en_GB",
+            "de_DE",
+            "fr_FR",
+            "es_ES",
+            "nl_NL",
+            "it_IT"
+          ],
+          "name": "EMEA"
+        },
+        "latam": {
+          "aliases": [
+            "Latin America",
+            "LatAm",
+            "South America",
+            "LAC"
+          ],
+          "faker_locales": [
+            "es_MX",
+            "pt_BR",
+            "es_ES"
+          ],
+          "name": "LATAM"
+        },
+        "north_america": {
+          "aliases": [
+            "NA",
+            "NAM",
+            "AMER",
+            "N. America"
+          ],
+          "faker_locales": [
+            "en_US",
+            "en_US",
+            "en_US",
+            "en_CA"
+          ],
+          "name": "North America"
+        }
+      }
+    },
+    "noise": {
+      "abbreviations": {
+        "Administration": [
+          "Admin"
+        ],
+        "Analyst": [
+          "Anlst"
+        ],
+        "Assistant": [
+          "Asst",
+          "Asst."
+        ],
+        "Associate": [
+          "Assoc",
+          "Assoc."
+        ],
+        "Chief": [
+          "Ch."
+        ],
+        "Coordinator": [
+          "Coord"
+        ],
+        "Customer": [
+          "Cust"
+        ],
+        "Department": [
+          "Dept"
+        ],
+        "Development": [
+          "Dev"
+        ],
+        "Director": [
+          "Dir",
+          "Dir."
+        ],
+        "Engineer": [
+          "Eng",
+          "Engr"
+        ],
+        "Engineering": [
+          "Engg",
+          "Eng"
+        ],
+        "Executive": [
+          "Exec"
+        ],
+        "Human Resources": [
+          "HR"
+        ],
+        "Information": [
+          "Info"
+        ],
+        "International": [
+          "Intl"
+        ],
+        "Junior": [
+          "Jr",
+          "Jr."
+        ],
+        "Management": [
+          "Mgmt"
+        ],
+        "Manager": [
+          "Mgr",
+          "Mngr"
+        ],
+        "Marketing": [
+          "Mktg"
+        ],
+        "Officer": [
+          "Ofcr"
+        ],
+        "Operations": [
+          "Ops"
+        ],
+        "President": [
+          "Pres."
+        ],
+        "Principal": [
+          "Princ",
+          "Prin."
+        ],
+        "Product": [
+          "Prod"
+        ],
+        "Professor": [
+          "Prof."
+        ],
+        "Representative": [
+          "Rep"
+        ],
+        "Senior": [
+          "Sr",
+          "Sr."
+        ],
+        "Senior Vice President": [
+          "SVP",
+          "Sr. VP"
+        ],
+        "Software": [
+          "SW",
+          "S/W"
+        ],
+        "Specialist": [
+          "Spec",
+          "Spclst"
+        ],
+        "Technology": [
+          "Tech"
+        ],
+        "Vice President": [
+          "VP",
+          "V.P."
+        ]
+      },
+      "chained_operation_probability": 0.35,
+      "department_noise_weights": {
+        "abbreviation": 3.0,
+        "alias": 3.0,
+        "case_format": 1.0,
+        "parent_department": 2.0,
+        "segment_prefix": 1.5
+      },
+      "department_suffix_formats": [
+        " - {value}",
+        ", {value}",
+        " ({value})",
+        " | {value}",
+        " {value}"
+      ],
+      "generic_titles": {
+        "director": [
+          "Director",
+          "Head of Department",
+          "Department Head",
+          "Head"
+        ],
+        "executive": [
+          "Executive",
+          "Senior Leader",
+          "President",
+          "Leadership Team",
+          "Head"
+        ],
+        "individual": [
+          "Associate",
+          "Specialist",
+          "Team Member",
+          "Staff",
+          "Employee",
+          "Analyst",
+          "Consultant",
+          "Professional"
+        ],
+        "manager": [
+          "Manager",
+          "Team Lead",
+          "Lead",
+          "Supervisor",
+          "People Manager"
+        ],
+        "vp": [
+          "Vice President",
+          "VP",
+          "Senior Leader",
+          "Head of Department"
+        ]
+      },
+      "location_noise_weights": {
+        "city_alias": 3.0,
+        "formatting": 3.0,
+        "region_instead": 2.0
+      },
+      "profiles": {
+        "clean": {
+          "ambiguity_probability": 0.0,
+          "departed_employee_rate": 0.0,
+          "department_inconsistency_probability": 0.0,
+          "description": "No injected noise. Fields a source never carries (e.g. job family in a directory) are still absent.",
+          "historical_manager_probability": 0.0,
+          "location_noise_probability": 0.0,
+          "max_title_operations": 1,
+          "missing_department_probability": 0.0,
+          "missing_job_family_probability": 0.0,
+          "missing_location_probability": 0.0,
+          "missing_source_probability": 0.0,
+          "missing_timestamp_probability": 0.0,
+          "missing_title_probability": 0.0,
+          "promotion_rate": 0.0,
+          "source_conflict_probability": 0.0,
+          "source_coverage_multiplier": 1.0,
+          "stale_observation_probability": 0.0,
+          "title_corruption_probability": 0.0,
+          "transfer_rate": 0.0
+        },
+        "enterprise_complexity": {
+          "ambiguity_probability": 0.3,
+          "departed_employee_rate": 0.07,
+          "department_inconsistency_probability": 0.45,
+          "description": "High noise plus heavy leadership ambiguity, staleness and departures typical of large reorganizing enterprises.",
+          "historical_manager_probability": 0.5,
+          "location_noise_probability": 0.35,
+          "max_title_operations": 3,
+          "missing_department_probability": 0.22,
+          "missing_job_family_probability": 0.28,
+          "missing_location_probability": 0.18,
+          "missing_source_probability": 0.02,
+          "missing_timestamp_probability": 0.05,
+          "missing_title_probability": 0.06,
+          "promotion_rate": 0.22,
+          "source_conflict_probability": 0.2,
+          "source_coverage_multiplier": 1.0,
+          "stale_observation_probability": 0.28,
+          "title_corruption_probability": 0.55,
+          "transfer_rate": 0.18
+        },
+        "high_noise": {
+          "ambiguity_probability": 0.18,
+          "departed_employee_rate": 0.06,
+          "department_inconsistency_probability": 0.4,
+          "description": "Heavy corruption, many missing fields and frequent cross-source disagreement.",
+          "historical_manager_probability": 0.45,
+          "location_noise_probability": 0.4,
+          "max_title_operations": 3,
+          "missing_department_probability": 0.25,
+          "missing_job_family_probability": 0.3,
+          "missing_location_probability": 0.2,
+          "missing_source_probability": 0.03,
+          "missing_timestamp_probability": 0.06,
+          "missing_title_probability": 0.08,
+          "promotion_rate": 0.18,
+          "source_conflict_probability": 0.15,
+          "source_coverage_multiplier": 0.9,
+          "stale_observation_probability": 0.22,
+          "title_corruption_probability": 0.6,
+          "transfer_rate": 0.12
+        },
+        "low_noise": {
+          "ambiguity_probability": 0.03,
+          "departed_employee_rate": 0.01,
+          "department_inconsistency_probability": 0.1,
+          "description": "Mostly consistent records with occasional variants and gaps.",
+          "historical_manager_probability": 0.3,
+          "location_noise_probability": 0.1,
+          "max_title_operations": 1,
+          "missing_department_probability": 0.04,
+          "missing_job_family_probability": 0.05,
+          "missing_location_probability": 0.04,
+          "missing_source_probability": 0.005,
+          "missing_timestamp_probability": 0.01,
+          "missing_title_probability": 0.01,
+          "promotion_rate": 0.08,
+          "source_conflict_probability": 0.03,
+          "source_coverage_multiplier": 1.0,
+          "stale_observation_probability": 0.05,
+          "title_corruption_probability": 0.15,
+          "transfer_rate": 0.04
+        },
+        "medium_noise": {
+          "ambiguity_probability": 0.08,
+          "departed_employee_rate": 0.03,
+          "department_inconsistency_probability": 0.25,
+          "description": "Typical multi-source mess - abbreviations, gaps, stale profiles and conflicts.",
+          "historical_manager_probability": 0.4,
+          "location_noise_probability": 0.25,
+          "max_title_operations": 2,
+          "missing_department_probability": 0.12,
+          "missing_job_family_probability": 0.15,
+          "missing_location_probability": 0.1,
+          "missing_source_probability": 0.01,
+          "missing_timestamp_probability": 0.03,
+          "missing_title_probability": 0.03,
+          "promotion_rate": 0.12,
+          "source_conflict_probability": 0.08,
+          "source_coverage_multiplier": 1.0,
+          "stale_observation_probability": 0.12,
+          "title_corruption_probability": 0.35,
+          "transfer_rate": 0.07
+        }
+      },
+      "regional_suffix_formats": [
+        " - {value}",
+        ", {value}",
+        " ({value})",
+        " {value}"
+      ],
+      "segment_prefix_formats": [
+        "{segment} - {department}",
+        "{segment} {department}",
+        "{department} ({segment})",
+        "{segment}/{department}"
+      ],
+      "seniority_markers": [
+        "Senior",
+        "Sr.",
+        "Sr",
+        "Junior",
+        "Jr.",
+        "Jr",
+        "Lead",
+        "Staff",
+        "Principal",
+        "Associate",
+        "Chief",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "I"
+      ],
+      "title_noise_weights": {
+        "abbreviation": 3.0,
+        "business_unit_suffix": 1.0,
+        "capitalization": 2.0,
+        "department_suffix": 1.5,
+        "generic_replacement": 0.6,
+        "legacy_title": 0.6,
+        "punctuation": 2.0,
+        "regional_suffix": 1.0,
+        "seniority_removal": 1.5,
+        "truncation": 0.8,
+        "typo": 1.0,
+        "variant": 4.0
+      },
+      "truncation_max_chars": 18
+    },
+    "sources": {
+      "departed_source_coverage": {
+        "company_directory": 0.3,
+        "historical_snapshot": 1.0,
+        "public_profile": 0.6
+      },
+      "fallback_source": "company_directory",
+      "sources": {
+        "company_directory": {
+          "age_days": [
+            0,
+            120
+          ],
+          "always_historical": false,
+          "conflict_multiplier": 1.0,
+          "coverage": 0.7,
+          "department_noise_multiplier": 1.0,
+          "includes_job_family": false,
+          "label": "Company directory",
+          "location_noise_multiplier": 1.0,
+          "missing_department_multiplier": 0.8,
+          "missing_job_family_multiplier": 1.0,
+          "missing_location_multiplier": 0.8,
+          "missing_title_multiplier": 0.8,
+          "provides_historical_manager": false,
+          "reports_employment_status": false,
+          "stale_multiplier": 0.8,
+          "status_unknown_probability": 0.3,
+          "title_noise_multiplier": 0.8
+        },
+        "historical_snapshot": {
+          "age_days": [
+            365,
+            1095
+          ],
+          "always_historical": true,
+          "conflict_multiplier": 1.0,
+          "coverage": 0.3,
+          "department_noise_multiplier": 1.0,
+          "includes_job_family": true,
+          "label": "Historical snapshot",
+          "location_noise_multiplier": 1.0,
+          "missing_department_multiplier": 0.8,
+          "missing_job_family_multiplier": 1.0,
+          "missing_location_multiplier": 1.0,
+          "missing_title_multiplier": 0.8,
+          "provides_historical_manager": true,
+          "reports_employment_status": true,
+          "stale_multiplier": 1.0,
+          "status_unknown_probability": 0.0,
+          "title_noise_multiplier": 0.7
+        },
+        "hr_export": {
+          "age_days": [
+            0,
+            30
+          ],
+          "always_historical": false,
+          "conflict_multiplier": 0.4,
+          "coverage": 0.85,
+          "coverage_by_employment_type": {
+            "contractor": 0.25,
+            "intern": 0.7,
+            "part_time": 0.8
+          },
+          "department_noise_multiplier": 0.4,
+          "includes_job_family": true,
+          "label": "HR export",
+          "location_noise_multiplier": 0.5,
+          "missing_department_multiplier": 0.2,
+          "missing_job_family_multiplier": 0.3,
+          "missing_location_multiplier": 0.3,
+          "missing_title_multiplier": 0.3,
+          "provides_historical_manager": false,
+          "reports_employment_status": true,
+          "stale_multiplier": 0.2,
+          "status_unknown_probability": 0.0,
+          "title_noise_multiplier": 0.35
+        },
+        "internal_directory": {
+          "age_days": [
+            0,
+            60
+          ],
+          "always_historical": false,
+          "conflict_multiplier": 0.8,
+          "coverage": 0.5,
+          "department_noise_multiplier": 0.8,
+          "includes_job_family": true,
+          "label": "Internal directory",
+          "location_noise_multiplier": 0.8,
+          "missing_department_multiplier": 0.6,
+          "missing_job_family_multiplier": 0.8,
+          "missing_location_multiplier": 0.6,
+          "missing_title_multiplier": 0.6,
+          "provides_historical_manager": false,
+          "reports_employment_status": true,
+          "stale_multiplier": 0.6,
+          "status_unknown_probability": 0.05,
+          "title_noise_multiplier": 0.6
+        },
+        "public_profile": {
+          "age_days": [
+            0,
+            720
+          ],
+          "always_historical": false,
+          "conflict_multiplier": 1.8,
+          "coverage": 0.55,
+          "coverage_by_employment_type": {
+            "contractor": 0.7,
+            "intern": 0.6
+          },
+          "department_noise_multiplier": 1.6,
+          "includes_job_family": false,
+          "label": "Public profile",
+          "location_noise_multiplier": 1.8,
+          "missing_department_multiplier": 3.0,
+          "missing_job_family_multiplier": 1.0,
+          "missing_location_multiplier": 1.5,
+          "missing_title_multiplier": 1.5,
+          "provides_historical_manager": false,
+          "reports_employment_status": false,
+          "stale_multiplier": 2.5,
+          "status_unknown_probability": 0.6,
+          "title_noise_multiplier": 2.0
+        }
+      }
+    },
+    "titles": {
+      "executive_roles": {
+        "bu_president": {
+          "seniority": "executive",
+          "title": "Business Unit President",
+          "variants": [
+            "BU President",
+            "President - Business Unit",
+            "BU Head",
+            "Head of Business Unit",
+            "EVP & General Manager"
+          ]
+        },
+        "cco": {
+          "seniority": "c_level",
+          "title": "Chief Compliance Officer",
+          "variants": [
+            "CCO",
+            "Chief Compliance & Ethics Officer"
+          ]
+        },
+        "cdo": {
+          "seniority": "c_level",
+          "title": "Chief Data Officer",
+          "variants": [
+            "CDO",
+            "Chief Data & Analytics Officer",
+            "CDAO"
+          ]
+        },
+        "ceo": {
+          "seniority": "c_level",
+          "title": "Chief Executive Officer",
+          "variants": [
+            "CEO",
+            "Chief Exec Officer",
+            "President & CEO",
+            "Founder & CEO",
+            "Co-Founder, CEO",
+            "President and Chief Executive Officer"
+          ]
+        },
+        "cfo": {
+          "seniority": "c_level",
+          "title": "Chief Financial Officer",
+          "variants": [
+            "CFO",
+            "Chief Finance Officer",
+            "EVP Finance & CFO"
+          ]
+        },
+        "chief_academic_officer": {
+          "seniority": "c_level",
+          "title": "Chief Academic Officer",
+          "variants": [
+            "CAO",
+            "Chief Academic Off."
+          ]
+        },
+        "chief_audit_executive": {
+          "seniority": "c_level",
+          "title": "Chief Audit Executive",
+          "variants": [
+            "CAE",
+            "Head of Internal Audit",
+            "Chief Auditor"
+          ]
+        },
+        "chief_content_officer": {
+          "seniority": "c_level",
+          "title": "Chief Content Officer",
+          "variants": [
+            "CCO",
+            "Editor-in-Chief",
+            "Chief Editor"
+          ]
+        },
+        "chief_medical_officer": {
+          "seniority": "c_level",
+          "title": "Chief Medical Officer",
+          "variants": [
+            "CMO",
+            "Chief Clinical Officer",
+            "Medical Director"
+          ]
+        },
+        "chief_risk_officer": {
+          "seniority": "c_level",
+          "title": "Chief Risk Officer",
+          "variants": [
+            "CRO",
+            "Chief Risk Exec"
+          ]
+        },
+        "chief_scientific_officer": {
+          "seniority": "c_level",
+          "title": "Chief Scientific Officer",
+          "variants": [
+            "CSO",
+            "Chief Science Officer",
+            "Head of R&D"
+          ]
+        },
+        "chief_supply_chain_officer": {
+          "seniority": "c_level",
+          "title": "Chief Supply Chain Officer",
+          "variants": [
+            "CSCO",
+            "Chief Supply Officer"
+          ]
+        },
+        "chro": {
+          "seniority": "c_level",
+          "title": "Chief Human Resources Officer",
+          "variants": [
+            "CHRO",
+            "Chief People Officer",
+            "CPO - People"
+          ]
+        },
+        "cio": {
+          "seniority": "c_level",
+          "title": "Chief Information Officer",
+          "variants": [
+            "CIO",
+            "Chief Info Officer"
+          ]
+        },
+        "ciso": {
+          "seniority": "c_level",
+          "title": "Chief Information Security Officer",
+          "variants": [
+            "CISO",
+            "Chief Security Officer",
+            "Head of Information Security"
+          ]
+        },
+        "clo": {
+          "seniority": "c_level",
+          "title": "General Counsel",
+          "variants": [
+            "Chief Legal Officer",
+            "GC",
+            "CLO",
+            "General Counsel & Secretary"
+          ]
+        },
+        "cmo": {
+          "seniority": "c_level",
+          "title": "Chief Marketing Officer",
+          "variants": [
+            "CMO",
+            "Chief Growth Officer"
+          ]
+        },
+        "coo": {
+          "seniority": "c_level",
+          "title": "Chief Operating Officer",
+          "variants": [
+            "COO",
+            "Chief Operations Officer",
+            "EVP Operations"
+          ]
+        },
+        "cpo": {
+          "seniority": "c_level",
+          "title": "Chief Product Officer",
+          "variants": [
+            "CPO",
+            "Chief Product & Design Officer"
+          ]
+        },
+        "cro": {
+          "seniority": "c_level",
+          "title": "Chief Revenue Officer",
+          "variants": [
+            "CRO",
+            "Chief Commercial Officer",
+            "Chief Sales Officer"
+          ]
+        },
+        "cto": {
+          "seniority": "c_level",
+          "title": "Chief Technology Officer",
+          "variants": [
+            "CTO",
+            "Chief Technical Officer",
+            "EVP, Technology"
+          ]
+        },
+        "division_president": {
+          "seniority": "svp",
+          "title": "Division President",
+          "variants": [
+            "Division Head",
+            "Head of Division",
+            "President - Division",
+            "Divisional President"
+          ]
+        },
+        "general_manager": {
+          "seniority": "executive",
+          "title": "General Manager",
+          "variants": [
+            "GM",
+            "General Mgr",
+            "Product Line GM",
+            "Head of Product Line"
+          ]
+        },
+        "regional_president": {
+          "seniority": "executive",
+          "title": "Regional President",
+          "variants": [
+            "Regional Head",
+            "Regional Managing Director",
+            "President - Region",
+            "Regional MD"
+          ]
+        }
+      },
+      "ladder_patterns": {
+        "director": "Director of {function}",
+        "ic": "{ic_role}",
+        "intern": "{function} Intern",
+        "junior": "Junior {ic_role}",
+        "manager": "{function} Manager",
+        "principal": "Principal {ic_role}",
+        "senior_director": "Senior Director of {function}",
+        "senior_ic": "Senior {ic_role}",
+        "senior_manager": "Senior {function} Manager",
+        "staff": "Staff {ic_role}",
+        "svp": "SVP {function}",
+        "vp": "VP {function}"
+      },
+      "overrides": {
+        "academic": {
+          "director": {
+            "title": "Associate Dean",
+            "variants": [
+              "Assoc. Dean",
+              "Asst Dean"
+            ]
+          },
+          "intern": {
+            "title": "Teaching Intern",
+            "variants": [
+              "Student Teacher",
+              "Teaching Fellow"
+            ]
+          },
+          "junior": {
+            "title": "Teaching Assistant",
+            "variants": [
+              "TA",
+              "Graduate Teaching Assistant"
+            ]
+          },
+          "manager": {
+            "title": "Academic Program Manager",
+            "variants": [
+              "Program Coordinator",
+              "Program Manager - Academics"
+            ]
+          },
+          "principal": {
+            "title": "Professor",
+            "variants": [
+              "Prof.",
+              "Full Professor"
+            ]
+          },
+          "senior_director": {
+            "title": "Dean",
+            "variants": [
+              "Dean of Faculty",
+              "Faculty Dean"
+            ]
+          },
+          "senior_manager": {
+            "title": "Department Chair",
+            "variants": [
+              "Dept Chair",
+              "Chair of Department",
+              "Head of Department"
+            ]
+          },
+          "staff": {
+            "title": "Associate Professor",
+            "variants": [
+              "Assoc. Professor",
+              "Assoc Prof"
+            ]
+          },
+          "svp": {
+            "title": "Provost",
+            "variants": [
+              "Provost & VP",
+              "Chief Academic Provost"
+            ]
+          },
+          "vp": {
+            "title": "Vice Provost",
+            "variants": [
+              "Vice-Provost",
+              "VP Academic Affairs"
+            ]
+          }
+        },
+        "analytics": {
+          "intern": {
+            "title": "Analytics Intern",
+            "variants": [
+              "Data Analyst Intern",
+              "BI Intern"
+            ]
+          }
+        },
+        "consulting": {
+          "director": {
+            "title": "Director of Consulting",
+            "variants": [
+              "Consulting Director",
+              "Associate Partner"
+            ]
+          },
+          "intern": {
+            "title": "Consulting Intern",
+            "variants": [
+              "Summer Associate",
+              "Consulting Summer Intern"
+            ]
+          },
+          "junior": {
+            "title": "Consulting Analyst",
+            "variants": [
+              "Analyst - Consulting",
+              "Business Analyst - Consulting"
+            ]
+          },
+          "manager": {
+            "title": "Engagement Manager",
+            "variants": [
+              "EM - Consulting",
+              "Engagement Mgr",
+              "Project Manager - Consulting"
+            ]
+          },
+          "senior_manager": {
+            "title": "Senior Engagement Manager",
+            "variants": [
+              "Sr Engagement Manager",
+              "Sr. EM"
+            ]
+          },
+          "staff": {
+            "title": "Lead Consultant",
+            "variants": [
+              "Consulting Lead",
+              "Lead Cnslt"
+            ]
+          },
+          "svp": {
+            "title": "Senior Partner",
+            "variants": [
+              "Sr Partner",
+              "Managing Partner"
+            ]
+          },
+          "vp": {
+            "title": "Partner",
+            "variants": [
+              "Practice Partner",
+              "Partner - Consulting"
+            ]
+          }
+        },
+        "customer_success": {
+          "manager": {
+            "title": "Manager, Customer Success",
+            "variants": [
+              "CS Team Manager",
+              "Customer Success Team Lead",
+              "CS Manager"
+            ]
+          },
+          "senior_manager": {
+            "title": "Senior Manager, Customer Success",
+            "variants": [
+              "Sr Manager - CS",
+              "Sr. CS Team Manager"
+            ]
+          }
+        },
+        "executive_support": {
+          "staff": {
+            "title": "Chief of Staff",
+            "variants": [
+              "CoS",
+              "Chief-of-Staff",
+              "Chief of Staff to the CEO"
+            ]
+          }
+        },
+        "hr": {
+          "staff": {
+            "title": "HR Business Partner",
+            "variants": [
+              "HRBP",
+              "HR BP",
+              "People Partner",
+              "HR Biz Partner"
+            ]
+          }
+        },
+        "legal": {
+          "director": {
+            "title": "Deputy General Counsel",
+            "variants": [
+              "Deputy GC",
+              "DGC",
+              "Associate General Counsel"
+            ]
+          },
+          "junior": {
+            "title": "Paralegal",
+            "variants": [
+              "Legal Assistant",
+              "Para-legal"
+            ]
+          },
+          "staff": {
+            "title": "Lead Counsel",
+            "variants": [
+              "Senior Counsel",
+              "Lead Legal Counsel"
+            ]
+          }
+        },
+        "manufacturing": {
+          "director": {
+            "title": "Director of Manufacturing",
+            "variants": [
+              "Manufacturing Director",
+              "Plant Director",
+              "Dir Manufacturing"
+            ]
+          },
+          "manager": {
+            "title": "Production Manager",
+            "variants": [
+              "Prod Mgr",
+              "Production Mgr",
+              "Manufacturing Manager"
+            ]
+          },
+          "senior_manager": {
+            "title": "Senior Production Manager",
+            "variants": [
+              "Sr Production Manager",
+              "Sr. Prod Mgr"
+            ]
+          },
+          "staff": {
+            "title": "Lead Production Technician",
+            "variants": [
+              "Lead Technician",
+              "Production Lead"
+            ]
+          }
+        },
+        "product_management": {
+          "director": {
+            "title": "Director of Product Management",
+            "variants": [
+              "Director of Product",
+              "Product Director",
+              "Director, Product",
+              "Dir Product"
+            ]
+          },
+          "junior": {
+            "title": "Associate Product Manager",
+            "variants": [
+              "APM",
+              "Assoc. Product Manager",
+              "Jr Product Manager"
+            ]
+          },
+          "manager": {
+            "title": "Group Product Manager",
+            "variants": [
+              "GPM",
+              "Group PM",
+              "Grp Product Manager"
+            ]
+          },
+          "principal": {
+            "title": "Principal Product Manager",
+            "variants": [
+              "Principal PM",
+              "Princ. PM"
+            ]
+          },
+          "senior_director": {
+            "title": "Senior Director of Product Management",
+            "variants": [
+              "Sr Director of Product",
+              "Sr. Director, Product"
+            ]
+          },
+          "senior_manager": {
+            "title": "Senior Group Product Manager",
+            "variants": [
+              "Sr GPM",
+              "Sr. Group Product Manager"
+            ]
+          },
+          "staff": {
+            "title": "Lead Product Manager",
+            "variants": [
+              "Lead PM",
+              "Product Lead"
+            ]
+          },
+          "svp": {
+            "title": "SVP Product",
+            "variants": [
+              "SVP of Product",
+              "Senior Vice President, Product"
+            ]
+          },
+          "vp": {
+            "title": "VP Product",
+            "variants": [
+              "VP of Product",
+              "Vice President, Product",
+              "VP - Product",
+              "VP Product Management"
+            ]
+          }
+        },
+        "property_management": {
+          "manager": {
+            "title": "Property Manager",
+            "variants": [
+              "Property Mgr",
+              "PM - Property"
+            ]
+          },
+          "senior_manager": {
+            "title": "Senior Property Manager",
+            "variants": [
+              "Sr Property Manager",
+              "Sr. Property Mgr"
+            ]
+          }
+        },
+        "qa_engineering": {
+          "intern": {
+            "title": "QA Intern",
+            "variants": [
+              "Test Intern",
+              "Quality Engineering Intern"
+            ]
+          }
+        },
+        "research": {
+          "intern": {
+            "title": "Research Intern",
+            "variants": [
+              "Lab Intern",
+              "R&D Intern"
+            ]
+          },
+          "junior": {
+            "title": "Associate Scientist",
+            "variants": [
+              "Research Associate",
+              "Assoc. Scientist"
+            ]
+          },
+          "principal": {
+            "title": "Distinguished Scientist",
+            "variants": [
+              "Distinguished Research Scientist",
+              "Fellow"
+            ]
+          },
+          "staff": {
+            "title": "Principal Scientist",
+            "variants": [
+              "Princ. Scientist",
+              "Lead Scientist"
+            ]
+          }
+        },
+        "retail_operations": {
+          "manager": {
+            "title": "Store Manager",
+            "variants": [
+              "Store Mgr",
+              "SM",
+              "General Store Manager"
+            ]
+          },
+          "senior_manager": {
+            "title": "District Manager",
+            "variants": [
+              "District Mgr",
+              "DM",
+              "Area Manager"
+            ]
+          },
+          "staff": {
+            "title": "Shift Lead",
+            "variants": [
+              "Shift Supervisor",
+              "Key Holder",
+              "Team Lead - Store"
+            ]
+          }
+        },
+        "sales": {
+          "intern": {
+            "title": "Sales Intern",
+            "variants": [
+              "Sales Intern - SDR",
+              "Business Development Intern"
+            ]
+          },
+          "junior": {
+            "title": "Sales Development Representative",
+            "variants": [
+              "SDR",
+              "BDR",
+              "Business Development Representative",
+              "Sales Dev Rep"
+            ]
+          },
+          "staff": {
+            "title": "Strategic Account Executive",
+            "variants": [
+              "Strategic AE",
+              "Enterprise Account Executive",
+              "Sr. Strategic AE"
+            ]
+          }
+        },
+        "software_engineering": {
+          "director": {
+            "title": "Director of Engineering",
+            "variants": [
+              "Dir Engineering",
+              "Engineering Director",
+              "Director, Engineering",
+              "Dir. of Engg"
+            ]
+          },
+          "intern": {
+            "title": "Software Engineering Intern",
+            "variants": [
+              "SWE Intern",
+              "Software Intern",
+              "Engineering Intern"
+            ]
+          },
+          "manager": {
+            "title": "Engineering Manager",
+            "variants": [
+              "Engg Mgr",
+              "Eng Manager",
+              "EM",
+              "Engineering Mgr",
+              "Mgr, Engineering"
+            ]
+          },
+          "principal": {
+            "title": "Principal Engineer",
+            "variants": [
+              "Principal SWE",
+              "Principal Software Engineer",
+              "Princ. Engineer"
+            ]
+          },
+          "senior_director": {
+            "title": "Senior Director of Engineering",
+            "variants": [
+              "Sr Director, Engineering",
+              "Sr. Dir Engineering",
+              "Senior Engineering Director"
+            ]
+          },
+          "senior_manager": {
+            "title": "Senior Engineering Manager",
+            "variants": [
+              "Sr Mgr - Engg",
+              "Sr. Engineering Manager",
+              "Sr EM",
+              "Senior EM"
+            ]
+          },
+          "svp": {
+            "title": "SVP Engineering",
+            "variants": [
+              "SVP - Engineering",
+              "Senior Vice President, Engineering",
+              "Sr. VP Engineering"
+            ]
+          },
+          "vp": {
+            "title": "VP Engineering",
+            "variants": [
+              "VP - Engineering",
+              "Vice President, Engineering",
+              "VP of Engineering",
+              "VP Engg"
+            ]
+          }
+        }
+      },
+      "seniority_levels": [
+        {
+          "executive": false,
+          "key": "intern",
+          "label": "Intern",
+          "management": false,
+          "tier": 8
+        },
+        {
+          "executive": false,
+          "key": "junior",
+          "label": "Junior",
+          "management": false,
+          "tier": 8
+        },
+        {
+          "executive": false,
+          "key": "ic",
+          "label": "Individual Contributor",
+          "management": false,
+          "tier": 8
+        },
+        {
+          "executive": false,
+          "key": "senior_ic",
+          "label": "Senior Individual Contributor",
+          "management": false,
+          "tier": 8
+        },
+        {
+          "executive": false,
+          "key": "staff",
+          "label": "Staff",
+          "management": false,
+          "tier": 8
+        },
+        {
+          "executive": false,
+          "key": "principal",
+          "label": "Principal",
+          "management": false,
+          "tier": 8
+        },
+        {
+          "executive": false,
+          "key": "manager",
+          "label": "Manager",
+          "management": true,
+          "tier": 7
+        },
+        {
+          "executive": false,
+          "key": "senior_manager",
+          "label": "Senior Manager",
+          "management": true,
+          "tier": 6
+        },
+        {
+          "executive": false,
+          "key": "director",
+          "label": "Director",
+          "management": true,
+          "tier": 5
+        },
+        {
+          "executive": false,
+          "key": "senior_director",
+          "label": "Senior Director",
+          "management": true,
+          "tier": 4
+        },
+        {
+          "executive": true,
+          "key": "vp",
+          "label": "Vice President",
+          "management": true,
+          "tier": 3
+        },
+        {
+          "executive": true,
+          "key": "svp",
+          "label": "Senior Vice President",
+          "management": true,
+          "tier": 2
+        },
+        {
+          "executive": true,
+          "key": "executive",
+          "label": "Executive",
+          "management": true,
+          "tier": 1
+        },
+        {
+          "executive": true,
+          "key": "c_level",
+          "label": "C-level",
+          "management": true,
+          "tier": 0
+        }
+      ],
+      "variant_patterns": {
+        "director": [
+          "Dir {function}",
+          "Director, {function}",
+          "{function} Director",
+          "Dir. of {function}",
+          "Director - {function_abbrev}",
+          "{function_abbrev} Director"
+        ],
+        "ic": [
+          "{ic_abbrev}",
+          "{ic_role} II",
+          "{ic_role} (Mid-level)"
+        ],
+        "intern": [
+          "{function} Intern",
+          "Intern - {function}",
+          "{function_abbrev} Intern",
+          "Intern, {function}",
+          "Summer Intern"
+        ],
+        "junior": [
+          "Jr {ic_role}",
+          "Jr. {ic_role}",
+          "Associate {ic_role}",
+          "{ic_role} I",
+          "Junior {ic_abbrev}",
+          "Jr. {ic_abbrev}"
+        ],
+        "manager": [
+          "{function_abbrev} Mgr",
+          "{function} Mgr",
+          "Manager, {function}",
+          "Manager - {function}",
+          "Mgr {function}",
+          "{function_abbrev} Manager"
+        ],
+        "principal": [
+          "Principal {ic_abbrev}",
+          "Princ. {ic_role}",
+          "{ic_role} V",
+          "Principal {ic_role} (IC)"
+        ],
+        "senior_director": [
+          "Sr Director, {function}",
+          "Sr. Dir {function}",
+          "Senior Director, {function}",
+          "Sr Dir - {function_abbrev}"
+        ],
+        "senior_ic": [
+          "Sr {ic_role}",
+          "Sr. {ic_role}",
+          "Senior {ic_abbrev}",
+          "Sr. {ic_abbrev}",
+          "Sr {ic_abbrev}",
+          "{ic_role} III",
+          "{ic_role}, Senior"
+        ],
+        "senior_manager": [
+          "Sr Mgr - {function_abbrev}",
+          "Sr. {function} Manager",
+          "Senior Manager, {function}",
+          "Sr Manager {function}",
+          "Sr. Mgr, {function}"
+        ],
+        "staff": [
+          "Staff {ic_abbrev}",
+          "Lead {ic_role}",
+          "{ic_role} IV",
+          "Lead {ic_abbrev}"
+        ],
+        "svp": [
+          "SVP - {function}",
+          "Senior Vice President, {function}",
+          "Sr. VP {function}",
+          "SVP {function_abbrev}"
+        ],
+        "vp": [
+          "VP - {function}",
+          "Vice President, {function}",
+          "VP of {function}",
+          "Vice President of {function}",
+          "VP {function_abbrev}"
+        ]
+      }
+    }
+  },
+  "settings": {
+    "batch_size": 25,
+    "challenge_noise_profile": "enterprise_complexity",
+    "companies": 500,
+    "min_employees_per_company": 100,
+    "noise_profile": "medium_noise",
+    "planned_employee_total": 100000,
+    "seed": 42,
+    "target_employees": 50000
+  }
+}

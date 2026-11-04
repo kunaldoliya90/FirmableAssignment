@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "company": 500,
+    "dataset.company_count": 1,
+    "departed_employee": 4035,
+    "employee": 100000,
+    "hierarchy": 500,
+    "leakage.companies": 1000,
+    "leakage.employees": 208070,
+    "leakage.observations": 591798,
+    "manifest.checksum": 44,
+    "observation": 295899,
+    "reporting_edge": 100000,
+    "secondary_edge": 2636
+  },
+  "error_count": 0,
+  "issue_counts": {},
+  "issues": [],
+  "issues_truncated": false,
+  "ok": true,
+  "stats": {
+    "companies": 500,
+    "companies_per_split": {
+      "challenge": 50,
+      "test": 75,
+      "train": 300,
+      "validation": 75
+    },
+    "departed_employees": 4035,
+    "employees": 100000,
+    "observations": 295899,
+    "reporting_edges": 99500,
+    "secondary_edges": 2636
+  }
+}
