@@ -67,10 +67,10 @@ What survives a deploy:
 - **Code, learned weights and title aliases** are committed files and ship inside the image.
 - **The dataset** is committed and baked into the image, so it is there on every deploy.
 - **Predictions and evaluations** for validation, test and challenge are computed while the
-  image builds and copied into `/data/artifacts` at startup. Results produced at runtime
-  (new inference or evaluation runs) live on the `/data/artifacts` disk from the blueprint
-  and survive deploys and restarts; the seed never overwrites them. Without a disk the app
-  still starts complete, but runtime results are lost on each deploy.
+  image builds and copied into `/data/artifacts` at startup, so every deploy starts complete.
+- **Runtime results** (inference or evaluation runs started from the UI) are lost on a
+  redeploy or restart on the free plan. To keep them, switch the blueprint to `starter` and
+  uncomment its disk; the seed then never overwrites them.
 - **Background jobs** are in memory, so a job running during a deploy is lost; rerun it.
 
 **Frontend (Vercel).** Import the repo, set the root directory to `Frontend` and add

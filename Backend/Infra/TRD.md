@@ -201,11 +201,16 @@ offline title-alias script is never needed at runtime.
 
 A Blueprint (Blueprint path `Backend/Infra/Production/render.yaml`) for one Docker web
 service: context `Backend`, the bundled image, health check `/api/v1/health`,
-`FIRMABLE_ENV=production`, `FIRMABLE_JOB_WORKERS=1`, and a 1 GB disk at `/data/artifacts`.
+`FIRMABLE_ENV=production`, `FIRMABLE_JOB_WORKERS=1` and a company cache of 24.
 `FIRMABLE_CORS_ORIGINS` and `FIRMABLE_CORS_ORIGIN_REGEX` are set in the dashboard (the
-regex covers Vercel preview URLs). The disk needs a paid plan, so the blueprint uses
-`starter`; the free plan also sleeps when idle and has 512 MB of RAM, which is tight for
-the largest company.
+regex covers Vercel preview URLs).
+
+It uses the free plan. I ran the image with the free plan's limits (512 MB, 0.1 CPU): it starts
+in about 20 s at 116 MB, the largest company (7,197 employees) takes about 12 s, and the 12
+largest companies together peak at 206 MB. The free plan has no disk and sleeps after about
+15 idle minutes, so the first request after a pause is slow, and runs started at runtime
+are lost on a redeploy or restart; the seeded results come back with every image. Switching
+to `starter` and uncommenting the 1 GB disk at `/data/artifacts` keeps runtime results as well.
 
 ### 4.6 Makefile
 
