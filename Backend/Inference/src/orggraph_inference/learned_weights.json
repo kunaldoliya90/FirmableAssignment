@@ -1,0 +1,65 @@
+{
+  "abstain_score": -1.0,
+  "confidence_threshold": 0.63,
+  "training": {
+    "epochs": 300,
+    "l2": 0.001,
+    "report_metrics": {
+      "coverage": 0.394312,
+      "edge_precision": 0.960665,
+      "edge_recall": 0.382121,
+      "penalized_score": 0.350829
+    },
+    "report_split": "test",
+    "train_companies": 150,
+    "train_employees": 23856,
+    "train_split": "train",
+    "tune_metrics": {
+      "penalized_score": 0.4576,
+      "precision": 0.9573,
+      "recall": 0.5024
+    },
+    "tune_split": "validation"
+  },
+  "weights": {
+    "candidate_generic_title": 0.1035,
+    "candidate_not_manager": -1.8765,
+    "candidate_uncertain_seniority": -0.0042,
+    "ceo_for_lower_level": 0.6288,
+    "ceo_for_top_level": 0.0299,
+    "department_conflict": -1.3954,
+    "executive_owns_department": 1.1692,
+    "executive_wrong_function": -2.5735,
+    "historical_manager": 4.2022,
+    "ic_reports_to": {
+      "c_level": -0.4798,
+      "director": 0.2805,
+      "executive": -0.305,
+      "ic": -0.8969,
+      "junior": -0.0698,
+      "manager": 1.8313,
+      "principal": -0.3407,
+      "senior_director": 0.0924,
+      "senior_ic": -1.4228,
+      "senior_manager": -1.0879,
+      "staff": -1.2598
+    },
+    "level_step": -0.2172,
+    "level_step_exact": {
+      "0": 0.1756,
+      "1": 0.0574,
+      "2": -0.2096,
+      "3+": -0.0989
+    },
+    "load_balance": -0.03,
+    "manages_family": 1.622,
+    "same_city": -0.0499,
+    "same_department": 2.09,
+    "same_family": 0.7996,
+    "same_region": 0.4771,
+    "same_segment": 0.6775,
+    "same_subdepartment": 2.317,
+    "segment_conflict": -0.4416,
+    "subdepartment_conflict": -1.5899
+  }
+}

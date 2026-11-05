@@ -662,6 +662,7 @@ name = "orggraph-inference"
 version = "0.1.0"
 source = { editable = "Inference" }
 dependencies = [
+    { name = "numpy" },
     { name = "orggraph-dataset" },
     { name = "pydantic" },
     { name = "typer" },
@@ -669,6 +670,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "numpy", specifier = ">=1.26" },
     { name = "orggraph-dataset", editable = "DataGenerator" },
     { name = "pydantic", specifier = ">=2.7" },
     { name = "typer", specifier = ">=0.12" },

@@ -1,0 +1,28 @@
+# Render Blueprint for the backend API (Blueprint path: Backend/Infra/Production/render.yaml; paths below are
+# relative to the repository root). The frontend deploys to Vercel; see README, "Deploying".
+services:
+  - type: web
+    name: firmable-api
+    runtime: docker
+    # the disk needs a paid plan; the free plan also sleeps when idle and has 512 MB of RAM
+    plan: starter
+    dockerContext: ./Backend
+    dockerfilePath: ./Backend/Infra/Production/DockerfileProd
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: FIRMABLE_ENV
+        value: production
+      # JSON list of exact origins, e.g. ["https://firmable.vercel.app"]
+      - key: FIRMABLE_CORS_ORIGINS
+        sync: false
+      # optional, for Vercel preview URLs, e.g. ^https://firmable-[a-z0-9-]+\.vercel\.app$
+      - key: FIRMABLE_CORS_ORIGIN_REGEX
+        sync: false
+      - key: FIRMABLE_JOB_WORKERS
+        value: "1"
+    # runtime predictions and evaluations survive deploys and restarts here; the image re-seeds what's missing
+    disk:
+      name: artifacts
+      mountPath: /data/artifacts
+      sizeGB: 1

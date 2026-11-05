@@ -65,10 +65,11 @@ class InferenceService:
         self.settings = settings
         self.datasets = datasets
         self.jobs = jobs
-        self.config = InferenceConfig(
-            confidence_threshold=settings.inference.confidence_threshold,
-            max_candidates=settings.inference.max_candidates,
-        )
+        self.config = InferenceConfig(max_candidates=settings.inference.max_candidates)
+        if settings.inference.confidence_threshold is not None:
+            self.config = self.config.model_copy(
+                update={"confidence_threshold": settings.inference.confidence_threshold}
+            )
         self._engine: InferenceEngine | None = None
         self._engine_lock = threading.Lock()
         self._cache: OrderedDict[tuple[str, str], CompanyView] = OrderedDict()

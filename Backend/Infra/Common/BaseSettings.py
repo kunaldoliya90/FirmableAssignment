@@ -11,7 +11,8 @@ BACKEND_ROOT = Path(__file__).resolve().parents[2]
 
 
 class InferenceSettings(BaseModel):
-    confidence_threshold: float = Field(default=0.55, ge=0.0, le=1.0)
+    # None keeps the engine's tuned threshold (learned_weights.json); set it only to override
+    confidence_threshold: float | None = Field(default=None, ge=0.0, le=1.0)
     max_candidates: int = Field(default=25, ge=1)
     company_cache_size: int = Field(default=64, ge=1)
 
@@ -36,9 +37,13 @@ class CommonSettings(BaseSettings):
     datasets_dir: Path = BACKEND_ROOT / "DataGenerator" / "datasets"
     generator_config_dir: Path = BACKEND_ROOT / "DataGenerator" / "config"
     artifacts_dir: Path = BACKEND_ROOT / "DataGenerator" / "datasets" / "_artifacts"
+    # read-only artifacts baked into the image; copied into artifacts_dir at startup when missing there
+    seed_artifacts_dir: Path | None = None
     default_dataset: str = "FirmableAssignmentDataset"
 
     cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:3000"])
+    # e.g. ^https://firmable-[a-z0-9-]+\.vercel\.app$ for Vercel preview deployments
+    cors_origin_regex: str | None = None
     frontend_url: str = "http://localhost:3000"
 
     inference: InferenceSettings = Field(default_factory=InferenceSettings)

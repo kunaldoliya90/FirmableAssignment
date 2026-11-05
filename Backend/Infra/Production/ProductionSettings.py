@@ -1,6 +1,7 @@
 # Production settings
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Literal
 
@@ -23,4 +24,6 @@ class ProductionSettings(CommonSettings):
     def _no_wildcard_cors(self) -> ProductionSettings:
         if "*" in self.cors_origins:
             raise ValueError("wildcard CORS origins are not allowed in production")
+        if self.cors_origin_regex and re.fullmatch(self.cors_origin_regex, "https://attacker.example"):
+            raise ValueError("cors_origin_regex matches arbitrary origins; anchor it to your own domain")
         return self

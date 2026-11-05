@@ -235,6 +235,7 @@ message names the API URL, so a wrong `NEXT_PUBLIC_API_BASE_URL` is obvious righ
 |---|---|
 | API URL | `NEXT_PUBLIC_API_BASE_URL` (default `http://localhost:8000/api/v1`) |
 | Build | `next build` with `output: "standalone"`, ready for a slim Node image |
+| Hosting | Vercel, root directory `Frontend`; set `NEXT_PUBLIC_API_BASE_URL` for Production and Preview (it is inlined at build time). The backend must allow the Vercel origins through `FIRMABLE_CORS_ORIGINS` / `FIRMABLE_CORS_ORIGIN_REGEX` |
 | Scripts | `dev`, `build`, `start`, `test`, `typecheck` |
 | Path alias | `@/` → `src/` |
 

@@ -7,7 +7,7 @@ COMPOSE = docker compose -f Infra/Local/docker-compose.yaml
 .PHONY: setup install generate generate-large validate benchmark-smoke infer evaluate pipeline \
         test test-datagen test-inference test-api test-integration test-fullscale \
         lint format typecheck check api api-prod compose-up compose-down compose-logs logs \
-        docker-build-prod clean
+        docker-build-prod docker-build-bundled train seed-artifacts clean
 
 setup: install
 	cp -n .env.example .env || true
@@ -91,7 +91,17 @@ compose-logs logs:
 	$(COMPOSE) logs -f --tail=200
 
 docker-build-prod:
-	docker build -f Infra/Production/DockerfileProd -t firmable-backend:latest .
+	docker build -f Infra/Production/DockerfileProd --target runtime -t firmable-backend:latest .
+
+docker-build-bundled:
+	docker build -f Infra/Production/DockerfileProd -t firmable-backend:bundled .
+
+train:
+	uv run orggraph-infer train --dataset-dir $(DATASET_DIR)
+
+seed-artifacts:
+	uv run python scripts/build_seed_artifacts.py --datasets-dir DataGenerator/datasets \
+		--output-dir DataGenerator/datasets/_seed_artifacts
 
 clean:
 	rm -rf .mypy_cache .ruff_cache .pytest_cache DataGenerator/.mypy_cache DataGenerator/.ruff_cache \

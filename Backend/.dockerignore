@@ -6,6 +6,7 @@
 **/.ruff_cache
 **/.pytest_cache
 .env
-DataGenerator/datasets
+DataGenerator/datasets/*
+!DataGenerator/datasets/FirmableAssignmentDataset
 **/tests
 **/*.md

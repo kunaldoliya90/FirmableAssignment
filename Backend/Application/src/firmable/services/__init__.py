@@ -4,6 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from firmable.core.jobs import JobManager
+from firmable.core.seeding import seed_artifacts
 from firmable.services.companies import CompanyService
 from firmable.services.datasets import DatasetService
 from firmable.services.employees import EmployeeService
@@ -26,6 +27,8 @@ class ServiceContainer:
 
     @classmethod
     def build(cls, settings: CommonSettings) -> ServiceContainer:
+        if settings.seed_artifacts_dir is not None:
+            seed_artifacts(settings.seed_artifacts_dir, settings.artifacts_dir)
         jobs = JobManager(settings.job_workers)
         datasets = DatasetService(settings, jobs)
         inference = InferenceService(settings, datasets, jobs)

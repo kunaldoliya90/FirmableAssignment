@@ -69,7 +69,7 @@ Backend/
 
 ```python
 class InferenceSettings(BaseModel):
-    confidence_threshold: float = 0.55      # 0..1
+    confidence_threshold: float | None = None   # 0..1; None keeps the engine's learned threshold
     max_candidates: int = 25
     company_cache_size: int = 64
 
@@ -80,13 +80,15 @@ class CommonSettings(BaseSettings):
     api_prefix: str = "/api/v1"             # normalized to a single leading slash
     docs_enabled: bool;  log_level: str;  log_json: bool
     datasets_dir: Path;  generator_config_dir: Path;  artifacts_dir: Path;  default_dataset: str
-    cors_origins: list[str];  frontend_url: str
+    seed_artifacts_dir: Path | None         # baked-in artifacts copied into artifacts_dir at startup
+    cors_origins: list[str];  cors_origin_regex: str | None;  frontend_url: str
     inference: InferenceSettings
     allow_dataset_generation: bool;  max_generation_companies: int = 500;  job_workers: int = 2
 
 class LocalSettings(CommonSettings):       # docs on, generation on, localhost CORS, reload
 class ProductionSettings(CommonSettings):  # JSON logs, docs off, generation off,
-                                           # /data paths, empty CORS, rejects "*"
+                                           # /data paths, empty CORS, rejects "*" and a
+                                           # cors_origin_regex that matches any origin
 ```
 
 Nested values use a double underscore: `FIRMABLE_INFERENCE__CONFIDENCE_THRESHOLD=0.4`.
@@ -157,18 +159,55 @@ stage builder  (ghcr.io/astral-sh/uv:python3.12-bookworm-slim)
   COPY Infra, */src, DataGenerator/config
   uv sync --frozen --no-dev --no-editable              # workspace packages as wheels
 
-stage runtime  (python:3.12-slim-bookworm)
+stage runtime  (python:3.12-slim-bookworm)              # docker build --target runtime
   user app (uid 10001), /data/datasets and /data/artifacts owned by app
   COPY /app/.venv and the generator config
   ENV FIRMABLE_ENV=production, FIRMABLE_*_DIR=/data/..., PATH=/app/.venv/bin
   HEALTHCHECK GET /api/v1/health
-  CMD uvicorn firmable.main:app --host 0.0.0.0 --port 8000 --proxy-headers
+  CMD uvicorn firmable.main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers
+
+stage bundled  (FROM runtime; the default, last stage)
+  COPY the shipped dataset to /app/bundled/datasets
+  RUN scripts/build_seed_artifacts.py → /app/bundled/artifacts   # predictions + one evaluation
+                                                                 # per validation/test/challenge
+  ENV FIRMABLE_DATASETS_DIR=/app/bundled/datasets, FIRMABLE_SEED_ARTIFACTS_DIR=/app/bundled/artifacts
 ```
 
-`.dockerignore` keeps datasets, caches, tests and markdown out of the build context. No
-secrets are embedded; the app currently needs none.
+`runtime` is the original image: code only, datasets mounted at `/data`. `bundled` exists for
+hosts without a dataset volume, such as Render. It is the last stage because Render can't
+pick a build target. It bends N2 (no datasets in the image) on purpose: the dataset is
+committed to git anyway, and it's the only way a fresh Render instance starts complete.
 
-### 4.5 Makefile
+At startup, `ServiceContainer.build` calls `seed_artifacts(seed_artifacts_dir,
+artifacts_dir)`:
+
+| File in the seed | In artifacts_dir | Action |
+|---|---|---|
+| any | missing | copy |
+| any | identical | keep |
+| changed by a new image | still exactly what an earlier deploy seeded (`.seeded.json`) | upgrade |
+| changed by a new image | different (rerun or written at runtime) | keep, never overwrite |
+
+So a persistent disk at `/data/artifacts` keeps every runtime result across deploys, a new
+model version still refreshes the seeded predictions, and without a disk the app still starts
+with the seeded results. If the directory isn't writable, seeding logs a warning and the app
+starts anyway.
+
+`.dockerignore` keeps caches, tests, markdown and every dataset except the shipped one out of
+the build context. No secrets are embedded; the app needs none. The OpenAI key used by the
+offline title-alias script is never needed at runtime.
+
+### 4.5 Render: `Production/render.yaml`
+
+A Blueprint (Blueprint path `Backend/Infra/Production/render.yaml`) for one Docker web
+service: context `Backend`, the bundled image, health check `/api/v1/health`,
+`FIRMABLE_ENV=production`, `FIRMABLE_JOB_WORKERS=1`, and a 1 GB disk at `/data/artifacts`.
+`FIRMABLE_CORS_ORIGINS` and `FIRMABLE_CORS_ORIGIN_REGEX` are set in the dashboard (the
+regex covers Vercel preview URLs). The disk needs a paid plan, so the blueprint uses
+`starter`; the free plan also sleeps when idle and has 512 MB of RAM, which is tight for
+the largest company.
+
+### 4.6 Makefile
 
 | Target | Command |
 |---|---|
@@ -178,7 +217,8 @@ secrets are embedded; the app currently needs none.
 | `test`, `test-fullscale`, `lint`, `format`, `typecheck` | pytest, ruff, mypy |
 | `api`, `api-prod` | uvicorn with local or production settings |
 | `compose-up`, `compose-down`, `compose-logs` | Docker Compose |
-| `docker-build-prod` | production image |
+| `docker-build-prod`, `docker-build-bundled` | production image: `runtime` target (mounted data) or `bundled` (Render) |
+| `train`, `seed-artifacts` | `orggraph-infer train`, `scripts/build_seed_artifacts.py` |
 
 Every recipe is a plain `uv run ...` or `docker ...` line, so the commands can be copied
 directly on Windows without `make`.
@@ -186,17 +226,19 @@ directly on Windows without `make`.
 ## 5. Testing
 
 - `Application/src/firmable/tests/test_settings.py`: environment selection, nested env
-  overrides, the production wildcard-CORS rejection, generation disabled in production.
+  overrides, the production wildcard-CORS and open-regex rejection, preview origins allowed
+  by the regex, the learned threshold kept when unset, generation disabled in production.
+- `Application/src/firmable/tests/test_seeding.py`: seeding copies, upgrades untouched files
+  and never overwrites runtime output.
 - `Backend/tests/test_structure.py`: the repository layout, every path the Makefile refers
   to exists, and the docs are exactly one TRD per section.
 - `docker compose config` validates the compose file.
 
 ## 6. Limitations and next steps
 
-- The compose file is validated, but I haven't built the images on this machine, because
-  Docker wasn't running.
 - Running one API process per container is required, because the job state and the
-  inference cache are in memory.
+  inference cache are in memory. A job running during a deploy or restart is lost and has to
+  be started again; its finished output is on disk and survives.
 - TLS and authentication are expected from a gateway or reverse proxy in front of the API.
 - The frontend production build (`next build`, standalone output) isn't part of this image;
   it would get its own Node image with `NEXT_PUBLIC_API_BASE_URL` set at build time.

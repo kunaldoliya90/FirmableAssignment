@@ -6,7 +6,7 @@ from collections import Counter
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, NamedTuple
 
 from orggraph_dataset.constants import SENIORITY_RANK
 from orggraph_dataset.evaluation.prediction_schema import Prediction
@@ -31,6 +31,13 @@ class CompanyInference:
     stats: dict[str, Any] = field(default_factory=dict)
 
 
+class ScoredCompany(NamedTuple):
+    profiles: dict[str, EmployeeProfile]
+    root_id: str | None
+    departed: set[str]
+    scored: dict[str, ScoredEmployee]
+
+
 class InferenceEngine:
     def __init__(self, config: InferenceConfig | None = None, vocabulary: Vocabulary | None = None) -> None:
         self.config = config or InferenceConfig()
@@ -52,8 +59,7 @@ class InferenceEngine:
                 owned.setdefault(role, set()).add(dept)
         return owned
 
-    def infer_company(self, data: ObservedCompanyData) -> CompanyInference:
-        started = time.perf_counter()
+    def score_company(self, data: ObservedCompanyData) -> ScoredCompany:
         profiles = self.profiles.build(data)
         _revive_absent_ceo(profiles)
         active = [p for p in profiles.values() if not p.departed]
@@ -68,9 +74,14 @@ class InferenceEngine:
             )
             for eid, cands in candidates.items()
         }
+        return ScoredCompany(profiles, root.employee_id if root else None, departed, scored)
+
+    def infer_company(self, data: ObservedCompanyData) -> CompanyInference:
+        started = time.perf_counter()
+        profiles, root_id, departed, scored = self.score_company(data)
         graph = self.graph.build(
             scored,
-            root.employee_id if root else None,
+            root_id,
             departed,
             {eid: p.seniority for eid, p in profiles.items()},
         )

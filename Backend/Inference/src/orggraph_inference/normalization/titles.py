@@ -2,15 +2,18 @@
 from __future__ import annotations
 
 import difflib
+import json
 import re
 from collections import defaultdict
 from dataclasses import dataclass
+from pathlib import Path
 
 from orggraph_dataset.constants import SENIORITY_RANK
 
 from orggraph_inference.normalization.text import clean
 from orggraph_inference.normalization.vocabulary import Vocabulary
 
+TITLE_ALIASES_PATH = Path(__file__).with_name("title_aliases.json")
 _SUFFIX_SPLIT = re.compile(r"\s+-\s+|,\s+|\s+\||\s*\(")
 _KEYWORD_SENIORITY: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\b(ceo|chief executive)\b"), "c_level"),
@@ -52,12 +55,27 @@ class TitleInterpretation:
         return SENIORITY_RANK[self.seniority] if self.seniority else None
 
 
+def load_title_aliases(path: Path = TITLE_ALIASES_PATH) -> dict[str, str]:
+    if not path.is_file():
+        return {}
+    aliases: dict[str, str] = json.loads(path.read_text(encoding="utf-8"))["aliases"]
+    return aliases
+
+
 class TitleNormalizer:
-    def __init__(self, vocabulary: Vocabulary, fuzzy_threshold: float = 0.84) -> None:
+    def __init__(
+        self, vocabulary: Vocabulary, fuzzy_threshold: float = 0.84, aliases: dict[str, str] | None = None
+    ) -> None:
         self.vocab = vocabulary
         self.fuzzy_threshold = fuzzy_threshold
         tax = vocabulary.taxonomy
         self._entries = {t.canonical_title: t for t in tax.all_titles()}
+        # reviewed raw-title -> canonical mappings produced offline by scripts/llm_title_aliases.py
+        self._aliases = {
+            clean(raw): canonical
+            for raw, canonical in (load_title_aliases() if aliases is None else aliases).items()
+            if canonical in self._entries
+        }
         self._keys: dict[str, set[str]] = defaultdict(set)
         for entry in tax.all_titles():
             for text in (*entry.title_variants, *entry.legacy_titles):
@@ -155,6 +173,10 @@ class TitleNormalizer:
         found = self._lookup(cleaned)
         if found:
             return self._from_canonicals(raw, found, 0.9, "expanded", None)
+        alias = self._aliases.get(cleaned)
+        if alias:
+            suffix = clean(heads[-1][1]) if heads else None
+            return self._from_canonicals(raw, {alias}, 0.9, "alias", suffix or None)
         for head, rest in heads:
             head_fuzzy = self._fuzzy(clean(head), suffix=clean(rest) or None)
             if head_fuzzy is not None:

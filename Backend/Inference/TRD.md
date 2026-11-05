@@ -56,10 +56,11 @@ whole graph.
 2. **Restrict who can be a manager.** A manager must be active and strictly more senior.
    That one constraint makes cycles almost impossible, and it shrinks the search space from
    N to a handful of plausible people.
-3. **Score pairs with interpretable features.** I use a linear model with hand-set weights:
-   same department, level gap, segment match, historical-manager hint, and so on. I picked
-   linear over a learned model so every decision can be explained as a sum of named
-   signals, and so the engine never needs ground truth to train.
+3. **Score pairs with interpretable features.** I use a linear model over named features:
+   same department, level gap, segment match, historical-manager hint, and so on. Linear
+   keeps every decision explainable as a sum of named signals. The weights are learned
+   offline on the train split (5.9) and committed as a JSON file; the runtime engine reads
+   that file and never touches ground truth.
 4. **Make abstention a real option.** The softmax runs over the candidates **plus an abstain
    slot**. If three managers look equally good, each gets about a third of the probability,
    and the employee falls under the threshold. Ambiguity turns into abstention by itself.
@@ -141,6 +142,7 @@ The matchers are tried in order, and the first hit wins:
 | exact variant lookup | `Sr. SWE` | 1.0 |
 | strip a trailing suffix (`, Engineering`, `(EMEA)`, `- Consumer`) right to left, then lookup | `Director, Engineering (EMEA)` | 0.93 |
 | abbreviation expansion, then lookup | `Financial Anlst` | 0.9 |
+| reviewed alias (`normalization/title_aliases.json`, built offline by an LLM, see 5.10) | `Snr Dta Platfrm Engnr` | 0.9 |
 | fuzzy: candidate keys from a token index, then `SequenceMatcher` ≥ 0.84 | `Senoir Analyst` | ratio × 0.85 |
 | keyword fallback: seniority only | `Head of Something` | 0.15–0.3 |
 
@@ -223,24 +225,30 @@ safety net.
 ### 5.5 Features and scoring
 
 `relationship_features(emp, cand, exec_departments, present_ranks) -> RelationshipFeatures`
-(19 fields). The ones that carry the most weight:
+(19 scored fields, plus `employee_is_ic` and `candidate_seniority`). Besides one weight per
+field, the scorer has two small learned tables: a bonus per exact level gap
+(`level_step_exact`: 0, 1, 2, 3+) and, for IC employees, a bonus per manager seniority
+(`ic_reports_to`). The weights that matter most, learned vs the original hand-set values:
 
-| Feature | Weight | Notes |
-|---|---|---|
-| `level_steps` | −1.1 per step | counts only seniority levels that actually exist in that department (`present_level_steps`), so a director over managers is 0 steps when there are no senior managers |
-| `same_department` / `same_subdepartment` | +2.2 / +1.6 | |
-| `department_conflict` | −2.5 | |
-| `same_segment` / `segment_conflict` | +1.8 / −1.8 | BU/region copies of the same department |
-| `historical_manager` | +3.5 × share | an unreliable hint, so it is weighted rather than trusted |
-| `executive_owns_department` | +2.6 | CTO → engineering, etc. |
-| `ceo_for_top_level` / `ceo_for_lower_level` | +1.5 / −3.0 | stops everything collapsing onto the CEO |
-| `candidate_not_manager` | −3.0 | ICs managing ICs is rare |
+| Feature | Learned | Hand-set | Notes |
+|---|---|---|---|
+| `historical_manager` | +4.2 × share | +3.5 | the strongest single signal when present (10–12% of employees) |
+| `same_department` / `same_subdepartment` | +2.1 / +2.3 | +2.2 / +1.6 | |
+| `manages_family` / `same_family` | +1.6 / +0.8 | +0.6 / +0.9 | a team almost always shares its manager's job family |
+| `executive_wrong_function` | −2.6 | −1.5 | |
+| `candidate_not_manager` | −1.9 | −3.0 | |
+| `ic_reports_to.manager` vs `.senior_manager` | +1.8 / −1.1 | — | ICs report to first-line managers, not to the level above |
+| `level_steps` | −0.2 per step | −1.1 | mostly replaced by the IC table and `level_step_exact` |
+
+`level_steps` counts only seniority levels that actually exist in that department
+(`present_level_steps`), so a director over managers is 0 steps when there are no senior
+managers.
 
 `RelationshipScorer.score(emp, cands, ...) -> ScoredEmployee`:
 
 ```
 s_i     = linear_score(features_i, weights)
-p       = softmax([s_1 … s_k, abstain_score=0.6] / temperature)
+p       = softmax([s_1 … s_k, abstain_score] / temperature)     # abstain_score = −1.0, tuned
 quality = 0.5 + 0.3·seniority_conf + 0.2·min(1.5·dept_conf, 1)   (×0.8 if generic title)
 → candidates sorted by p, abstain_probability = p[k], profile_quality
 ```
@@ -309,23 +317,82 @@ can never score a half-written file.
 
 ### 5.8 Configuration: `InferenceConfig`
 
+`confidence_threshold`, `abstain_score` and `weights` default to the values in
+`learned_weights.json` when that file exists, and to the original hand-set values otherwise.
+
 | Key | Default | Purpose |
 |---|---|---|
-| `confidence_threshold` | 0.55 | abstain below this |
+| `confidence_threshold` | 0.63 (learned; 0.55 hand-set) | abstain below this |
 | `max_candidates` | 25 | candidate pool cap |
-| `abstain_score` | 0.6 | logit of the abstain slot |
+| `abstain_score` | −1.0 (learned; 0.6 hand-set) | logit of the abstain slot |
 | `source_reliability` | hr 1.0 … snapshot 0.25 | vote weights |
 | `recency_half_life_days` | 365 | vote decay |
 | `fuzzy_title_threshold` / `fuzzy_department_threshold` | 0.84 / 0.86 | fuzzy cut-offs |
 | `span_caps` | manager 22 … c_level 16 | per-seniority report caps |
 | `optimization_rounds` | 3 | graph clean-up passes |
-| `weights` | `ScoringWeights` | 20 feature weights |
+| `weights` | `ScoringWeights` | 20 feature weights plus the two learned tables |
 
-The API exposes the first three through `FIRMABLE_INFERENCE__*`.
+The API exposes the first two through `FIRMABLE_INFERENCE__*`; leaving the threshold unset
+keeps the learned one.
+
+### 5.9 Learning the weights: `orggraph-infer train`
+
+`evaluation/training.py` is the only code that reads ground truth for anything other than
+scoring, which is why it lives in `evaluation/`. It never runs inside the engine.
+
+```
+1. for the first 150 train companies: score_company() → per employee, the candidates'
+   feature_terms() and the index of the true manager (skipped if absent or alone)
+2. fit a conditional logit (softmax over each employee's candidates) with Adam, L2 1e-3
+3. for abstain_score in −4 … +1: run the engine on validation, sweep thresholds 0.30–0.95,
+   keep the pair with the best penalized score (correct − 2·wrong) / true edges
+4. score the report split (test) once with the result, then write learned_weights.json
+```
+
+`feature_terms()` and `linear_score()` share one definition of the terms, and a test checks
+that `linear_score` equals the weighted sum of `feature_terms` on real candidates, so the
+trainer and the engine can't drift apart. The whole run takes about 8 minutes.
+
+### 5.10 LLM title aliases (offline)
+
+`Inference/scripts/llm_title_aliases.py` sends the observed titles the matchers handle worst
+(fuzzy, keyword, unknown, ambiguous: about 8,600 unique strings, 108 calls) to an LLM
+(`OPENAI_MODEL`, default `gpt-5.5`; `OPENAI_ENDPOINT` selects OpenAI or an Azure AI Foundry
+resource, whose OpenAI v1 API lives under `/openai/v1` with an `api-key` header). It asks for a canonical title from the taxonomy or null,
+using strict JSON-schema output, and drops any answer that isn't a real canonical title.
+Every answer is cached in `scripts/llm_cache/`, so re-runs are free and reproducible. The
+result is `normalization/title_aliases.json`, which is reviewed and committed like code.
+Production never calls the LLM, and determinism (N1) holds because the engine only reads a
+file.
+
+I measured the ceiling before building it: giving the engine the *true* seniority and job
+family of every employee only moves validation from 0.387 to 0.408 penalized. Title
+normalization is not the bottleneck (5.4 and section 8 explain what is), so the alias pass is
+a cheap, bounded improvement, not a big lever. It matters more on real data, whose titles
+are messier than the generator's.
+
+The committed run used `gpt-5.5` on Azure AI Foundry: 8,561 titles in 108 calls, 7,688
+mapped and the rest left null (bare titles such as "Account" or "Lead"). Where the model
+answered, its canonical title was right in every case I spot-checked. On the 14,000
+observations whose title it mapped, seniority accuracy against ground truth goes from 65.4% to
+69.9% (about 770 fixed, 147 made worse). The remaining errors are generator noise no reader
+can undo, such as a dropped "Senior" or a stale title. Penalized score rises by 0.001–0.002
+on every split and precision doesn't drop.
 
 ## 6. Results and threshold choice
 
-I tuned on validation and checked test once.
+Weights learned on train, abstain logit and threshold tuned on validation, test scored once,
+with the LLM title aliases (5.10) in place.
+
+| Split | Precision | Recall | Coverage | Penalized | ECE |
+|---|---|---|---|---|---|
+| validation | 0.959 | 0.503 | 0.518 | 0.460 | 0.033 |
+| test | 0.961 | 0.382 | 0.394 | 0.352 | 0.046 |
+| challenge (enterprise noise) | 0.884 | 0.174 | 0.195 | 0.129 | 0.058 |
+
+Without the aliases the penalized scores are 0.458, 0.351 and 0.128.
+
+With the original hand-set weights (threshold 0.55):
 
 | Split | Precision | Recall | Coverage | Penalized | ECE |
 |---|---|---|---|---|---|
@@ -333,16 +400,23 @@ I tuned on validation and checked test once.
 | test | 0.955 | 0.321 | 0.334 | 0.291 | 0.096 |
 | challenge (enterprise noise) | 0.872 | 0.146 | 0.165 | 0.103 | 0.075 |
 
-The penalized score is flat between 0.5 and 0.7. Going lower buys coverage at the cost of
-precision: on validation, 0.40 gives 0.892 precision at 0.530 coverage, and 0.30 gives 0.803
-at 0.637.
+Lowering the threshold buys coverage at the cost of precision, and the penalized score drops
+below about 0.6.
+
+**How far this data lets us go.** The candidate pool contains the true manager for about 98%
+of employees, so almost every miss is a choice between look-alikes. In the ground truth, the
+true manager is the only manager with its department, job family and seniority for 51% of
+validation employees and 38% of test employees; on test, 35% of employees have six or more
+such look-alikes. Adding employees with a correct historical hint, the recall reachable at
+high precision is roughly 56% (validation) and 44% (test). The learned model reaches 50% and
+38%.
 
 Performance is about 14,600 employees in 36 s for the test split. The largest company (7,746)
 takes about 16 s.
 
 ## 7. Testing
 
-30 tests, run against small datasets generated in fixtures (clean and noisy).
+36 tests, run against small datasets generated in fixtures (clean and noisy).
 
 | Area | What is checked |
 |---|---|
@@ -352,6 +426,8 @@ takes about 16 s.
 | Quality floor | precision > 0.9 clean and > 0.75 noisy; coverage > 0.2 |
 | Determinism | same process, and two processes with different `PYTHONHASHSEED`s |
 | Candidate cap | with 40 senior ICs and 3 managers above an IC, all 3 managers survive the cap of 25 |
+| Learning | `linear_score` equals the weighted `feature_terms`; the logit fit recovers an informative feature; the threshold sweep maximizes the penalized score |
+| Aliases | an alias resolves a title the matchers miss (keeping its suffix); aliases to unknown titles are ignored; the script batches, honours the cache, and drops invalid LLM answers (mocked API) |
 
 ## 8. Trade-offs and future work
 
@@ -360,8 +436,13 @@ takes about 16 s.
   employees. It costs coverage, not precision, because those people just get no manager.
   I kept it because in noisy data it's the main way departures are detected.
 - **Coverage on large flat teams.** When several managers share department, family and
-  location, nothing in the data separates them, so the engine abstains. The next step would
-  be using co-observation patterns (people who share an exact sub-team label across sources).
-- **Hand-set weights.** Learning them offline on the train split (logistic regression on the
-  same features) would be cheap. The runtime engine would still never touch ground truth.
+  location, nothing in the data separates them, so the engine abstains (section 6 measures
+  how often). I tried propagating historical hints between same-family peers as a feature;
+  it added nothing on validation, so it isn't in the model. A useful next step for the UI is
+  a skip-level answer: when the near-tied managers share a parent, attach the employee to
+  that parent's team rather than leaving them unplaced.
+- **What an LLM can and can't do here.** It can read messy titles (5.10). It can't pick
+  between look-alike managers, because the data holds no signal to separate them, and
+  asking it per employee would cost tens of millions of tokens per run and break
+  determinism.
 - **Matrix (dotted-line) managers** are out of scope; only primary edges are predicted.

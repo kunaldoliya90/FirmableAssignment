@@ -55,5 +55,36 @@ def evaluate(
     typer.echo(f"{'ECE':<20}{report['calibration']['expected_calibration_error']}")
 
 
+@app.command(
+    help="Learn scoring weights on one split, tune the threshold on another, write learned_weights.json."
+)
+def train(
+    dataset_dir: DatasetOpt = Path("DataGenerator/datasets/FirmableAssignmentDataset"),
+    train_split: Annotated[str, typer.Option(help="Split the weights are fitted on.")] = "train",
+    tune_split: Annotated[
+        str, typer.Option(help="Split the abstain logit and threshold are tuned on.")
+    ] = "validation",
+    report_split: Annotated[str | None, typer.Option(help="Split scored once with the result.")] = "test",
+    max_companies: Annotated[int, typer.Option(help="Training companies (first N by ID).")] = 150,
+    output: Annotated[Path | None, typer.Option(help="Where to write (default: the packaged file).")] = None,
+) -> None:
+    from orggraph_inference.config import LEARNED_WEIGHTS_PATH
+    from orggraph_inference.evaluation.training import train as run_training
+    from orggraph_inference.evaluation.training import write_learned
+
+    result = run_training(
+        dataset_dir,
+        train_split,
+        tune_split,
+        report_split,
+        max_companies,
+        progress=lambda message: typer.echo(f"  {message}", err=True),
+    )
+    target = output or LEARNED_WEIGHTS_PATH
+    write_learned(result, target)
+    typer.echo(f"wrote {target}")
+    typer.echo(json.dumps(result.summary, indent=2))
+
+
 if __name__ == "__main__":
     app()

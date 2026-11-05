@@ -1,7 +1,22 @@
-# Inference tunables
+# Inference tunables; learned_weights.json (written by `orggraph-infer train`) overrides the hand-set defaults
 from __future__ import annotations
 
+import json
+from functools import lru_cache
+from pathlib import Path
+from typing import Any
+
 from pydantic import BaseModel, ConfigDict, Field
+
+LEARNED_WEIGHTS_PATH = Path(__file__).with_name("learned_weights.json")
+
+
+@lru_cache(maxsize=1)
+def learned_settings() -> dict[str, Any]:
+    if not LEARNED_WEIGHTS_PATH.is_file():
+        return {}
+    data: dict[str, Any] = json.loads(LEARNED_WEIGHTS_PATH.read_text(encoding="utf-8"))
+    return data
 
 
 class ScoringWeights(BaseModel):
@@ -27,6 +42,14 @@ class ScoringWeights(BaseModel):
     candidate_uncertain_seniority: float = -0.6
     candidate_not_manager: float = -3.0
     load_balance: float = -0.03
+    # learned only: bonus per exact level gap ("0", "1", "2", "3+") and per manager seniority for IC employees
+    level_step_exact: dict[str, float] = Field(default_factory=dict)
+    ic_reports_to: dict[str, float] = Field(default_factory=dict)
+
+
+def _default_weights() -> ScoringWeights:
+    learned = learned_settings().get("weights")
+    return ScoringWeights.model_validate(learned) if learned else ScoringWeights()
 
 
 class InferenceConfig(BaseModel):
@@ -49,10 +72,12 @@ class InferenceConfig(BaseModel):
     fuzzy_department_threshold: float = 0.86
 
     max_candidates: int = Field(default=25, ge=1)
-    abstain_score: float = 0.6
+    abstain_score: float = Field(default_factory=lambda: learned_settings().get("abstain_score", 0.6))
     softmax_temperature: float = 1.0
-    confidence_threshold: float = Field(default=0.55, ge=0.0, le=1.0)
-    weights: ScoringWeights = Field(default_factory=ScoringWeights)
+    confidence_threshold: float = Field(
+        default_factory=lambda: learned_settings().get("confidence_threshold", 0.55), ge=0.0, le=1.0
+    )
+    weights: ScoringWeights = Field(default_factory=_default_weights)
 
     span_caps: dict[str, int] = Field(
         default_factory=lambda: {

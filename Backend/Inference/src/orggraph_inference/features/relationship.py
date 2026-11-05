@@ -33,9 +33,15 @@ class RelationshipFeatures:
     candidate_generic_title: bool
     candidate_uncertain_seniority: bool
     candidate_not_manager: bool
+    employee_is_ic: bool = False
+    candidate_seniority: str | None = None
 
     def evidence(self) -> list[str]:
-        names = [name for name, value in self.__dict__.items() if isinstance(value, bool) and value]
+        names = [
+            name
+            for name, value in self.__dict__.items()
+            if isinstance(value, bool) and value and name != "employee_is_ic"
+        ]
         if self.historical_manager:
             names.append("historical_manager")
         return names
@@ -108,4 +114,6 @@ def relationship_features(
         candidate_generic_title=candidate.generic_title,
         candidate_uncertain_seniority=candidate.seniority_confidence < 0.5,
         candidate_not_manager=candidate.rank < _MANAGER_RANK,
+        employee_is_ic=employee.rank < _MANAGER_RANK,
+        candidate_seniority=candidate.seniority,
     )

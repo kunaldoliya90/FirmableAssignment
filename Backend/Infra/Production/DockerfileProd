@@ -1,4 +1,6 @@
-# Production backend image: locked deps, non-root user, datasets mounted at /data
+# Production backend image: locked deps, non-root user.
+#   --target runtime : datasets mounted at /data (docker compose, Kubernetes, ...)
+#   default (bundled): the shipped dataset and precomputed artifacts baked in, for hosts like Render
 FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS builder
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
@@ -42,5 +44,20 @@ USER app
 EXPOSE 8000
 VOLUME ["/data"]
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
-  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health')"
-CMD ["uvicorn", "firmable.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]
+  CMD python -c "import os, urllib.request; urllib.request.urlopen(f\"http://127.0.0.1:{os.environ.get('PORT', '8000')}/api/v1/health\")"
+# PORT is set by hosts such as Render; 8000 otherwise
+CMD ["sh", "-c", "exec uvicorn firmable.main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips '*'"]
+
+# Self-contained image: dataset under /app/bundled (read-only, part of the image), precomputed predictions and
+# evaluations seeded into /data/artifacts at startup. Mount a persistent disk at /data/artifacts to keep
+# runtime results across deploys; without one the app still starts complete from the seed.
+FROM runtime AS bundled
+USER root
+RUN mkdir -p /app/bundled /app/scripts && chown app:app /app/bundled /app/scripts
+USER app
+COPY --chown=app:app DataGenerator/datasets/FirmableAssignmentDataset /app/bundled/datasets/FirmableAssignmentDataset
+COPY --chown=app:app scripts/build_seed_artifacts.py /app/scripts/
+RUN python /app/scripts/build_seed_artifacts.py \
+      --datasets-dir /app/bundled/datasets --output-dir /app/bundled/artifacts
+ENV FIRMABLE_DATASETS_DIR=/app/bundled/datasets \
+    FIRMABLE_SEED_ARTIFACTS_DIR=/app/bundled/artifacts

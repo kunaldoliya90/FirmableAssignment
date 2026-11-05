@@ -115,7 +115,10 @@ class ServiceContainer:
 ```
 
 Routes get the container with `Depends(services)`, which reads `request.app.state.services`.
-Tests call `create_app(LocalSettings(datasets_dir=tmp, ...))`, so nothing needs patching.
+When `settings.seed_artifacts_dir` is set, `build` first copies the artifacts baked into the
+image into `artifacts_dir` (`core/seeding.py`, rules in the Infra TRD, 4.4). The inference
+threshold comes from the engine's learned config unless
+`FIRMABLE_INFERENCE__CONFIDENCE_THRESHOLD` overrides it. Tests call `create_app(LocalSettings(datasets_dir=tmp, ...))`, so nothing needs patching.
 
 When a dataset is regenerated, `DatasetService.on_invalidate(listener)` notifies the
 company, employee and inference services, and each drops its caches for that dataset.

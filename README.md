@@ -32,10 +32,12 @@ Or use Docker: `cd Backend && docker compose -f Infra/Local/docker-compose.yaml 
 
 ## Where it stands
 
-On the held-out test split, the engine gets **95% of the edges it predicts right, and
-predicts an edge for 33% of employees**. It abstains on the rest on purpose: a wrong
-reporting line costs more than a missing one. The trade-off is one setting, and the
-Inference TRD has the numbers for other thresholds.
+On the held-out test split, the engine gets **96% of the edges it predicts right, and
+predicts an edge for 39% of employees** (up from 33% with hand-set weights). It abstains on
+the rest on purpose: a wrong reporting line costs more than a missing one, and in this data
+many employees have several managers that no observed field can tell apart, which caps
+high-precision recall at roughly 45–55%. The scoring weights are learned offline on the
+train split (`orggraph-infer train`); the Inference TRD has the numbers and the analysis.
 
 ## Tests
 
@@ -44,3 +46,36 @@ cd Backend && make test        # or, without make: run `uv run pytest -q` inside
                                # Inference and Application, then once in Backend/
 cd Frontend && npm test
 ```
+
+## Deploying
+
+The backend runs on Render as a Docker web service, the frontend on Vercel.
+
+**Backend (Render).** Create a Blueprint from this repo with the Blueprint path
+`Backend/Infra/Production/render.yaml`, or create a Docker web service by hand with context
+`Backend`, Dockerfile `Backend/Infra/Production/DockerfileProd` and health check
+`/api/v1/health`. Then set:
+
+| Variable | Value |
+|---|---|
+| `FIRMABLE_ENV` | `production` |
+| `FIRMABLE_CORS_ORIGINS` | `["https://<your-app>.vercel.app"]` |
+| `FIRMABLE_CORS_ORIGIN_REGEX` | optional, for preview URLs: `^https://<your-app>-[a-z0-9-]+\.vercel\.app$` |
+
+What survives a deploy:
+
+- **Code, learned weights and title aliases** are committed files and ship inside the image.
+- **The dataset** is committed and baked into the image, so it is there on every deploy.
+- **Predictions and evaluations** for validation, test and challenge are computed while the
+  image builds and copied into `/data/artifacts` at startup. Results produced at runtime
+  (new inference or evaluation runs) live on the `/data/artifacts` disk from the blueprint
+  and survive deploys and restarts; the seed never overwrites them. Without a disk the app
+  still starts complete, but runtime results are lost on each deploy.
+- **Background jobs** are in memory, so a job running during a deploy is lost; rerun it.
+
+**Frontend (Vercel).** Import the repo, set the root directory to `Frontend` and add
+`NEXT_PUBLIC_API_BASE_URL=https://<your-service>.onrender.com/api/v1` for Production and
+Preview. The variable is inlined at build time, so redeploy after changing it.
+
+After the first deploy, check the Render logs for `seeded artifacts into /data/artifacts`
+and open the Evaluation page; it should list three evaluations.
