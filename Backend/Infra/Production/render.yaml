@@ -23,7 +23,3 @@ services:
         value: "1"
       - key: FIRMABLE_INFERENCE__COMPANY_CACHE_SIZE
         value: "24"
-    # disk:
-    #   name: artifacts
-    #   mountPath: /data/artifacts
-    #   sizeGB: 1
